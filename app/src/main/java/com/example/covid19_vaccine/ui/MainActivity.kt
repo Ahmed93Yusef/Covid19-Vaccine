@@ -12,6 +12,7 @@ class MainActivity: BaseActivity<ActivityMainBinding>() {
         openFile()
     }
     override fun addCallbacks() {
+
     }
 
     private fun openFile() {

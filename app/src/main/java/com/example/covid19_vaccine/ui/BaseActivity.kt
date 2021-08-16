@@ -15,7 +15,8 @@ abstract class BaseActivity<VB: ViewBinding>: AppCompatActivity() {
 
     private var _binding: ViewBinding? = null
 
-    protected val binding = _binding as VB
+    protected val binding
+        get() = _binding as VB?
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
@@ -31,7 +32,7 @@ abstract class BaseActivity<VB: ViewBinding>: AppCompatActivity() {
 
     abstract fun addCallbacks()
 
-    protected fun log(value: String){
-        Log.v(LOG_TAG, value)
+    protected fun log(value: Any){
+        Log.v(LOG_TAG, value.toString())
     }
 }
