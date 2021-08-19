@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
+import com.example.covid19_vaccine.data.domain.VaccineData
 import com.example.covid19_vaccine.databinding.FragmentHomeBinding
 
 class HomeFragment: Fragment() {
@@ -19,4 +20,6 @@ class HomeFragment: Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+
 }

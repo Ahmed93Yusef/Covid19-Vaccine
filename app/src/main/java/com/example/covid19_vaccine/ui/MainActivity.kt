@@ -3,12 +3,15 @@ import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
+import com.example.covid19_vaccine.data.domain.VaccineData
 import com.example.covid19_vaccine.databinding.ActivityMainBinding
 import com.example.covid19_vaccine.util.CsvParser
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
 class MainActivity: BaseActivity<ActivityMainBinding>() {
+
+    private val localCountry = DataManger.countryFun("Afghanistan")
     private val myHomeFragment = HomeFragment()
     private val mySearchFragment = SearchFragment()
     private val myStatisticFragment = StatisticFragment()
@@ -18,6 +21,8 @@ class MainActivity: BaseActivity<ActivityMainBinding>() {
 
     override fun setup() {
         parseFile()
+        DataManger.countryFun("Afghanistan")
+        DataManger.log()
     }
     override fun addCallbacks() {
         initSubView()
@@ -44,6 +49,10 @@ class MainActivity: BaseActivity<ActivityMainBinding>() {
 
             }
         }
+        bindText(localCountry.toString())
+
+
+
 
 
     }
@@ -75,6 +84,17 @@ class MainActivity: BaseActivity<ActivityMainBinding>() {
             DataManger.addVaccine(currentVaccine)
         }
     }
+
+    private fun bindText(vaccine: String){
+        binding?.apply {
+            textHome.text = vaccine
+
+        }
+    }
+
+
+
+
 
 
 
