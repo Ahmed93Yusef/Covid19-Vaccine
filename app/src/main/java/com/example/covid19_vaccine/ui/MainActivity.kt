@@ -3,16 +3,21 @@ import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.ViewFlipper
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
 import com.example.covid19_vaccine.databinding.ActivityMainBinding
 import com.example.covid19_vaccine.util.CsvParser
+import com.example.covid19_vaccine.util.VaccineAdapter
+import kotlinx.android.synthetic.main.fragment_home.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
 class MainActivity: BaseActivity<ActivityMainBinding>() {
 
     lateinit var imagePreventFlipper: ViewFlipper
+
+
 
     private val myHomeFragment = HomeFragment()
     private val mySearchFragment = SearchFragment()
@@ -23,14 +28,20 @@ class MainActivity: BaseActivity<ActivityMainBinding>() {
     override val bindingInflater: (LayoutInflater) -> ActivityMainBinding = ActivityMainBinding::inflate
 
     override fun setup() {
+
+        initSubView()
         parseFile()
+
         DataManger.countryFun("Algeria")
         DataManger.countryMap("Andorra")
         DataManger.group("Andorra")
 
     }
+
     override fun addCallbacks() {
         initSubView()
+
+
         binding?.bottomNavigationView!!.setOnItemSelectedListener {
             item ->
             when(item.itemId){
@@ -54,6 +65,8 @@ class MainActivity: BaseActivity<ActivityMainBinding>() {
 
             }
         }
+
+
 
     }
 
@@ -111,11 +124,5 @@ class MainActivity: BaseActivity<ActivityMainBinding>() {
         imagePreventFlipper.setOutAnimation(this,android.R.anim.slide_out_right)
 
     }
-
-
-
-
-
-
 
 }

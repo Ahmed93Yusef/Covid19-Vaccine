@@ -1,4 +1,4 @@
-
+package com.example.covid19_vaccine.util
 
 import android.view.LayoutInflater
 import android.view.View
@@ -47,7 +47,8 @@ class VaccineAdapter() : RecyclerView.Adapter<VaccineAdapter.VaccineHolder>() {
 
 
     inner class VaccineHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-        var imageView: ImageView = itemView.findViewById(R.id.image_Vaccine)
-        var textView: TextView = itemView.findViewById(R.id.textNameVaccine)
+         var imageView: ImageView = itemView.findViewById(R.id.image_Vaccine)
+         var textView: TextView= itemView.findViewById(R.id.textNameVaccine)
+
     }
 }
