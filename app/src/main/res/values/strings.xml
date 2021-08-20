@@ -10,4 +10,7 @@
     <string name="shoudTakeVaccien">Why shoud we Take Vaccien</string>
     <string name="more_details">More datalis</string>
     <string name="anti_vaccines_covid_19">Anti Vaccines Covid-19</string>
+    <string name="statement1">This App offers states for Corona Virus Vaccine around the world</string>
+    <string name="statement2">The Application Was Develop By:\n1- Ahmed Yusef\n2-Ali Khalifa\n3-Akram Talib\n4-Asawer Dawood\n5-Mohamed Ali\n6-Nooralden</string>
+    <string name="input_country">input Country</string>
 </resources>
