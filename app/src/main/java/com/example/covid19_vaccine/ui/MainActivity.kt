@@ -10,7 +10,6 @@ import java.io.InputStreamReader
 
 class MainActivity: BaseActivity<ActivityMainBinding>() {
 
-    private val localCountry = DataManger.countryFun("Afghanistan")
     private val myHomeFragment = HomeFragment()
     private val mySearchFragment = SearchFragment()
     private val myStatisticFragment = StatisticFragment()
@@ -20,8 +19,10 @@ class MainActivity: BaseActivity<ActivityMainBinding>() {
 
     override fun setup() {
         parseFile()
-        DataManger.countryFun("Albania")
-        DataManger.group()
+        DataManger.countryFun("Algeria")
+        DataManger.countryMap("Andorra")
+        DataManger.group("Andorra")
+
     }
     override fun addCallbacks() {
         initSubView()
@@ -48,11 +49,6 @@ class MainActivity: BaseActivity<ActivityMainBinding>() {
 
             }
         }
-        bindText(localCountry.toString())
-
-
-
-
 
     }
 
@@ -81,13 +77,6 @@ class MainActivity: BaseActivity<ActivityMainBinding>() {
         buffer.forEachLine {
             val currentVaccine = parser.parse(it)
             DataManger.addVaccine(currentVaccine)
-        }
-    }
-
-    private fun bindText(vaccine: String){
-        binding?.apply {
-            textHome.text = vaccine
-
         }
     }
 

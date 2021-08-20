@@ -2,16 +2,16 @@ package com.example.covid19_vaccine.data
 
 import android.util.Log
 import com.example.covid19_vaccine.data.domain.VaccineData
-import com.example.covid19_vaccine.util.Constant
-import java.math.BigInteger
+
 
 object DataManger {
     private val vaccineList = mutableListOf<VaccineData>()
 
     private var countryList = mutableListOf<VaccineData>()
 
+    private var countryMap = mutableMapOf<String , VaccineData>()
 
-    var countyIndex = 0
+    private var countryName = mutableSetOf<String>()
 
     fun addVaccine(vaccine: VaccineData){
         vaccineList.add(vaccine)
@@ -25,29 +25,35 @@ object DataManger {
 
         }
     }
-    fun group(){
-        var x : Int = 0
+    fun countryMap(country: String){
+        vaccineList.forEach {
+            if (country == it.country){
+                countryMap[country] = it
+            }
 
-        for (i in vaccineList.indices)
-        {
-            if (vaccineList[i].daily_vaccinations != null){
-                vaccineList[i].daily_vaccinations!!.let { x.plus(it)}
-        }}
-        log(x)
+        }
 
     }
 
-    fun getNext():VaccineData
+    fun nameCountry(): MutableSet<String> {
+        vaccineList.forEach {
+            countryName.add(it.country)
+        }
+        return countryName
+    }
+
+    fun group(country: String){
+
+        var x = countryMap[country]?.people_fully_vaccinated
+        log(x.toString())
+        }
 
 
+    }
 
 
-
-
-
-
-    fun log(value : Any){
+    private fun log(value : Any){
         Log.v("MAIN_ACTIVITY", value.toString())
     }
 
-}
+
