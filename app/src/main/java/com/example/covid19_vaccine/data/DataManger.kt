@@ -11,7 +11,7 @@ object DataManger {
     private var countryList = mutableListOf<VaccineData>()
 
 
-
+    var countyIndex = 0
 
     fun addVaccine(vaccine: VaccineData){
         vaccineList.add(vaccine)
@@ -25,14 +25,29 @@ object DataManger {
 
         }
     }
+    fun group(){
+        var x : Int = 0
+
+        for (i in vaccineList.indices)
+        {
+            if (vaccineList[i].daily_vaccinations != null){
+                vaccineList[i].daily_vaccinations!!.let { x.plus(it)}
+        }}
+        log(x)
+
+    }
+
+    fun getNext():VaccineData
 
 
 
 
 
 
-    fun log(){
-        Log.v("MAIN_ACTIVITY", countryList.toString())
+
+
+    fun log(value : Any){
+        Log.v("MAIN_ACTIVITY", value.toString())
     }
 
 }

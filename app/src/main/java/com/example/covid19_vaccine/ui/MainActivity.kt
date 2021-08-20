@@ -3,7 +3,6 @@ import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
-import com.example.covid19_vaccine.data.domain.VaccineData
 import com.example.covid19_vaccine.databinding.ActivityMainBinding
 import com.example.covid19_vaccine.util.CsvParser
 import java.io.BufferedReader
@@ -21,8 +20,8 @@ class MainActivity: BaseActivity<ActivityMainBinding>() {
 
     override fun setup() {
         parseFile()
-        DataManger.countryFun("Afghanistan")
-        DataManger.log()
+        DataManger.countryFun("Albania")
+        DataManger.group()
     }
     override fun addCallbacks() {
         initSubView()

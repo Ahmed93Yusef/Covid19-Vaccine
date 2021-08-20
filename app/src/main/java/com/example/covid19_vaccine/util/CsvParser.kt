@@ -10,7 +10,7 @@ class CsvParser {
             date = tokens[Constant.ColumnIndex.DATE],
             people_vaccinated = tokens[Constant.ColumnIndex.PEOPLE_VACCINATED].toBigIntegerOrNull(),
             people_fully_vaccinated = tokens[Constant.ColumnIndex.PEOPLE_FULLY_VACCINATED].toBigIntegerOrNull(),
-            daily_vaccinations = tokens[Constant.ColumnIndex.DAILY_VACCINATIONS].toBigIntegerOrNull(),
+            daily_vaccinations = tokens[Constant.ColumnIndex.DAILY_VACCINATIONS].toIntOrNull(),
             people_vaccinated_per_hundred = tokens[Constant.ColumnIndex.PEOPLE_VACCINATED_PER_HUNDRED].toDoubleOrNull(),
             people_fully_vaccinated_per_hundred = tokens[Constant.ColumnIndex.PEOPLE_FULLY_VACCINATED_PER_HUNDRED].toDoubleOrNull(),
             daily_vaccinations_per_million = tokens[Constant.ColumnIndex.DAILY_VACCINATIONS_PER_MILLION].toIntOrNull()
