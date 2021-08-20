@@ -23,6 +23,7 @@ abstract class BaseActivity<VB: ViewBinding>: AppCompatActivity() {
         _binding = bindingInflater(layoutInflater)
 
         setContentView(requireNotNull(_binding).root)
+
         setup()
         addCallbacks()
 

@@ -4,4 +4,10 @@
     <string name="search">Search</string>
     <string name="statistic">Statistic</string>
     <string name="about">About</string>
+    <string name="banifit_of_vaccin">Vaccination is the administration of a vaccine to help the immune system develop protection from ....</string>
+    <string name="detailsOFVaccine">Since the emergence of this novel coronavirus in December 2019, more than 20 vaccines have started to be rolled out. Here is an at-a-glance overview of those vaccines</string>
+    <string name="the_benefit">The Benefit For injection</string>
+    <string name="shoudTakeVaccien">Why shoud we Take Vaccien</string>
+    <string name="more_details">More datalis</string>
+    <string name="anti_vaccines_covid_19">Anti Vaccines Covid-19</string>
 </resources>
