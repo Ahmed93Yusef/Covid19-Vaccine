@@ -9,12 +9,11 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment: Fragment() {
-
     lateinit var binding: FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater,
