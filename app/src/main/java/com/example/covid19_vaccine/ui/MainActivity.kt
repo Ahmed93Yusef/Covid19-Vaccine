@@ -1,9 +1,10 @@
 package com.example.covid19_vaccine.ui
-import android.view.LayoutInflater
+import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ViewFlipper
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
@@ -12,9 +13,11 @@ import com.example.covid19_vaccine.util.CsvParser
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
-class MainActivity: BaseActivity<ActivityMainBinding>() {
+class MainActivity: AppCompatActivity() {
 
     lateinit var imagePreventFlipper: ViewFlipper
+
+    var binding : ActivityMainBinding? = null
 
 
     private val myDetailsButtonFragment = DetailsButtonFragment()
@@ -22,25 +25,32 @@ class MainActivity: BaseActivity<ActivityMainBinding>() {
     private val mySearchFragment = SearchFragment()
     private val myStatisticFragment = StatisticFragment()
     private val myAboutFragment = AboutFragment()
-    override val LOG_TAG: String = "MAIN_ACTIVITY"
-    override val bindingInflater: (LayoutInflater) -> ActivityMainBinding = ActivityMainBinding::inflate
 
-    override fun setup() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(requireNotNull(binding).root)
+        setup()
+        addCallbacks()
+
+
+    }
+    private fun setup() {
 
         initSubView()
         parseFile()
 
-        DataManger.countryFun("Algeria")
-        DataManger.countryMap("Andorra")
-        DataManger.group("Andorra")
-
     }
 
-    override fun addCallbacks() {
+    private fun addCallbacks() {
         initSubView()
+        selectFragment()
+    }
+
+    private fun selectFragment(){
 
         binding?.bottomNavigationView!!.setOnItemSelectedListener {
-            item ->
+                item ->
             when(item.itemId){
                 R.id.homePage -> {
                     replaceFragment(myHomeFragment)
@@ -62,7 +72,6 @@ class MainActivity: BaseActivity<ActivityMainBinding>() {
 
             }
         }
-
     }
 
     private fun initSubView() {
