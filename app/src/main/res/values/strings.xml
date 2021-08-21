@@ -13,4 +13,6 @@
     <string name="statement1">This App offers states for Corona Virus Vaccine around the world</string>
     <string name="statement2">The Application Was Develop By:\n1- Ahmed Yusef\n2-Ali Khalifa\n3-Akram Talib\n4-Asawer Dawood\n5-Mohamed Ali\n6-Nooralden</string>
     <string name="input_country">input Country</string>
+    <string name="vaizor">Vaccination is a simple, safe, and effective way of protecting people against harmful diseases, before they come into contact with them. It uses your body’s natural defenses to build resistance to specific infections and makes your immune system stronger.
+Vaccines train your immune system to create antibodies, just as it does when it’s exposed to a disease.</string>
 </resources>
