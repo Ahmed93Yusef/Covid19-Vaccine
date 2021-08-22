@@ -134,7 +134,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputCountryText"
         app:lottie_autoPlay="true"
-        app:lottie_rawRes="@raw/error2" />
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/error" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_search"

@@ -60,16 +60,19 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
                 txtPeopleFullyVaccine.text = data.people_fully_vaccinated.toInt().toString()
                 txtCountryName.text = data.country
 
-                barchart.addBar(BarModel(2.3f, -0xedcbaa))
-                barchart.addBar(BarModel(2f, -0xcbcbaa))
-                barchart.addBar(BarModel(3.3f, -0xa9cbaa))
-                barchart.addBar(BarModel(1.1f, -0x78c0aa))
-                barchart.addBar(BarModel(2.7f, -0xa9480f))
-                barchart.addBar(BarModel(2f, -0xcbcbaa))
-                barchart.addBar(BarModel(0.4f, -0xe00b54))
-                barchart.addBar(BarModel(4f, -0xe45b1a))
+
+                barchart.clearChart() /// Clear chart before new search
+
+
+                barchart.addBar(BarModel(data.people_fully_vaccinated.toFloat(), -0xedcbaa , ))
+                barchart.addBar(BarModel(data.people_vaccinated.toFloat(), -0xcbcbaa))
+                barchart.addBar(BarModel(data.people_vaccinated_per_hundred.toFloat(), -0xa9cbaa))
+                barchart.addBar(BarModel(data.people_fully_vaccinated_per_hundred.toFloat(), -0x78c0aa))
+                barchart.addBar(BarModel(data.daily_vaccinations.toFloat(), -0xa9480f))
+                barchart.addBar(BarModel(data.daily_vaccinations_per_million.toFloat(), -0xcbcbaa))
 
                 barchart.startAnimation()
+
 
             }
         }
