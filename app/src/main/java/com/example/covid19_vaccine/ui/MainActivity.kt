@@ -1,18 +1,29 @@
 package com.example.covid19_vaccine.ui
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.ViewFlipper
+import android.transition.AutoTransition
+import android.transition.TransitionManager
+import android.view.View
+import android.view.WindowManager.LayoutParams.*
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
 import com.example.covid19_vaccine.databinding.ActivityMainBinding
 import com.example.covid19_vaccine.ui.fragment.*
 import com.example.covid19_vaccine.util.CsvParser
+import kotlinx.android.synthetic.main.fragment_home.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
 class MainActivity: AppCompatActivity() {
+
+    lateinit var expandLayout : LinearLayout
+    lateinit var cardview : CardView
+    lateinit var textViewShowMore: TextView
+    lateinit var textViewShowless : TextView
+
 
     lateinit var imagePreventFlipper: ViewFlipper
 
@@ -25,10 +36,20 @@ class MainActivity: AppCompatActivity() {
     private val myStatisticFragment = StatisticFragment()
     private val myAboutFragment = AboutFragment()
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(requireNotNull(binding).root)
+
+
+        window.setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN)
+
+
+
+
+
         setup()
         addCallbacks()
 
@@ -128,6 +149,16 @@ class MainActivity: AppCompatActivity() {
 
     }
 
+    fun button(view: View) {
+
+        view.findViewById<Button>(R.id.buttonDetails).setOnClickListener {
 
 
-}
+            replaceFragment(myDetailsButtonFragment)
+
+        }
+
+    }
+
+
+    }

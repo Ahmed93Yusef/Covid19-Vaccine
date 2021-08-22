@@ -3,15 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/ic_about_icon.xml" value="0.18076923076923077" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/style.xml" value="0.2203125" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/activity_main.xml" value="0.1911231884057971" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_about.xml" value="0.1" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_button_details.xml" value="0.16" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/shapeview.xml" value="0.2203125" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/activity_main.xml" value="0.1838768115942029" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_about.xml" value="0.2" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_button_details.xml" value="0.11367753623188406" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_search.xml" value="0.1" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_statistic.xml" value="0.25" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/recycler_view_layout.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_statistic.xml" value="0.2" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/recycler_view_layout.xml" value="0.22" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/activity_main.xml" value="0.22083333333333333" />
       </map>
     </option>
@@ -25,7 +23,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.16" />
+        <option name="scale" value="0.2" />
       </ProjectState>
     </option>
   </component>
