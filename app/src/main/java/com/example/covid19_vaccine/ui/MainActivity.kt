@@ -1,7 +1,5 @@
 package com.example.covid19_vaccine.ui
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.ViewFlipper
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +7,7 @@ import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
 import com.example.covid19_vaccine.databinding.ActivityMainBinding
+import com.example.covid19_vaccine.ui.fragment.*
 import com.example.covid19_vaccine.util.CsvParser
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -79,7 +78,7 @@ class MainActivity: AppCompatActivity() {
 
     }
 
-    private fun addFragment(fragment: Fragment) {
+    fun addFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.add(R.id.fragment_container, fragment)
         transaction.commit()
@@ -129,14 +128,6 @@ class MainActivity: AppCompatActivity() {
 
     }
 
-    fun button_Details(view: View) {
 
-        view.findViewById<Button>(R.id.buttonDetails).setOnClickListener {
-
-            addFragment(myDetailsButtonFragment)
-
-        }
-
-    }
 
 }

@@ -1,4 +1,4 @@
-package com.example.covid19_vaccine.ui
+package com.example.covid19_vaccine.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
