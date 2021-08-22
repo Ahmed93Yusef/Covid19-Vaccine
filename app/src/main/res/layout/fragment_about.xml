@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/home"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintVertical_bias="0.45"
+        android:src="@drawable/covid3"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/covid" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5A61B7"
+        />
+    <View
+        android:id="@+id/viewLoitty"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintVertical_bias="0.33"
+        />
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="@id/viewLoitty"
+        app:layout_constraintTop_toTopOf="@id/viewLoitty"
+        app:layout_constraintStart_toStartOf="@id/viewLoitty"
+        app:layout_constraintBottom_toBottomOf="@id/viewLoitty"
+        app:lottie_autoPlay="true"
+        android:elevation="2dp"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/tools"
+
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+<!--<TextView-->
+<!--android:id="@+id/textView"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:fontFamily="@font/loraregular"-->
+<!--android:gravity="center"-->
+<!--android:text="@string/App_Name"-->
+<!--android:textColor="@color/white"-->
+<!--android:textSize="30sp"-->
+<!--android:textStyle="bold"-->
+<!--app:layout_constraintBottom_toBottomOf="parent"-->
+<!--app:layout_constraintEnd_toEndOf="parent"-->
+<!--app:layout_constraintStart_toStartOf="parent"-->
+<!--app:layout_constraintTop_toTopOf="parent"-->
+<!--app:layout_constraintVertical_bias="0.05" />-->
+
+<!--<TextView-->
+<!--android:id="@+id/textView2"-->
+<!--android:layout_width="410dp"-->
+<!--android:layout_height="120dp"-->
+<!--android:layout_marginTop="28dp"-->
+<!--android:fontFamily="@font/loraregular"-->
+<!--android:text="@string/statement1"-->
+<!--android:textAlignment="center"-->
+<!--android:textColor="@color/white"-->
+<!--android:textSize="20sp"-->
+<!--app:layout_constraintEnd_toEndOf="parent"-->
+<!--app:layout_constraintHorizontal_bias="0.0"-->
+<!--app:layout_constraintStart_toStartOf="parent"-->
+<!--app:layout_constraintTop_toBottomOf="@+id/textView" />-->
+
+
+
+<!--<TextView-->
+<!--android:id="@+id/textView3"-->
+<!--android:layout_width="348dp"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_marginTop="36dp"-->
+<!--android:fontFamily="@font/loraregular"-->
+<!--android:text="@string/statement2"-->
+<!--android:textColor="@color/white"-->
+<!--android:textSize="20sp"-->
+<!--app:layout_constraintBottom_toBottomOf="parent"-->
+<!--app:layout_constraintEnd_toEndOf="parent"-->
+<!--app:layout_constraintHorizontal_bias="0.492"-->
+<!--app:layout_constraintStart_toStartOf="parent"-->
+<!--app:layout_constraintTop_toTopOf="parent"-->
+<!--app:layout_constraintVertical_bias="0.82" />-->

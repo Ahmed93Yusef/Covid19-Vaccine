@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">covid19_vaccine</string>
+    <string name="app_name">COVID-19 VACCINE</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="statistic">Statistic</string>
+    <string name="about">About</string>
+    <string name="benefitOfVaccine">Vaccination is the administration of a vaccine to help the immune system develop protection from ....</string>
+    <string name="detailsOFVaccine">Since the emergence of this novel coronavirus in December 2019, more than 20 vaccines have started to be rolled out. Here is an at-a-glance overview of those vaccines</string>
+    <string name="the_benefit">The Benefit For injection</string>
+    <string name="shouldTakeVaccine">Why should we Take Vaccine?</string>
+    <string name="more_details">See More</string>
+    <string name="anti_vaccines_covid_19">Anti Vaccines Covid-19</string>
+    <string name="statement1">This App offers states for Corona Virus Vaccine around the world</string>
+    <string name="statement2">The Application Was Develop By Banana Team :\n 🍌 Ahmed Yusef\n 🍌 Ali Khalifa\n 🍌 Nooralden\n 🍌 Akram Talib\n 🍌 Mohamed Ali\n 🍌 Asawer Dawood </string>
+    <string name="input_country">input Country</string>
+    <string name="vaizor">Vaccination is a simple, safe, and effective way of protecting people against harmful diseases, before they come into contact with them. It uses your body’s natural defenses to build resistance to specific infections and makes your immune system stronger.
+Vaccines train your immune system to create antibodies, just as it does when it’s exposed to a disease.</string>
+    <string name="App_Name">Covid 19 Vaccine App</string>
+    <string name="covid">covid</string>
+    <string name="vizor">There are four types of vaccines in clinical trials: whole virus, protein subunit, viral vector and nucleic acid (RNA and DNA), each of which protects people, but by producing immunity in a slightly different way.</string>
 </resources>

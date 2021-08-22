@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/purple_300"
+    tools:context=".ui.fragment.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMain"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="12dp"
+            android:elevation="1dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/on" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textBenefit"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="25dp"
+            android:elevation="2dp"
+            android:fontFamily="@font/lora_regular"
+            android:gravity="center"
+            android:text="@string/shouldTakeVaccine"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/cardMain"
+            app:layout_constraintTop_toTopOf="@id/cardMain" />
+
+        <TextView
+            android:id="@+id/textAdvice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/loramedium"
+            android:lines="3"
+            android:text="@string/benefitOfVaccine"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/textBenefit"
+            app:layout_constraintStart_toStartOf="@id/textBenefit"
+            app:layout_constraintTop_toBottomOf="@id/textBenefit" />
+
+        <Button
+            android:id="@+id/buttonDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/colorButton"
+            android:longClickable="true"
+            android:onClick="button"
+            android:text="@string/more_details"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/cardMain"
+            app:layout_constraintEnd_toEndOf="@id/textAdvice"
+            app:layout_constraintStart_toStartOf="@id/textAdvice"
+            app:layout_constraintTop_toBottomOf="@id/textAdvice" />
+
+        <TextView
+            android:id="@+id/antiText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/lorabold"
+            android:text="@string/anti_vaccines_covid_19"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/detailsOFVaccine"
+            app:layout_constraintStart_toStartOf="@id/cardMain"
+            app:layout_constraintTop_toBottomOf="@id/cardMain" />
+
+        <TextView
+            android:id="@+id/detailsOFVaccine"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/loramedium"
+            android:lines="3"
+            android:text="@string/detailsOFVaccine"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/antiText"
+            app:layout_constraintTop_toBottomOf="@+id/antiText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_Vaccine"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailsOFVaccine"
+            tools:listitem="@layout/recycler_view_layout" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardLift"
+            android:layout_width="180dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            android:elevation="1dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toStartOf="@id/cardRight"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/recycler_Vaccine"
+            app:layout_constraintTop_toBottomOf="@id/recycler_Vaccine" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardRight"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:elevation="1dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardLift"
+            app:layout_constraintTop_toBottomOf="@id/recycler_Vaccine"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:src="@drawable/on"
+                        android:scaleType="fitXY"
+                        />
+                    <ImageView
+                        android:id="@+id/ShowMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow_down"
+                        android:layout_gravity="end"
+                        />
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/linearExpanded"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/image"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Vizor"
+                            android:textSize="30sp"
+                            android:gravity="center"
+                            android:textColor="#DF1A1A"
+                            />
+                    </LinearLayout>
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/vizor"
+                            android:textSize="14sp"
+                            android:textAlignment="center"
+                            android:textColor="@color/pinkDeep"
+                            />
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="How to Prevent : "
+            android:textSize="22sp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/lorabold"
+            app:layout_constraintTop_toBottomOf="@id/cardLift"
+            app:layout_constraintStart_toStartOf="@id/cardLift"
+            app:layout_constraintEnd_toEndOf="@id/cardLift"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
