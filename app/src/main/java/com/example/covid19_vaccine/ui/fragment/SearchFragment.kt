@@ -25,7 +25,6 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
 
             })
         }
-        barChart()
     }
 
     private fun searchSubmit(country: String) {
@@ -51,44 +50,30 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
             barchart.isVisible = false
         }
     }
-    fun setData(country: String){
-        TODO()
+    
+
+    private fun setData(country: String) {
+        DataManger.getCountry(country).forEach { dataCountry ->
+            val data = dataCountry.value[dataCountry.value.size-1]
+            binding!!.apply {
+                txtPeopleVaccine.text = data.people_vaccinated.toInt().toString()
+                txtPeopleFullyVaccine.text = data.people_fully_vaccinated.toInt().toString()
+                txtCountryName.text = data.country
+                txtTotalVaccinations.text = data.people_fully_vaccinated.toInt().toString()
+
+                barchart.addBar(BarModel(2.3f, -0xedcbaa))
+                barchart.addBar(BarModel(2f, -0xcbcbaa))
+                barchart.addBar(BarModel(3.3f, -0xa9cbaa))
+                barchart.addBar(BarModel(1.1f, -0x78c0aa))
+                barchart.addBar(BarModel(2.7f, -0xa9480f))
+                barchart.addBar(BarModel(2f, -0xcbcbaa))
+                barchart.addBar(BarModel(0.4f, -0xe00b54))
+                barchart.addBar(BarModel(4f, -0xe45b1a))
+
+            }
+        }
     }
 
-//    private fun setData(country: String) {
-//        DataManger.getCountry(country).forEach { dataCountry ->
-//            val data = dataCountry.value[dataCountry.value.size-1]
-//            binding!!.apply {
-//                txtPeopleVaccine.text = data.people_vaccinated.toInt().toString()
-//                txtPeopleFullyVaccine.text = data.people_fully_vaccinated.toInt().toString()
-//                txtCountryName.text = data.country
-//                txtIsoCode.text = data.iso_code
-//                txtTotalVaccinations.text = data.total_vaccinations.toInt().toString()
-//
-//                pieChart.addPieSlice(PieModel("total_vaccinations", data.total_vaccinations_per_hundred.toFloat(), Color.parseColor("#FF0000")))
-//                pieChart.addPieSlice(PieModel("people_vaccinated", data.people_vaccinated_per_hundred.toFloat(), Color.parseColor("#00FF00")))
-//                pieChart.addPieSlice(PieModel("people_fully_vaccinated", data.people_fully_vaccinated_per_hundred.toFloat(), Color.parseColor("#0000FF")))
-//
-//                pieChart.startAnimation()
-//            }
-//        }
-//    }
-
-    fun barChart(){
-
-        val mBarChart =binding!!.barchart
-
-        mBarChart.addBar(BarModel(2.3f, -0xedcbaa))
-        mBarChart.addBar(BarModel(2f, -0xcbcbaa))
-        mBarChart.addBar(BarModel(3.3f, -0xa9cbaa))
-        mBarChart.addBar(BarModel(1.1f, -0x78c0aa))
-        mBarChart.addBar(BarModel(2.7f, -0xa9480f))
-        mBarChart.addBar(BarModel(2f, -0xcbcbaa))
-        mBarChart.addBar(BarModel(0.4f, -0xe00b54))
-        mBarChart.addBar(BarModel(4f, -0xe45b1a))
-
-        mBarChart.startAnimation()
-    }
 
     override fun addCallBack() {
         visibility(false)
