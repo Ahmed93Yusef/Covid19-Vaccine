@@ -138,7 +138,7 @@
         app:layout_constraintEnd_toStartOf="@id/cardRight"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="@id/recycler_Vaccine"
-        app:layout_constraintTop_toBottomOf="@id/recycler_Vaccine"></androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toBottomOf="@id/recycler_Vaccine" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardRight"
@@ -149,7 +149,7 @@
         app:layout_constraintBottom_toBottomOf="@id/cardLift"
         app:layout_constraintEnd_toEndOf="@id/recycler_Vaccine"
         app:layout_constraintStart_toEndOf="@id/cardLift"
-        app:layout_constraintTop_toTopOf="@id/cardLift"></androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toTopOf="@id/cardLift" />
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -178,7 +178,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:lottie_autoPlay="false"
-                    app:lottie_rawRes="@raw/contacts" />
+                     />
 
 
             </androidx.cardview.widget.CardView>
@@ -198,7 +198,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:lottie_autoPlay="false"
-                    app:lottie_rawRes="@raw/contacts" />
+                    />
 
 
             </androidx.cardview.widget.CardView>
@@ -218,7 +218,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:lottie_autoPlay="false"
-                    app:lottie_rawRes="@raw/contacts" />
+                     />
 
 
             </androidx.cardview.widget.CardView>
@@ -238,7 +238,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:lottie_autoPlay="false"
-                    app:lottie_rawRes="@raw/contacts" />
+                     />
 
 
             </androidx.cardview.widget.CardView>
@@ -258,7 +258,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:lottie_autoPlay="false"
-                    app:lottie_rawRes="@raw/contacts" />
+                     />
 
 
             </androidx.cardview.widget.CardView>
@@ -278,7 +278,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:lottie_autoPlay="false"
-                    app:lottie_rawRes="@raw/contacts" />
+                     />
 
 
             </androidx.cardview.widget.CardView>
