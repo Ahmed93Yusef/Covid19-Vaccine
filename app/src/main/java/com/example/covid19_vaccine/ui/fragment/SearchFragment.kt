@@ -59,7 +59,6 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
                 txtPeopleVaccine.text = data.people_vaccinated.toInt().toString()
                 txtPeopleFullyVaccine.text = data.people_fully_vaccinated.toInt().toString()
                 txtCountryName.text = data.country
-                txtTotalVaccinations.text = data.people_fully_vaccinated.toInt().toString()
 
                 barchart.addBar(BarModel(2.3f, -0xedcbaa))
                 barchart.addBar(BarModel(2f, -0xcbcbaa))
@@ -70,6 +69,8 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
                 barchart.addBar(BarModel(0.4f, -0xe00b54))
                 barchart.addBar(BarModel(4f, -0xe45b1a))
 
+                barchart.startAnimation()
+
             }
         }
     }
@@ -77,6 +78,7 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
 
     override fun addCallBack() {
         visibility(false)
+        DataManger.totalVaccination(binding?.inputCountryText.toString())
     }
 
     fun visibility(state: Boolean){

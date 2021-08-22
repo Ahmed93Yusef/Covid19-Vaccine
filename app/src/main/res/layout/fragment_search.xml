@@ -85,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="6dp"
-                android:padding="8dp"
+                android:padding="16dp"
                 android:text="people fully vaccinated"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
-                android:padding="8dp"
+                android:padding="16dp"
                 android:text="people vaccinated"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toStartOf="@+id/labPeopleFullyVaccine"
@@ -107,18 +107,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtPeopleVaccine" />
 
-            <TextView
-                android:id="@+id/txtTotalVaccinations"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@color/purple_300"
-                android:gravity="center_horizontal"
-                android:padding="3dp"
-                android:text="total"
-                android:textSize="28sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/labPeopleVaccine" />
+<!--            <TextView-->
+<!--                android:id="@+id/txtTotalVaccinations"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:background="@color/purple_300"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:padding="3dp"-->
+<!--                android:text="total"-->
+<!--                android:textSize="28sp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/labPeopleVaccine" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

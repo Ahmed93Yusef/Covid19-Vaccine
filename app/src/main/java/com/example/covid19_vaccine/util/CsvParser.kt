@@ -8,12 +8,12 @@ class CsvParser {
         return VaccineData(
             country = tokens[Constant.ColumnIndex.COUNTRY],
             date = tokens[Constant.ColumnIndex.DATE],
-            people_vaccinated = tokens[Constant.ColumnIndex.PEOPLE_VACCINATED].toIntOrNull() ?: 0,
-            people_fully_vaccinated = tokens[Constant.ColumnIndex.PEOPLE_FULLY_VACCINATED].toIntOrNull() ?: 0,
-            daily_vaccinations = tokens[Constant.ColumnIndex.DAILY_VACCINATIONS].toIntOrNull() ?: 0,
+            people_vaccinated = tokens[Constant.ColumnIndex.PEOPLE_VACCINATED].toDoubleOrNull() ?: 0.0,
+            people_fully_vaccinated = tokens[Constant.ColumnIndex.PEOPLE_FULLY_VACCINATED].toDoubleOrNull() ?: 0.0,
+            daily_vaccinations = tokens[Constant.ColumnIndex.DAILY_VACCINATIONS].toDoubleOrNull() ?: 0.0,
             people_vaccinated_per_hundred = tokens[Constant.ColumnIndex.PEOPLE_VACCINATED_PER_HUNDRED].toDoubleOrNull() ?: 0.0,
             people_fully_vaccinated_per_hundred = tokens[Constant.ColumnIndex.PEOPLE_FULLY_VACCINATED_PER_HUNDRED].toDoubleOrNull() ?: 0.0,
-            daily_vaccinations_per_million = tokens[Constant.ColumnIndex.DAILY_VACCINATIONS_PER_MILLION].toIntOrNull() ?: 0
+            daily_vaccinations_per_million = tokens[Constant.ColumnIndex.DAILY_VACCINATIONS_PER_MILLION].toDoubleOrNull() ?: 0.0
 
         )
     }

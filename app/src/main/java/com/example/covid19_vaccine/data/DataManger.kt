@@ -2,13 +2,14 @@ package com.example.covid19_vaccine.data
 
 import android.util.Log
 import com.example.covid19_vaccine.data.domain.VaccineData
-import java.util.*
 
 
 object DataManger {
     private val vaccineList = mutableListOf<VaccineData>()
 
     private var countryList = mutableListOf<VaccineData>()
+
+    var totalFullyVaccine = 0
 
     fun addVaccine(vaccine: VaccineData) = vaccineList.add(vaccine)
 
@@ -17,9 +18,19 @@ object DataManger {
             it1.country.lowercase().trim() == country.lowercase().trim() }.toMutableList()
 
         it.associateBy(
-            keySelector = { country.lowercase(Locale.getDefault()) },
+            keySelector = { country.lowercase().trim() },
             valueTransform = { countryList }
         )
+    }
+
+    fun totalVaccination(country: String): Int {
+        vaccineList.forEach {
+            if(it.country.lowercase().trim() == country.lowercase().trim() ){
+                totalFullyVaccine =+ it.people_fully_vaccinated.toInt()
+            }
+        }
+        return totalFullyVaccine
+
     }
 
 
