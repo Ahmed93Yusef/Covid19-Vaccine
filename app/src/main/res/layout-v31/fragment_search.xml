@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@android:color/holo_blue_bright"
+    android:background="@android:color/system_neutral1_100"
     android:layout_height="match_parent"
     tools:context=".ui.fragment.SearchFragment">
 
@@ -13,7 +13,6 @@
         android:id="@+id/inputCountryText"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:background="@drawable/search_text_background"
         android:layout_height="wrap_content"
         android:hint="@string/input_country"
         android:layout_margin="16dp"
@@ -112,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:background="@color/purple_300"
+                android:background="@color/teal_200"
                 android:gravity="center_horizontal"
                 android:padding="3dp"
                 android:text="total"
@@ -134,7 +133,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputCountryText"
         app:lottie_autoPlay="true"
-        app:lottie_rawRes="@raw/error2" />
+        app:lottie_rawRes="@raw/error" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_search"
@@ -147,19 +146,32 @@
         app:layout_constraintTop_toBottomOf="@+id/inputCountryText"
         app:layout_constraintVertical_bias="0.329"
         app:lottie_autoPlay="true"
+        app:lottie_loop="true"
         app:lottie_rawRes="@raw/search" />
 
     <org.eazegraph.lib.charts.BarChart
         android:id="@+id/barchart"
         android:layout_width="match_parent"
         android:layout_height="256dp"
-        android:layout_marginHorizontal="16dp"
-        android:background="@drawable/search_text_background"
         android:padding="10dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_country" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <org.eazegraph.lib.charts.-->
+<!--        android:id="@+id/pieChart"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:padding="8dp"-->
+<!--        app:egLegendTextSize="18sp"-->
+<!--        app:egUsePieRotation="true"-->
+<!--        app:egValueTextSize="36sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/card_country" />-->
 
 
 
