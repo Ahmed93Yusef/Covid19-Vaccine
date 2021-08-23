@@ -5,7 +5,7 @@ import android.view.View
 import androidx.core.view.isVisible
 import com.example.covid19_vaccine.data.DataManger
 import com.example.covid19_vaccine.databinding.FragmentSearchBinding
-import org.eazegraph.lib.models.BarModel
+import org.eazegraph.lib.models.PieModel
 
 class SearchFragment: BaseFragment<FragmentSearchBinding>() {
     override val bindingInflater: (LayoutInflater) -> FragmentSearchBinding = FragmentSearchBinding::inflate
@@ -13,13 +13,13 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
     override fun setup() {
         binding!!.apply {
             inputCountryText.setOnQueryTextListener(object : android.widget.SearchView.OnQueryTextListener{
-                override fun onQueryTextSubmit(query: String?): Boolean {
-                    searchSubmit(query!!)
+                override fun onQueryTextSubmit(search: String?): Boolean {
+                    searchSubmit(search!!)
                     return false
                 }
 
-                override fun onQueryTextChange(newText: String?): Boolean {
-                    searchTextChange(newText!!)
+                override fun onQueryTextChange(newSearch: String?): Boolean {
+                    searchTextChange(newSearch!!)
                     return false
                 }
 
@@ -47,7 +47,7 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
             lottieError .visibility = View.GONE
             visibility(false)
             lottieSearch.isVisible = true
-            barchart.isVisible = false
+            piechart?.isVisible = false
         }
     }
     
@@ -56,24 +56,22 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
         DataManger.getCountry(country).forEach { dataCountry ->
             val data = dataCountry.value[dataCountry.value.size-1]
             binding!!.apply {
-                txtPeopleVaccine.text = data.people_vaccinated.toInt().toString()
-                txtPeopleFullyVaccine.text = data.people_fully_vaccinated.toInt().toString()
+                txtPeopleVaccine.text = data.people_vaccinated_per_hundred.toString()
+                txtPeopleFullyVaccine.text = data.people_fully_vaccinated_per_hundred.toString()
                 txtCountryName.text = data.country
 
+                piechart?.apply {
+                     /// Clear chart before new search
 
-                barchart.clearChart() /// Clear chart before new search
+                    addPieSlice(PieModel("people_vaccinated",data.people_vaccinated_per_hundred.toFloat(), -0x78c0aa  ))
+                    addPieSlice(PieModel("people_fully_vaccinated",data.people_fully_vaccinated_per_hundred.toFloat(), -0xa9cbaa  ))
+//                    addBar(BarModel(data.people_vaccinated_per_hundred.toFloat(), -0xa9cbaa))
+//                    addBar(BarModel(data.people_fully_vaccinated_per_hundred.toFloat(), -0x78c0aa))
+//                    addBar(BarModel(data.daily_vaccinations.toFloat(), -0xa9480f))
+//                    addBar(BarModel(data.daily_vaccinations_per_million.toFloat(), -0xcbcbaa))
 
-
-                barchart.addBar(BarModel(data.people_fully_vaccinated.toFloat(), -0xedcbaa , ))
-                barchart.addBar(BarModel(data.people_vaccinated.toFloat(), -0xcbcbaa))
-                barchart.addBar(BarModel(data.people_vaccinated_per_hundred.toFloat(), -0xa9cbaa))
-                barchart.addBar(BarModel(data.people_fully_vaccinated_per_hundred.toFloat(), -0x78c0aa))
-                barchart.addBar(BarModel(data.daily_vaccinations.toFloat(), -0xa9480f))
-                barchart.addBar(BarModel(data.daily_vaccinations_per_million.toFloat(), -0xcbcbaa))
-
-                barchart.startAnimation()
-
-
+                    startAnimation()
+                }
             }
         }
     }
@@ -81,14 +79,13 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
 
     override fun addCallBack() {
         visibility(false)
-        DataManger.totalVaccination(binding?.inputCountryText.toString())
     }
 
-    fun visibility(state: Boolean){
+    private fun visibility(state: Boolean){
         binding!!.apply {
             cardCountry.isVisible = state
             lottieSearch.isVisible = !state
-            barchart.isVisible = state
+            piechart?.isVisible = state
         }
     }
 

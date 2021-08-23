@@ -14,8 +14,23 @@
     <string name="statement2">The Application Was Develop By Banana Team :\n 🍌 Ahmed Yusef\n 🍌 Ali Khalifa\n 🍌 Nooralden\n 🍌 Akram Talib\n 🍌 Mohamed Ali\n 🍌 Asawer Dawood </string>
     <string name="input_country">input Country</string>
     <string name="vaizor">Vaccination is a simple, safe, and effective way of protecting people against harmful diseases, before they come into contact with them. It uses your body’s natural defenses to build resistance to specific infections and makes your immune system stronger.
-Vaccines train your immune system to create antibodies, just as it does when it’s exposed to a disease.</string>
+    Vaccines train your immune system to create antibodies, just as it does when it’s exposed to a disease.</string>
     <string name="App_Name">Covid 19 Vaccine App</string>
     <string name="covid">covid</string>
     <string name="vizor">There are four types of vaccines in clinical trials: whole virus, protein subunit, viral vector and nucleic acid (RNA and DNA), each of which protects people, but by producing immunity in a slightly different way.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="covid3">Vaccination is a simple, safe, and effective way of protecting people against harmful diseases, before they come into contact with them. It uses your body’s natural defenses to build resistance to specific infections and makes your immune system stronger. Vaccines train your immune system to create antibodies, just as it does when it’s exposed to a disease. However, because vaccines contain only killed or weakened forms of germs like viruses or bacteria, they do not cause the disease or put you at risk of its complications. Most vaccines are given by an injection, but some are given orally (by mouth) or sprayed into the nose.</string>
+    <string name="hello">Hello Folks ! I want to share my exploration about Covid Vaccine App. In this application you can find out the details of the vaccine and find the nearest vaccination location. Hope you guys like it and feel free to comment.</string>
+    <string name="johnson_and_johnson_s">Johnson and Johnson’s</string>
+    <string name="sinopharm">Sinopharm</string>
+    <string name="astrazeneca">Astrazeneca</string>
+    <string name="novavax">Novavax</string>
+    <string name="description">Description :</string>
+    <string name="pfizer_bionte">Pfizer-Bionte</string>
+    <string name="moderna">Moderna</string>
+    <string name="sputnik_v">Sputnik-v</string>
+    <string name="project_done_by">Project Done By:</string>
+    <string name="team_leader_ahmed_yusef">Team Leader : Ahmed Yusef</string>
+    <string name="team_member_nooraldeen_akeel">Team Member : Nooraldeen Akeel</string>
 </resources>
