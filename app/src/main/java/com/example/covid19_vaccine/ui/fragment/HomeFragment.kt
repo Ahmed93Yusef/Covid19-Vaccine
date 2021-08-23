@@ -8,10 +8,8 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.databinding.FragmentHomeBinding
-import com.example.covid19_vaccine.ui.MainActivity
 import com.example.covid19_vaccine.util.VaccineAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -29,7 +27,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>() {
             imageViewShowMore = binding!!.ShowMore
             cardview = binding!!.cardRight
         }
-        val adapter = VaccineAdapter()  //////////////////////لا تحذفهن ذني لان مهمات كلش للرسايكل فيو
+        val adapter = VaccineAdapter()
         recycler_Vaccine.adapter = adapter
     }
 

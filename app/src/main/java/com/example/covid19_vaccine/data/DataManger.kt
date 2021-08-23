@@ -37,6 +37,7 @@ object DataManger {
 
 
 
+
     private fun log(value : Any){
         Log.v("MAIN_ACTIVITY", value.toString())
     }

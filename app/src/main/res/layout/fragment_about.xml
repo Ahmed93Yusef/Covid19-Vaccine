@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -29,11 +30,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@string/covid" />
+
     <View
+        android:id="@+id/view1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#5A61B7"
-        />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
     <View
         android:id="@+id/viewLoitty"
         android:layout_width="70dp"
@@ -67,6 +72,54 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/animation" />
+
+    <TextView
+        android:id="@+id/project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:fontFamily="@font/cardobold"
+        android:paddingStart="6dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/project_done_by"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/nooralddenText"
+        app:layout_constraintBottom_toTopOf="@id/ahmedText"
+         />
+
+    <TextView
+        android:id="@+id/ahmedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:elevation="10dp"
+        android:fontFamily="@font/cardobold"
+        android:paddingStart="16dp"
+        android:text="@string/team_leader_ahmed_yusef"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/nooralddenText"
+        app:layout_constraintBottom_toTopOf="@id/nooralddenText" />
+
+    <TextView
+        android:id="@+id/nooralddenText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:paddingStart="16dp"
+        android:fontFamily="@font/cardobold"
+        android:layout_marginEnd="64dp"
+        android:elevation="10dp"
+        android:text="@string/team_member_nooraldeen_akeel"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

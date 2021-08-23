@@ -63,7 +63,7 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
                 piechart?.apply {
                      /// Clear chart before new search
 
-                    addPieSlice(PieModel("people_vaccinated",data.people_vaccinated_per_hundred.toFloat(), -0xedcbaa  ))
+                    addPieSlice(PieModel("people_vaccinated",data.people_vaccinated_per_hundred.toFloat(), -0x78c0aa  ))
                     addPieSlice(PieModel("people_fully_vaccinated",data.people_fully_vaccinated_per_hundred.toFloat(), -0xa9cbaa  ))
 //                    addBar(BarModel(data.people_vaccinated_per_hundred.toFloat(), -0xa9cbaa))
 //                    addBar(BarModel(data.people_fully_vaccinated_per_hundred.toFloat(), -0x78c0aa))

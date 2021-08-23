@@ -30,4 +30,7 @@
     <string name="pfizer_bionte">Pfizer-Bionte</string>
     <string name="moderna">Moderna</string>
     <string name="sputnik_v">Sputnik-v</string>
+    <string name="project_done_by">Project Done By:</string>
+    <string name="team_leader_ahmed_yusef">Team Leader : Ahmed Yusef</string>
+    <string name="team_member_nooraldeen_akeel">Team Member : Nooraldeen Akeel</string>
 </resources>
