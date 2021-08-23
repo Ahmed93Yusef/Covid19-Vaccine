@@ -13,13 +13,13 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
     override fun setup() {
         binding!!.apply {
             inputCountryText.setOnQueryTextListener(object : android.widget.SearchView.OnQueryTextListener{
-                override fun onQueryTextSubmit(query: String?): Boolean {
-                    searchSubmit(query!!)
+                override fun onQueryTextSubmit(search: String?): Boolean {
+                    searchSubmit(search!!)
                     return false
                 }
 
-                override fun onQueryTextChange(newText: String?): Boolean {
-                    searchTextChange(newText!!)
+                override fun onQueryTextChange(newSearch: String?): Boolean {
+                    searchTextChange(newSearch!!)
                     return false
                 }
 
@@ -60,20 +60,18 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
                 txtPeopleFullyVaccine.text = data.people_fully_vaccinated.toInt().toString()
                 txtCountryName.text = data.country
 
+                barchart.apply {
+                    clearChart()  /// Clear chart before new search
 
-                barchart.clearChart() /// Clear chart before new search
+                    addBar(BarModel(data.people_vaccinated.toFloat(), -0xedcbaa , ))
+                    addBar(BarModel(data.people_fully_vaccinated.toFloat(), -0xcbcbaa))
+                    addBar(BarModel(data.people_vaccinated_per_hundred.toFloat(), -0xa9cbaa))
+                    addBar(BarModel(data.people_fully_vaccinated_per_hundred.toFloat(), -0x78c0aa))
+                    addBar(BarModel(data.daily_vaccinations.toFloat(), -0xa9480f))
+                    addBar(BarModel(data.daily_vaccinations_per_million.toFloat(), -0xcbcbaa))
 
-
-                barchart.addBar(BarModel(data.people_fully_vaccinated.toFloat(), -0xedcbaa , ))
-                barchart.addBar(BarModel(data.people_vaccinated.toFloat(), -0xcbcbaa))
-                barchart.addBar(BarModel(data.people_vaccinated_per_hundred.toFloat(), -0xa9cbaa))
-                barchart.addBar(BarModel(data.people_fully_vaccinated_per_hundred.toFloat(), -0x78c0aa))
-                barchart.addBar(BarModel(data.daily_vaccinations.toFloat(), -0xa9480f))
-                barchart.addBar(BarModel(data.daily_vaccinations_per_million.toFloat(), -0xcbcbaa))
-
-                barchart.startAnimation()
-
-
+                    startAnimation()
+                }
             }
         }
     }
@@ -84,7 +82,7 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
         DataManger.totalVaccination(binding?.inputCountryText.toString())
     }
 
-    fun visibility(state: Boolean){
+    private fun visibility(state: Boolean){
         binding!!.apply {
             cardCountry.isVisible = state
             lottieSearch.isVisible = !state
