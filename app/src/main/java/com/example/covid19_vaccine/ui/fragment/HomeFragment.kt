@@ -21,35 +21,25 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>() {
     lateinit var cardview : CardView
     lateinit var imageViewShowMore: ImageView
     lateinit var textViewShowless : TextView
-    private val myDetailsButtonFragment = DetailsButtonFragment()
-
     override val bindingInflater: (LayoutInflater) -> FragmentHomeBinding = FragmentHomeBinding::inflate
 
     override fun setup() {
-
         binding?.apply {
             expandLayout = binding!!.linearExpanded
             imageViewShowMore = binding!!.ShowMore
             cardview = binding!!.cardRight
         }
-
         val adapter = VaccineAdapter()  //////////////////////لا تحذفهن ذني لان مهمات كلش للرسايكل فيو
         recycler_Vaccine.adapter = adapter
-
-
-
-
     }
 
     override fun addCallBack() {
         showExpandedCard()
 
     }
-    fun showExpandedCard() {
+    fun showExpandedCard() { ////Expand card view th Show Vaccine details.
 
         binding!!.ShowMore.setOnClickListener{
-
-
             if (expandLayout.visibility == View.GONE)
             {
                 imageViewShowMore.setImageResource(R.drawable.arrow_up)
@@ -60,7 +50,6 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>() {
                 TransitionManager.beginDelayedTransition(cardview , AutoTransition())
                 expandLayout.visibility = View.GONE
                 imageViewShowMore.setImageResource(R.drawable.arrow_down)
-
             }
 
 

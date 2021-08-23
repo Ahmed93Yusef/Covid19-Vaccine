@@ -135,6 +135,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginRight="5dp"
             android:elevation="1dp"
+            android:onClick="showVaccineType"
             app:cardCornerRadius="16dp"
             app:layout_constraintEnd_toStartOf="@id/cardRight"
             app:layout_constraintHorizontal_chainStyle="packed"

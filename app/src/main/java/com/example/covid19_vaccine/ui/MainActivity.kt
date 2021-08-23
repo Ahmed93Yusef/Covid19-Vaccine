@@ -160,5 +160,11 @@ class MainActivity: AppCompatActivity() {
 
     }
 
+    fun showVaccineType(view: View) {
+
+
 
     }
+
+
+}

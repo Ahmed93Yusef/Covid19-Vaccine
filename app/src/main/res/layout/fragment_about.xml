@@ -21,7 +21,7 @@
         android:id="@+id/imageView"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintVertical_bias="0.50"
         android:src="@drawable/covid3"
         android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,8 +42,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.24"
-        app:layout_constraintVertical_bias="0.33"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintVertical_bias="0.36"
         />
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="0dp"
