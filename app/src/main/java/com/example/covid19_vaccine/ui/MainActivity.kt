@@ -1,9 +1,7 @@
 package com.example.covid19_vaccine.ui
 import android.os.Bundle
-import android.transition.AutoTransition
-import android.transition.TransitionManager
 import android.view.View
-import android.view.WindowManager.LayoutParams.*
+import android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -13,7 +11,6 @@ import com.example.covid19_vaccine.data.DataManger
 import com.example.covid19_vaccine.databinding.ActivityMainBinding
 import com.example.covid19_vaccine.ui.fragment.*
 import com.example.covid19_vaccine.util.CsvParser
-import kotlinx.android.synthetic.main.fragment_home.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
@@ -42,13 +39,7 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(requireNotNull(binding).root)
-
-
         window.setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN)
-
-
-
-
 
         setup()
         addCallbacks()

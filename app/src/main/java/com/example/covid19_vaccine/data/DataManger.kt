@@ -11,6 +11,10 @@ object DataManger {
 
     var totalFullyVaccine = 0
 
+
+
+
+
     fun addVaccine(vaccine: VaccineData) = vaccineList.add(vaccine)
 
     fun getCountry(country: String) = vaccineList.let {
@@ -23,15 +27,10 @@ object DataManger {
         )
     }
 
-    fun totalVaccination(country: String): Int {
-        vaccineList.forEach {
-            if(it.country.lowercase().trim() == country.lowercase().trim() ){
-                totalFullyVaccine =+ it.people_fully_vaccinated.toInt()
-            }
-        }
-        return totalFullyVaccine
 
-    }
+
+
+
 
 
 
