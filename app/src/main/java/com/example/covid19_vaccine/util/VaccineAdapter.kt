@@ -16,7 +16,6 @@ class VaccineAdapter() : RecyclerView.Adapter<VaccineAdapter.VaccineHolder>() {
         "Pfizer-biontec" ,
         "Novavax" ,
         "Johnson and johnson",
-        "Sinopharm",
     )
     private var images = intArrayOf(
         R.drawable.image,

@@ -14,7 +14,6 @@ class CsvParser {
             people_vaccinated_per_hundred = tokens[Constant.ColumnIndex.PEOPLE_VACCINATED_PER_HUNDRED].toDoubleOrNull() ?: 0.0,
             people_fully_vaccinated_per_hundred = tokens[Constant.ColumnIndex.PEOPLE_FULLY_VACCINATED_PER_HUNDRED].toDoubleOrNull() ?: 0.0,
             daily_vaccinations_per_million = tokens[Constant.ColumnIndex.DAILY_VACCINATIONS_PER_MILLION].toDoubleOrNull() ?: 0.0
-
         )
     }
 }
