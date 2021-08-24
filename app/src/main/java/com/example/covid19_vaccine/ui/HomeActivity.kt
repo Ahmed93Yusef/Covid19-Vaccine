@@ -8,13 +8,13 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
-import com.example.covid19_vaccine.databinding.ActivityMainBinding
+import com.example.covid19_vaccine.databinding.ActivityHomeBinding
 import com.example.covid19_vaccine.ui.fragment.*
 import com.example.covid19_vaccine.util.CsvParser
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
-class MainActivity: AppCompatActivity() {
+class HomeActivity: AppCompatActivity() {
 
     lateinit var expandLayout : LinearLayout
     lateinit var cardview : CardView
@@ -24,7 +24,7 @@ class MainActivity: AppCompatActivity() {
 
     lateinit var imagePreventFlipper: ViewFlipper
 
-    var binding : ActivityMainBinding? = null
+    var binding : ActivityHomeBinding? = null
 
 
     private val myDetailsButtonFragment = DetailsButtonFragment()
@@ -37,7 +37,7 @@ class MainActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(requireNotNull(binding).root)
         window.setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN)
 

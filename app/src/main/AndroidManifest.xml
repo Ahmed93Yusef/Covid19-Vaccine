@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Covid19_vaccine"
         >
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
