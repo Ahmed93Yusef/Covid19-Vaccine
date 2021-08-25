@@ -39,6 +39,7 @@ class HomeActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(requireNotNull(binding).root)
+        setTheme(R.style.Theme_Covid19_vaccine)
         window.setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN)
 
         setup()
