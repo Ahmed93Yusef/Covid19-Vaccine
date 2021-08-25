@@ -1,7 +1,6 @@
 package com.example.covid19_vaccine.data
 
 import com.example.covid19_vaccine.data.domain.VaccineData
-import java.security.Key
 
 
 object DataManger {
