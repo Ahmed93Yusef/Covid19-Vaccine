@@ -8,7 +8,10 @@ object DataManger {
 
     private var countryList = mutableListOf<VaccineData>()
 
-    var totalFullyVaccine = 0
+    private var oneCountryList = mutableListOf<VaccineData>()
+
+    private var topVaccine = mutableListOf<Double>()
+
 
 
     fun addVaccine(vaccine: VaccineData) = vaccineList.add(vaccine)
@@ -24,11 +27,29 @@ object DataManger {
         )
     }
 
+    fun getLastCountry(){
+        for (i in 0 until vaccineList.size) {
+           if( vaccineList[i].country != vaccineList[i+1].country){
+            oneCountryList.add(vaccineList[i])
+           }
+        }
+
+    }
+
+    fun getTopFive(){
+        for (i in oneCountryList.indices){
+            topVaccine.add(oneCountryList[i].people_vaccinated)
+        }
+    }
+    fun topTen() = topVaccine.sort()
+
+
+
     fun convertNumber(number: Double): String {
         return when {
             (number / 1000000) >= 1 -> {
-                var number1 =number / 1000000
-                String.format("%.2f", number1).toString() + "M"
+                val number1 =number / 1000000
+                String.format("%.2f", number1) + "M"
             }
             (number / 1000) >= 1 -> {
                 (((number / 1000).toInt()).toString() + "K")
@@ -38,6 +59,8 @@ object DataManger {
             }
         }
     }
+
+
 }
 
 

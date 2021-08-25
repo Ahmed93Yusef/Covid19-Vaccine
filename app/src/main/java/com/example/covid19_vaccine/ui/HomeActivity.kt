@@ -57,7 +57,7 @@ class HomeActivity: AppCompatActivity() {
 
     private fun selectFragment(){
 
-        binding?.bottomNavigationView!!.setOnItemSelectedListener {
+        binding?.bottomNavigationView?.setOnItemSelectedListener {
                 item ->
             when(item.itemId){
                 R.id.homePage -> {

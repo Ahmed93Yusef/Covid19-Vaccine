@@ -23,9 +23,9 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>() {
 
     override fun setup() {
         binding?.apply {
-            expandLayout = binding!!.linearExpanded
-            imageViewShowMore = binding!!.ShowMore
-            cardview = binding!!.cardRight
+            expandLayout = linearExpanded
+            imageViewShowMore =ShowMore
+            cardview = cardRight
         }
         val adapter = VaccineAdapter()
         recycler_Vaccine.adapter = adapter
@@ -37,7 +37,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>() {
     }
     fun showExpandedCard() { ////Expand card view th Show Vaccine details.
 
-        binding!!.ShowMore.setOnClickListener{
+        binding?.ShowMore?.setOnClickListener{
             if (expandLayout.visibility == View.GONE)
             {
                 imageViewShowMore.setImageResource(R.drawable.arrow_up)

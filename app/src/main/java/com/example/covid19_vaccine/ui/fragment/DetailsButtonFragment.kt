@@ -7,10 +7,12 @@ class DetailsButtonFragment : BaseFragment<FragmentButtonDetailsBinding>(){
     override val bindingInflater: (LayoutInflater) -> FragmentButtonDetailsBinding = FragmentButtonDetailsBinding::inflate
 
     override fun setup() {
+
     }
 
     override fun addCallBack() {
     }
+
 
 
 }

@@ -11,7 +11,7 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
     override val bindingInflater: (LayoutInflater) -> FragmentSearchBinding = FragmentSearchBinding::inflate
 
     override fun setup() {
-        binding!!.apply {
+        binding?.apply {
             inputCountryText.setOnQueryTextListener(object : android.widget.SearchView.OnQueryTextListener{
                 override fun onQueryTextSubmit(search: String?): Boolean {
                     searchSubmit(search!!)
@@ -28,7 +28,7 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
     }
 
     private fun searchSubmit(country: String) {
-        binding!!.apply {
+        binding?.apply {
             visibility(true)
             if(country.isEmpty() || DataManger.getCountry(country.lowercase().trim())
                         [country.lowercase().trim()].isNullOrEmpty()) {
@@ -43,11 +43,11 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
     }
 
     private fun searchTextChange(newText: String){
-        binding!!.apply {
+        binding?.apply {
             lottieError .visibility = View.GONE
             visibility(false)
             lottieSearch.isVisible = true
-            piechart?.isVisible = false
+            piechart.isVisible = false
         }
     }
     
@@ -84,10 +84,10 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
     }
 
     private fun visibility(state: Boolean){
-        binding!!.apply {
+        binding?.apply {
             cardCountry.isVisible = state
             lottieSearch.isVisible = !state
-            piechart?.isVisible = state
+            piechart.isVisible = state
         }
     }
 

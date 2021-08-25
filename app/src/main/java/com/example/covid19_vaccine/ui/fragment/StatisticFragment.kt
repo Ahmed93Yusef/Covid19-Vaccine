@@ -11,7 +11,10 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
 
     override fun addCallBack() {
 
+
     }
+
+
 
 
 

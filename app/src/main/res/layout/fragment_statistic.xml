@@ -41,6 +41,7 @@
                                     android:orientation="vertical"
                                     android:layout_height="match_parent">
                                         <TextView
+                                            android:id="@+id/topOneText"
                                             android:layout_width="match_parent"
                                             android:layout_height="80dp"
                                             android:gravity="center"
@@ -71,6 +72,7 @@
                                     android:orientation="vertical"
                                     android:layout_height="match_parent">
                                         <TextView
+                                            android:id="@+id/topTwoText"
                                             android:layout_width="match_parent"
                                             android:layout_height="80dp"
                                             android:gravity="center"
@@ -101,6 +103,7 @@
                                     android:orientation="vertical"
                                     android:layout_height="match_parent">
                                         <TextView
+                                            android:id="@+id/topThreeText"
                                             android:layout_width="match_parent"
                                             android:layout_height="80dp"
                                             android:gravity="center"
@@ -131,6 +134,7 @@
                                     android:orientation="vertical"
                                     android:layout_height="match_parent">
                                         <TextView
+                                            android:id="@+id/topFourText"
                                             android:layout_width="match_parent"
                                             android:layout_height="80dp"
                                             android:gravity="center"

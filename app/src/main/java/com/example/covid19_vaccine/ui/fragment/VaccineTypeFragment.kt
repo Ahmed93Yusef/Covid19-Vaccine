@@ -19,17 +19,17 @@ class VaccineTypeFragment : BaseFragment<FragmentVaccineTypeBinding>(){
 
     override fun addCallBack() {
         binding?.let {
-            expandedCard(it.expandedLinear1, binding!!.showExpandedLinear1, binding!!.cardView1)
-            expandedCard(it.expandedLinear2, binding!!.showExpandedLinear2, binding!!.cardView2)
-            expandedCard(it.expandedLinear3, binding!!.showExpandedLinear3, binding!!.cardView3)
-            expandedCard(it.expandedLinear4, binding!!.showExpandedLinear4, binding!!.cardView4)
-            expandedCard(it.expandedLinear5, binding!!.showExpandedLinear5, binding!!.cardView5)
-            expandedCard(it.expandedLinear6, binding!!.showExpandedLinear6, binding!!.cardView6)
-            expandedCard(it.expandedLinear7, binding!!.showExpandedLinear7, binding!!.cardView7)
+            expandedCard(it.expandedLinear1, it.showExpandedLinear1, it.cardView1)
+            expandedCard(it.expandedLinear2, it.showExpandedLinear2, it.cardView2)
+            expandedCard(it.expandedLinear3, it.showExpandedLinear3, it.cardView3)
+            expandedCard(it.expandedLinear4, it.showExpandedLinear4, it.cardView4)
+            expandedCard(it.expandedLinear5, it.showExpandedLinear5, it.cardView5)
+            expandedCard(it.expandedLinear6, it.showExpandedLinear6, it.cardView6)
+            expandedCard(it.expandedLinear7, it.showExpandedLinear7, it.cardView7)
         }
     }
     fun expandedCard(linear: LinearLayout, buttonShowExpanded: ImageView, image: CardView) {
-        binding!!.apply {
+        binding?.apply {
 
             buttonShowExpanded.setOnClickListener {
                 if (linear.visibility == View.GONE) {
