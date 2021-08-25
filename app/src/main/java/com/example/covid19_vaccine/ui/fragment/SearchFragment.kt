@@ -55,16 +55,16 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
     private fun setData(country: String) {
         DataManger.getCountry(country).forEach { dataCountry ->
             val data = dataCountry.value[dataCountry.value.size-1]
-            binding!!.apply {
-                txtPeopleVaccine.text = data.people_vaccinated_per_hundred.toString()
-                txtPeopleFullyVaccine.text = data.people_fully_vaccinated_per_hundred.toString()
+            binding?.apply {
+                txtPeopleVaccine.text = DataManger.convertNumber(data.people_vaccinated)
+                txtPeopleFullyVaccine.text = DataManger.convertNumber(data.people_fully_vaccinated)
                 txtCountryName.text = data.country
 
-                piechart?.apply {
-                     /// Clear chart before new search
+                piechart.apply {
+                    clearChart()      /// Clear chart before new search
 
-                    addPieSlice(PieModel("people_vaccinated",data.people_vaccinated_per_hundred.toFloat(), -0x78c0aa  ))
-                    addPieSlice(PieModel("people_fully_vaccinated",data.people_fully_vaccinated_per_hundred.toFloat(), -0xa9cbaa  ))
+                    addPieSlice(PieModel("people_vaccinated",data.people_vaccinated.toFloat(), -0x78c0aa  ))
+                    addPieSlice(PieModel("people_fully_vaccinated",data.people_fully_vaccinated.toFloat(), -0xa9cbaa  ))
 //                    addBar(BarModel(data.people_vaccinated_per_hundred.toFloat(), -0xa9cbaa))
 //                    addBar(BarModel(data.people_fully_vaccinated_per_hundred.toFloat(), -0x78c0aa))
 //                    addBar(BarModel(data.daily_vaccinations.toFloat(), -0xa9480f))
@@ -75,6 +75,8 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
             }
         }
     }
+
+
 
 
     override fun addCallBack() {

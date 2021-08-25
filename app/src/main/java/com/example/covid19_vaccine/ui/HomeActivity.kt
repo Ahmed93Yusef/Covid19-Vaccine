@@ -47,14 +47,11 @@ class HomeActivity: AppCompatActivity() {
 
     }
     private fun setup() {
-
         initSubView()
         parseFile()
-
     }
 
     private fun addCallbacks() {
-        initSubView()
         selectFragment()
     }
 
