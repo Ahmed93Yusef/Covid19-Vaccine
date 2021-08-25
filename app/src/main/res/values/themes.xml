@@ -15,9 +15,9 @@
 <!--        <item name="android:windowTranslucentStatus">true</item>-->
 <!--        <item name="android:windowTranslucentNavigation">true</item>-->
     </style>
-    <style name="shapeCard" parent="Widget.AppCompat.Button">
-        <item name="backgroundTint">@drawable/shapeview</item>
-
+    <style name="shapeCard" parent="Widget.MaterialComponents.CardView">
+        <item name="android:shape">rectangle</item>
+        <item name="android:topRightRadius">100dp</item>
     </style>
     <style name="splashScreenTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@drawable/spalsh_image</item>

@@ -1,46 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="130dp"
-    android:layout_height="110dp"
+    android:layout_width="120dp"
+    android:layout_height="150dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardView"
+    android:id="@+id/cardViewItem"
     android:layout_gravity="center_horizontal"
-    android:layout_marginTop="5dp"
-    android:layout_marginLeft="5dp"
-    android:layout_marginBottom="4dp"
-    android:layout_marginRight="5dp"
-    app:contentPadding="12dp"
-    app:cardMaxElevation="8dp"
-    app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="12dp"
-    >
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_margin="2dp"
+    app:cardMaxElevation="16dp"
+    app:cardCornerRadius="16dp">
+    <LinearLayout
         android:id="@+id/my_layout"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/image_Vaccine"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#cdd6fc">
+            <ImageView
+                android:id="@+id/serviceImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_handshake"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
         <TextView
-            android:id="@+id/textNameVaccine"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textColor="#4F40D5"
-            android:fontFamily="@font/loramedium"
-            app:layout_constraintLeft_toLeftOf="@id/image_Vaccine"
-            app:layout_constraintRight_toRightOf="@id/image_Vaccine"
-            app:layout_constraintTop_toBottomOf="@id/image_Vaccine" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+            android:id="@+id/serviceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/health_support"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/lorabold"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
 </androidx.cardview.widget.CardView>

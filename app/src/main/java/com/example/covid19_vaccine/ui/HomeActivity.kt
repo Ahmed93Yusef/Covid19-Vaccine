@@ -1,5 +1,6 @@
 package com.example.covid19_vaccine.ui
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN
 import android.widget.*
@@ -22,7 +23,6 @@ class HomeActivity: AppCompatActivity() {
     lateinit var textViewShowless : TextView
 
 
-    lateinit var imagePreventFlipper: ViewFlipper
 
     var binding : ActivityHomeBinding? = null
 
@@ -41,10 +41,10 @@ class HomeActivity: AppCompatActivity() {
         setContentView(requireNotNull(binding).root)
         setTheme(R.style.Theme_Covid19_vaccine)
         window.setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN)
+        window.setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN) //this set using for hiding the statistbar
 
         setup()
         addCallbacks()
-
 
     }
     private fun setup() {
@@ -88,7 +88,7 @@ class HomeActivity: AppCompatActivity() {
 
     }
 
-    fun addFragment(fragment: Fragment) {
+    private fun addFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.add(R.id.fragment_container, fragment)
         transaction.commit()
@@ -100,7 +100,6 @@ class HomeActivity: AppCompatActivity() {
         transaction.commit()
 
     }
-
     private fun parseFile() {
         val inputStream = assets.open("country_vaccinations.csv")
         val buffer = BufferedReader(InputStreamReader(inputStream))
@@ -114,46 +113,10 @@ class HomeActivity: AppCompatActivity() {
 
 
     //Image Flipper
-    private fun imageFlipper(){
-        val image = arrayListOf<Int>(
-            //List of Image Of Prevent
-        )
 
-//        imagePreventFlipper = findViewById(R.id.imagePreventFlipper)
-
-        for (i in image.iterator()){
-            flipeerImage(i)
-        }
-    }
-
-    fun flipeerImage(image : Int){
-        val imageView = ImageView(this)
-        imageView.setBackgroundResource(image)
-        imagePreventFlipper.addView(imageView)
-        imagePreventFlipper.flipInterval = 4000
-        imagePreventFlipper.isAutoStart=true
-
-        imagePreventFlipper.setInAnimation(this,android.R.anim.slide_in_left)
-        imagePreventFlipper.setOutAnimation(this,android.R.anim.slide_out_right)
-
-    }
-
-    fun button(view: View) {
-
-        view.findViewById<Button>(R.id.buttonDetails).setOnClickListener {
-
-
-            replaceFragment(myDetailsButtonFragment)
-
-        }
-
-    }
-
-    fun showVaccineType(view: View) {
-
-
-
-    }
-
-
+//    fun button(view: View) {
+//        view.findViewById<Button>(R.id.buttonDetails).setOnClickListener {
+//            replaceFragment(myDetailsButtonFragment)
+//        }
+//    }
 }

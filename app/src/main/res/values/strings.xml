@@ -35,4 +35,8 @@
     <string name="team_member_nooraldeen_akeel">Team Member : Nooraldeen Akeel</string>
     <string name="people_fully_vaccinated">people fully vaccinated</string>
     <string name="people_vaccinated">people vaccinated</string>
+    <string name="services">Services :</string>
+    <string name="health_support">Health Support</string>
+    <string name="iraq_statistics">IRAQ Statistics : </string>
+    <string name="this_statistics_shown">This Statistics Shown the Fully Vaccination and Daily</string>
 </resources>
