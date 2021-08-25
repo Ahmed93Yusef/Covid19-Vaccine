@@ -2,6 +2,7 @@ package com.example.covid19_vaccine.data
 
 import android.util.Log
 import com.example.covid19_vaccine.data.domain.VaccineData
+import java.security.Key
 
 
 object DataManger {
@@ -9,13 +10,31 @@ object DataManger {
 
     private var countryList = mutableListOf<VaccineData>()
 
-    var totalFullyVaccine = 0
-
-
-
-
+    private var vaccineIndex = 0
 
     fun addVaccine(vaccine: VaccineData) = vaccineList.add(vaccine)
+
+
+//    this function using with RecyclerView to make the the last position on Recycler can Reachable
+
+    fun getCurrentItem():VaccineData = vaccineList[vaccineIndex]
+    fun getNextItem() : VaccineData{
+        var a : Double = 0.0
+        vaccineIndex++
+        if (vaccineIndex == vaccineList.size){
+            vaccineIndex = 0
+        }
+        return vaccineList[vaccineIndex]
+    }
+    fun getPreviousItem() : VaccineData{ //this function using with Recycler View to make the the last position on Recycler can Reachable
+        vaccineIndex--
+        if (vaccineIndex == -1){
+            vaccineIndex = vaccineList.size-1
+        }
+        return vaccineList[vaccineIndex]
+    }
+
+    
 
     fun getCountry(country: String) = vaccineList.let {
         countryList = it.filter { it1 ->
@@ -34,14 +53,12 @@ object DataManger {
 
 
 
+    private fun log(value : Any) {
+       Log.v("MAIN_ACTIVITY", value.toString())
 
-
-
-
-    private fun log(value : Any){
-        Log.v("MAIN_ACTIVITY", value.toString())
     }
 
+
+
+
   }
-
-
