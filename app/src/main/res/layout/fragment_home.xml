@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#03A9F4"
-    tools:context=".ui.fragment.HomeFragment">
+    tools:context=".ui.fragment.HomeFragment"
+    >
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -19,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <ViewFlipper
-            android:id="@+id/viewFlipper"
+            android:id="@+id/view_Flipper"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </androidx.cardview.widget.CardView>

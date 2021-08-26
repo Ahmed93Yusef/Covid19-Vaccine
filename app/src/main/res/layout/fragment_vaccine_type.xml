@@ -99,6 +99,7 @@
                     android:gravity="center_horizontal"
                     android:orientation="horizontal">
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/Vizor_type1"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_gravity="center"
@@ -107,6 +108,7 @@
                         app:cardCornerRadius="8dp"
                         app:cardElevation="8dp" />
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/sputnik_type2"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_gravity="center"
@@ -115,6 +117,7 @@
                         app:cardCornerRadius="8dp"
                         app:cardElevation="8dp" />
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/asta_type3"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_gravity="center"
@@ -123,11 +126,39 @@
                         app:cardCornerRadius="8dp"
                         app:cardElevation="8dp" />
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/moderna_type4"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_gravity="center"
                         android:layout_marginEnd="@dimen/marginEnd16"
                         app:cardBackgroundColor="#EDD81B"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/novavax_type5"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/marginEnd16"
+                        app:cardBackgroundColor="#FFEB3B"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/jhonson_type6"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/marginEnd16"
+                        app:cardBackgroundColor="#E6D533"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/senphorm_type7"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/marginEnd16"
+                        app:cardBackgroundColor="#FDE61D"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="8dp" />
                 </LinearLayout>
