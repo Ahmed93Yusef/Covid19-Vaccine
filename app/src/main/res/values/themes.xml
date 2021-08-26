@@ -15,8 +15,9 @@
 <!--        <item name="android:windowTranslucentStatus">true</item>-->
 <!--        <item name="android:windowTranslucentNavigation">true</item>-->
     </style>
-    <style name="shapeCard" parent="Widget.MaterialComponents.CardView">
-        <item name="android:shape">rectangle</item>
-        <item name="android:topRightRadius">100dp</item>
+    <style name="shapeCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="android:topRightRadius">120dp</item>
+        <item name="android:startColor">#84DEEA</item>
+        <item name="android:endColor">#DD9B3A</item>
     </style>
 </resources>

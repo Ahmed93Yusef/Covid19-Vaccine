@@ -30,6 +30,7 @@ class MainActivity: AppCompatActivity() {
     private val mySearchFragment = SearchFragment()
     private val myStatisticFragment = StatisticFragment()
     private val myAboutFragment = AboutFragment()
+    private val myVaccineType = VaccineTypeFragment()
 
 
 
@@ -109,6 +110,13 @@ class MainActivity: AppCompatActivity() {
         }
     }
 
+    fun showVaccienTypr(view: android.view.View) {
+        replaceFragment(myVaccineType)
+    }
+
+    fun showDescription(view: android.view.View) {
+        replaceFragment(myDetailsButtonFragment)
+    }
 
 
     //Image Flipper
