@@ -14,6 +14,9 @@
     <string name="statement2">The Application Was Develop By Banana Team :\n 🍌 Ahmed Yusef\n 🍌 Ali Khalifa\n 🍌 Nooralden\n 🍌 Akram Talib\n 🍌 Mohamed Ali\n 🍌 Asawer Dawood </string>
     <string name="input_country">input Country</string>
     <string name="vaizor">Vaccination is a simple, safe, and effective way of protecting people against harmful diseases, before they come into contact with them. It uses your body’s natural defenses to build resistance to specific infections and makes your immune system stronger.
+    Vaccines train your immune system to create antibodies, just as it does when it’s exposed to a disease.Vaccination is a simple, safe, and effective way of protecting people against harmful diseases, before they come into contact with them. It uses your body’s natural defenses to build resistance to specific infections and makes your immune system stronger.
+    Vaccines train your immune system to create antibodies, just as it does when it’s exposed to a disease.Vaccination is a simple, safe, and effective way of protecting people against harmful diseases, before they come into contact with them. It uses your body’s natural defenses to build resistance to specific infections and makes your immune system stronger.
+    Vaccines train your immune system to create antibodies, just as it does when it’s exposed to a disease.Vaccination is a simple, safe, and effective way of protecting people against harmful diseases, before they come into contact with them. It uses your body’s natural defenses to build resistance to specific infections and makes your immune system stronger.
     Vaccines train your immune system to create antibodies, just as it does when it’s exposed to a disease.</string>
     <string name="App_Name">Covid 19 Vaccine App</string>
     <string name="covid">covid</string>
@@ -39,4 +42,7 @@
     <string name="health_support">Health Support</string>
     <string name="iraq_statistics">IRAQ Statistics : </string>
     <string name="this_statistics_shown">This Statistics Shown the Fully Vaccination and Daily</string>
+    <string name="vaccination">Vaccination</string>
+    <string name="covid_19">Covid-19</string>
+    <string name="descriptionScreen">Description</string>
 </resources>

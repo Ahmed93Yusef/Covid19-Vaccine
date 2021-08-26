@@ -1,9 +1,6 @@
 package com.example.covid19_vaccine.ui
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN
-import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
@@ -16,26 +13,18 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 
 class HomeActivity: AppCompatActivity() {
-
-    lateinit var expandLayout : LinearLayout
-    lateinit var cardview : CardView
-    lateinit var textViewShowMore: TextView
-    lateinit var textViewShowless : TextView
-
-
-
     var binding : ActivityHomeBinding? = null
 
-
-    private val myDetailsButtonFragment = DetailsButtonFragment()
     private val myHomeFragment = HomeFragment()
     private val mySearchFragment = SearchFragment()
     private val myStatisticFragment = StatisticFragment()
     private val myAboutFragment = AboutFragment()
-
-
+    private val myVaccineType = VaccineTypeFragment()
+    private val myDetailsButtonFragment = DetailsButtonFragment()
+    lateinit var viewC : CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(requireNotNull(binding).root)
@@ -45,8 +34,8 @@ class HomeActivity: AppCompatActivity() {
 
         setup()
         addCallbacks()
-
     }
+
     private fun setup() {
         initSubView()
         parseFile()
@@ -54,6 +43,8 @@ class HomeActivity: AppCompatActivity() {
 
     private fun addCallbacks() {
         selectFragment()
+
+
     }
 
     private fun selectFragment(){
@@ -100,6 +91,12 @@ class HomeActivity: AppCompatActivity() {
         transaction.commit()
 
     }
+      fun removeFragment(fragment: Fragment){
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.remove(fragment)
+        transaction.commit()
+
+    }
     private fun parseFile() {
         val inputStream = assets.open("country_vaccinations.csv")
         val buffer = BufferedReader(InputStreamReader(inputStream))
@@ -112,11 +109,4 @@ class HomeActivity: AppCompatActivity() {
 
 
 
-    //Image Flipper
-
-//    fun button(view: View) {
-//        view.findViewById<Button>(R.id.buttonDetails).setOnClickListener {
-//            replaceFragment(myDetailsButtonFragment)
-//        }
-//    }
 }

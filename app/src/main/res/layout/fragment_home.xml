@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#03A9F4"
-    tools:context=".ui.fragment.HomeFragment">
+    tools:context=".ui.fragment.HomeFragment"
+    >
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -17,10 +18,9 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
         <ViewFlipper
-            android:id="@+id/viewFlipper"
+            android:id="@+id/view_Flipper"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </androidx.cardview.widget.CardView>
@@ -35,13 +35,12 @@
         android:textColor="@color/black"
         android:fontFamily="@font/frankruhllibremedium"
         app:layout_constraintTop_toBottomOf="@id/cardView"
-        app:layout_constraintStart_toStartOf="@id/cardView"
-        />
+        app:layout_constraintStart_toStartOf="@id/cardView" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vaccineRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/services"
@@ -59,16 +58,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/vaccineRecyclerView"
         app:layout_constraintEnd_toEndOf="@id/vaccineRecyclerView"
-        app:layout_constraintTop_toBottomOf="@id/vaccineRecyclerView"
-        >
+        app:layout_constraintTop_toBottomOf="@id/vaccineRecyclerView">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/iraq_statistics"
             android:textSize="25sp"
-            android:layout_marginLeft="16dp"
-            android:fontFamily="@font/lorabold"
-            />
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/lorabold" />
         <TextView
             android:layout_width="260dp"
             android:layout_height="wrap_content"
@@ -77,20 +74,19 @@
             android:textStyle="bold"
             android:fontFamily="@font/frankruhllibrelight"
             android:letterSpacing="0.01"
-            android:layout_marginLeft="16dp"
-            android:textSize="16sp"
-            />
+            android:layout_marginStart="16dp"
+            android:textSize="16sp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:gravity="center"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
             <androidx.cardview.widget.CardView
                 android:layout_width="190dp"
                 android:layout_height="match_parent"
                 app:cardElevation="8dp"
+                android:onClick="showDescription"
                 android:background="@drawable/shapestatictic"
                 app:cardCornerRadius="6dp">
                 <TextView
@@ -102,18 +98,15 @@
                     android:fontFamily="@font/frankruhllibremedium"
                     android:textSize="35sp"
                     android:gravity="start"
-                    android:layout_margin="16dp"
-                    />
+                    android:layout_margin="16dp" />
 
             </androidx.cardview.widget.CardView>
-
             <androidx.cardview.widget.CardView
                 android:layout_width="190dp"
                 android:layout_height="120dp"
                 app:cardElevation="8dp"
-                style="@style/shapeCard"
-                android:layout_marginLeft="4dp"
-                android:background="@drawable/shapestatictic"
+                android:onClick="showVaccienTypr"
+                android:layout_marginStart="4dp"
                 app:cardCornerRadius="8dp">
                 <TextView
                     android:id="@+id/homeScreenTotal"
@@ -138,11 +131,5 @@
 
 
         </LinearLayout>
-
-
-
     </LinearLayout>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
