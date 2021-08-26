@@ -13,7 +13,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 
 class HomeActivity: AppCompatActivity() {
-    var binding : ActivityHomeBinding? = null
+    private var binding : ActivityHomeBinding? = null
 
     private val myHomeFragment = HomeFragment()
     private val mySearchFragment = SearchFragment()

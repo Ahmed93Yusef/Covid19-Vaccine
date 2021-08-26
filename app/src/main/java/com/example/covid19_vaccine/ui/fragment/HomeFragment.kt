@@ -3,11 +3,8 @@ package com.example.covid19_vaccine.ui.fragment
 import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.ViewFlipper
-import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.databinding.FragmentHomeBinding
-import com.example.covid19_vaccine.ui.MainActivity
-import com.example.covid19_vaccine.ui.fragment.*
 import com.example.covid19_vaccine.util.VaccineAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 
