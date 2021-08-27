@@ -58,6 +58,7 @@ object DataManger {
         }
     }
     fun topTen() = topCountriesVaccinated.sort()
+    fun tonighn(){}
 
 
 
