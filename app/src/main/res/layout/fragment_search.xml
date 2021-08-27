@@ -138,20 +138,12 @@
         app:lottie_autoPlay="true"
         app:lottie_rawRes="@raw/search" />
 
-    <org.eazegraph.lib.charts.PieChart
-        android:id="@+id/piechart"
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/pieChart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:padding="30dp"
-        app:egLegendTextSize="18sp"
-        app:egUsePieRotation="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_country" />
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

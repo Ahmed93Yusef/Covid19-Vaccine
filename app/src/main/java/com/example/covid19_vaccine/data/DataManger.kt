@@ -60,6 +60,7 @@ object DataManger {
     fun topTen() = topCountriesVaccinated.sort()
 
 
+// function to convert big numbers to K and M style
 
     fun convertNumber(number: Double): String {
         return when {
