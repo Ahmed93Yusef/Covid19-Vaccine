@@ -31,7 +31,6 @@ class HomeActivity: AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(requireNotNull(binding).root)
 
-        setTheme(R.style.Theme_Covid19_vaccine)
         window.setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN) //this function using for hiding the stats bar
 
         setup()
@@ -87,6 +86,7 @@ class HomeActivity: AppCompatActivity() {
             DataManger.addVaccine(currentVaccine)
         }
     }
+
     /* this function Do to tran data the csv provide it to File to make dail with it symbol
     ,then sprite the data to single line using @parse function then using it. */
 
