@@ -11,15 +11,17 @@
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/shapeview.xml" value="0.2203125" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/style.xml" value="0.2203125" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout-v31/fragment_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/activity_main.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_about.xml" value="0.2" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_button_details.xml" value="0.22" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_search.xml" value="0.25" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_statistic.xml" value="0.25" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_vaccine_type.xml" value="0.19" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_vaccine_type.xml" value="0.2" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_vaccine_type_show.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/recycler_view_layout.xml" value="0.18" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/menu/main_bottom_navigation.xml" value="0.1" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/drawable/shearch_text_background.xml" value="0.24114583333333334" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout-v31/fragment_search.xml" value="0.22083333333333333" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/activity_Home.xml" value="0.22083333333333333" />

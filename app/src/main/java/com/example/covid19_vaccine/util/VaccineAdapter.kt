@@ -5,38 +5,26 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.covid19_vaccine.R
+import com.example.covid19_vaccine.data.domain.VaccineRecyclerView
 import com.example.covid19_vaccine.databinding.RecyclerViewLayoutBinding
 
-class VaccineAdapter() : RecyclerView.Adapter<VaccineAdapter.VaccineHolder>() {
-    private var vaccineName = arrayOf(
-        "Health Support" ,
-        "Vaccine Type" ,
-        "Test",
-        "Covid Prevent",
-    )
-    private var images = intArrayOf(
-        R.drawable.ic_handshake,
-        R.drawable.ic_injection,
-        R.drawable.ic_test_tube,
-        R.drawable.ic_heart,
-    )
+class VaccineAdapter(private val listData : List<VaccineRecyclerView>, private val listener : VaccineInteraction) : RecyclerView.Adapter<VaccineAdapter.VaccineHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VaccineHolder {
-        val view =LayoutInflater.from(parent.context).inflate(R.layout.recycler_view_layout,parent,false)
-        return VaccineHolder(view)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VaccineHolder =
+        VaccineHolder(LayoutInflater.from(parent.context).inflate(R.layout.recycler_view_layout,parent,false))
 
     override fun onBindViewHolder(holder: VaccineHolder, position: Int) {
-
+        val currentServices = listData[position]
         holder.binding.apply {
-            serviceName.text= vaccineName[position]
-            serviceImage.setImageResource(images[position])
-
-    }}
-    override fun getItemCount() = vaccineName.size
-
-    inner class VaccineHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-        val binding = RecyclerViewLayoutBinding.bind(itemView)
-
+            serviceName.text= currentServices.nameVaccine
+            serviceImage.setImageResource(currentServices.image)
+            serviceName.setOnClickListener {listener.onClickServiceName(currentServices.nameVaccine)}
+            serviceImage.setOnClickListener {listener.onClickServiceImage(currentServices.image)}
+        }
     }
+    override fun getItemCount() = listData.size
+
+        inner class VaccineHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+            val binding = RecyclerViewLayoutBinding.bind(itemView)
+        }
 }

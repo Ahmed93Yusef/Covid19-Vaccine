@@ -6,7 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-abstract class BaseFragment<VB : ViewBinding> : Fragment(){
+
+abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
     abstract  val bindingInflater: (LayoutInflater) -> VB
     private var _binding: ViewBinding? = null
@@ -29,7 +30,6 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment(){
         _binding = bindingInflater(layoutInflater)
         return _binding?.root
     }
-
     abstract  fun setup()
     abstract  fun addCallBack()
 }

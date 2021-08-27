@@ -86,7 +86,6 @@
                 android:layout_width="190dp"
                 android:layout_height="match_parent"
                 app:cardElevation="8dp"
-                android:onClick="showDescription"
                 android:background="@drawable/shapestatictic"
                 app:cardCornerRadius="6dp">
                 <TextView
@@ -105,7 +104,6 @@
                 android:layout_width="190dp"
                 android:layout_height="120dp"
                 app:cardElevation="8dp"
-                android:onClick="showVaccienTypr"
                 android:layout_marginStart="4dp"
                 app:cardCornerRadius="8dp">
                 <TextView
