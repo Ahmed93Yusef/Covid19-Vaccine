@@ -1,6 +1,6 @@
 package com.example.covid19_vaccine.data.domain
 
-data class VaccineDataRecycler(
-    val image : Int,
+data class VaccineRecyclerView(
     val nameVaccine : String,
+    val image : Int,
 )

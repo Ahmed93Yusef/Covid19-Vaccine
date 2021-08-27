@@ -71,9 +71,8 @@
                 android:id="@+id/linearButton"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="#48344A89"
+                android:background="@drawable/shapecardhome"
                 android:orientation="horizontal">
-
                 <com.airbnb.lottie.LottieAnimationView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

@@ -4,22 +4,23 @@ import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.ViewFlipper
 import com.example.covid19_vaccine.R
+import com.example.covid19_vaccine.data.VaccineDataRecyclerView
+import com.example.covid19_vaccine.data.domain.VaccineRecyclerView
 import com.example.covid19_vaccine.databinding.FragmentHomeBinding
+import com.example.covid19_vaccine.util.VaccineInteraction
 import com.example.covid19_vaccine.util.VaccineAdapter
-import kotlinx.android.synthetic.main.fragment_home.*
 
-class HomeFragment: BaseFragment<FragmentHomeBinding>() {
+class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction {
 
     private lateinit var imagePreventFlipper: ViewFlipper
-    private val myDetailsButtonFragment = DetailsButtonFragment()
 
 
     override val bindingInflater: (LayoutInflater) -> FragmentHomeBinding = FragmentHomeBinding::inflate
 
     override fun setup() {
         imageFlipper()
-        val adapter = VaccineAdapter()
-        vaccineRecyclerView.adapter = adapter
+        val adapter = VaccineAdapter(VaccineDataRecyclerView.listData,this)
+        binding?.vaccineRecyclerView?.adapter = adapter
     }
 
     override fun addCallBack() {
@@ -36,7 +37,8 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>() {
         for (i in image.iterator()){
             flipperImage(i)
         }
-    }
+    } //Data Image for ImageFlipper
+
     private fun flipperImage(image : Int){
         val imageView = ImageView(context)
         imageView.setBackgroundResource(image)
@@ -47,7 +49,15 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>() {
             setInAnimation(context,android.R.anim.slide_in_left)
             setOutAnimation(context,android.R.anim.slide_out_right)
         }
+    }  //This Function using to add flipper image to cardView in the Home Screen
+
+    override fun onClickItem(vaccineView: VaccineRecyclerView) {
     }
+
+    override fun onClickServiceName(name: String) {
+    } //this function override from InterFace "Interaction VaccineAdapter" to add listener when user click on name Vaccine on RecyclerView
+
+    override fun onClickServiceImage(image: Int) {}
 
 
 }
