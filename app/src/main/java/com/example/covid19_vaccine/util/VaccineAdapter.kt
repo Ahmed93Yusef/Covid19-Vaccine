@@ -18,13 +18,20 @@ class VaccineAdapter(private val listData : List<VaccineRecyclerView>, private v
         holder.binding.apply {
             serviceName.text= currentServices.nameVaccine
             serviceImage.setImageResource(currentServices.image)
-            serviceName.setOnClickListener {listener.onClickServiceName(currentServices.nameVaccine)}
-            serviceImage.setOnClickListener {listener.onClickServiceImage(currentServices.image)}
         }
     }
     override fun getItemCount() = listData.size
 
-        inner class VaccineHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+        inner class VaccineHolder(itemView : View) : RecyclerView.ViewHolder(itemView) , View.OnClickListener{
             val binding = RecyclerViewLayoutBinding.bind(itemView)
+             init {
+                 itemView.setOnClickListener(this)
+             } //this Lambda function using to give to each item on the recycler own functionality
+            override fun onClick(p0: View?) {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION){
+                 listener.onClickServiceItem(position)}
+            }
+
         }
 }

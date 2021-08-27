@@ -17,7 +17,7 @@ import com.example.covid19_vaccine.util.VaccineInteraction
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
-class HomeActivity: AppCompatActivity() , VaccineInteraction {
+class HomeActivity: AppCompatActivity() {
     private var binding : ActivityHomeBinding? = null
 
     private val myHomeFragment = HomeFragment()
@@ -72,14 +72,11 @@ class HomeActivity: AppCompatActivity() , VaccineInteraction {
 
             }
         }
-    }
+    } //this function Do : give each item in menu on the NavButton functionality to tran to the specific fragment
 
     private fun initSubView() {
-        addFragment(HomeFragment())
+        addFragment(HomeFragment()) //this function Do : to make the first Screen shown is the "HomeFragment".
     }
-
-
-
 
     private fun parseFile() {
         val inputStream = assets.open("country_vaccinations.csv")
@@ -90,29 +87,23 @@ class HomeActivity: AppCompatActivity() , VaccineInteraction {
             DataManger.addVaccine(currentVaccine)
         }
     }
-
-
-    override fun onClickItem(vaccineView: VaccineRecyclerView) {
-        Toast.makeText(applicationContext,"you clicked me",Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onClickServiceName(name: String) {}
-
-    override fun onClickServiceImage(image: Int) {}
+    /* this function Do to tran data the csv provide it to File to make dail with it symbol
+    ,then sprite the data to single line using @parse function then using it. */
 
     private fun addFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction().addToBackStack(null)
+        /* "addToBackStack" is very important to mack the back
+        to previous fragment work fine without close the app*/
         transaction.add(R.id.fragment_container, fragment)  
         transaction.commit()
-    }// this function using for add fragment on another fragment when we want trans to another Screen
-    /* "addToBackStack" is very important to mack the back
-   to previous fragment work fine without close the app*/
+    }// this function using for add fragment on another fragment when we want trans to another Screen.
+
 
 
     private fun replaceFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container, fragment).addToBackStack(null) 
         transaction.commit()
-    }
+    }// this function using for replace fragment to another fragment , so the above fragment is deleted.
 
 }
