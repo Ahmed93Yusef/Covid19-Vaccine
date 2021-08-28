@@ -82,44 +82,93 @@
             android:layout_marginTop="4dp"
             android:gravity="center"
             android:orientation="horizontal">
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="190dp"
                 android:layout_height="120dp"
                 app:cardElevation="2dp"
-                android:background="@drawable/shapestatictic"
-                app:cardCornerRadius="6dp">
-                <TextView
-                    android:id="@+id/homeScreenDaily"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="843"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/frankruhllibremedium"
-                    android:textSize="35sp"
-                    android:gravity="start"
-                    android:layout_margin="16dp" />
-            </androidx.cardview.widget.CardView>
+                android:layout_marginEnd="2dp"
+                style="@style/CustomCardViewStyle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/homeScreenDaily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="843"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/frankruhllibrelight"
+                            android:textSize="35sp"
+                            android:gravity="start"
+                            android:layout_margin="16dp" />
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_line_graphq" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/daily_vaccine"
+                        android:layout_gravity="start"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/frankruhllibrelight"
+                        android:layout_marginStart="16dp"
+                        />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="190dp"
                 android:id="@+id/rightCard"
                 android:layout_height="120dp"
+                style="@style/CustomCardViewStyle"
                 app:cardElevation="2dp"
-                android:layout_marginStart="4dp"
-                app:cardCornerRadius="8dp">
-                <TextView
-                    android:id="@+id/homeScreenTotal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="843"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/frankruhllibremedium"
-                    android:textSize="35sp"
-                    android:gravity="start"
-                    android:layout_margin="16dp"
-                    />
+                android:layout_marginStart="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/homeScreenTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="210M"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/frankruhllibrelight"
+                            android:textSize="35sp"
+                            android:gravity="start"
+                            android:layout_margin="16dp" />
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/linegraphpng" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_vaccine"
+                        android:layout_gravity="start"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/frankruhllibrelight"
+                        android:layout_marginStart="16dp"
+                        />
+                </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
 
 

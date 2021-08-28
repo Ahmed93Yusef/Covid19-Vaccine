@@ -6,7 +6,9 @@ import android.widget.Toast
 import android.widget.ViewFlipper
 import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
+import com.example.covid19_vaccine.data.DataManger
 import com.example.covid19_vaccine.data.VaccineDataRecyclerView
+import com.example.covid19_vaccine.data.domain.VaccineData
 import com.example.covid19_vaccine.databinding.FragmentHomeBinding
 import com.example.covid19_vaccine.util.TransFragment
 import com.example.covid19_vaccine.util.VaccineAdapter
@@ -24,9 +26,9 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
 
     override fun setup() {
         imageFlipper()
-
         adapter = VaccineAdapter(VaccineDataRecyclerView.listData,this) //Call the Recycle View to shown it
         binding?.vaccineRecyclerView?.adapter = adapter
+        iraqData()
     }
     override fun addCallBack() {
         binding?.cardView?.setOnClickListener {
@@ -91,5 +93,14 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
         }
     } // this function using for transition to Fragments depend on the type of services user selected , and working by Positions
 
+    private fun iraqData(){
 
+        DataManger.getCountry("iraq").forEach { dataCountry ->
+            val data = dataCountry.value[dataCountry.value.size-1]
+            binding?.apply {
+                homeScreenTotal.text = DataManger.convertNumber(data.total_vaccinated)
+                homeScreenDaily.text = DataManger.convertNumber(data.daily_vaccinations)
+            }
+        }
+    }
 }

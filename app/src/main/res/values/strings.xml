@@ -53,4 +53,6 @@
     <string name="what_is_vaccin">What is vaccination?</string>
     <string name="why_should_i_get_vaccinated">Why should I get vaccinated?</string>
     <string name="are_vaccines_safe">Are vaccines safe?</string>
+    <string name="daily_vaccine">Daily Vaccine</string>
+    <string name="total_vaccine">Total Vaccine</string>
 </resources>
