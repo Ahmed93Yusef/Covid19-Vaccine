@@ -76,4 +76,9 @@ object DataManger {
             }
         }
     }
+
+    fun makeCountryNameList(){
+//        this.vaccineList.map
+    }
+
   }
