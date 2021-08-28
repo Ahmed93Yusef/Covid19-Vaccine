@@ -28,7 +28,11 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
         adapter = VaccineAdapter(VaccineDataRecyclerView.listData,this) //Call the Recycle View to shown it
         binding?.vaccineRecyclerView?.adapter = adapter
     }
-    override fun addCallBack() {}
+    override fun addCallBack() {
+        binding?.cardView?.setOnClickListener {
+            replaceFragment(myDetailsButtonFragment)
+        }
+    }
 
     private fun imageFlipper(){
         val image = arrayListOf(
@@ -42,7 +46,6 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
             flipperImage(i)
         }
     } //Data Image provide to ImageFlipper
-
     private fun flipperImage(image : Int){
         val imageView = ImageView(context)
         imageView.setBackgroundResource(image)
@@ -57,7 +60,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
 
     override fun addFragment(fragment: Fragment) {
         val transaction = activity?.supportFragmentManager?.beginTransaction()
-        transaction?.add(R.id.fragment_container, fragment)?.addToBackStack(null)
+        transaction?.add(R.id.fragment_container, fragment)
         transaction?.commit()
     }
     /*this functions @Override from the "TransFragment" interface to make the trans easy to use.

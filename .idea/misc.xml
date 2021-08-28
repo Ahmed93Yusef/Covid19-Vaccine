@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable-xxhdpi/ic_baseline_remove_circle_24.xml" value="0.2203125" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/arrow_up.xml" value="0.2203125" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/colorapp.xml" value="0.2203125" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/ic_about_icon.xml" value="0.18076923076923077" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/sh.xml" value="0.2203125" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/shape_staticticcard.xml" value="0.2203125" />
@@ -14,7 +16,7 @@
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/activity_main.xml" value="0.1911231884057971" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_about.xml" value="0.2" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_button_details.xml" value="0.22" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_button_details.xml" value="0.25" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_search.xml" value="0.25" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_statistic.xml" value="0.25" />
