@@ -102,7 +102,8 @@ class HomeActivity: AppCompatActivity() {
 
     private fun replaceFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, fragment).addToBackStack(null) 
+        transaction.replace(R.id.fragment_container, fragment)
+           // .addToBackStack(null)
         transaction.commit()
     }// this function using for replace fragment to another fragment , so the above fragment is deleted.
 

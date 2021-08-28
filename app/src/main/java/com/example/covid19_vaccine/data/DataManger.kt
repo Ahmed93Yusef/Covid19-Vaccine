@@ -52,6 +52,7 @@ object DataManger {
 
     }
 
+
     fun getTopFive(){
         for (i in oneCountryList.indices){
             topCountriesVaccinated.add(oneCountryList[i].people_vaccinated)
