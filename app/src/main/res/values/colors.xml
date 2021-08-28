@@ -11,4 +11,7 @@
     <color name="colorButton">#ffaebd</color>
     <color name="pinkDeep">#6E215F</color>
 
+
+    <color name="main_background">#EBF5FF</color>
+
 </resources>
