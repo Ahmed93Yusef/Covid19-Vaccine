@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#03A9F4"
+    android:background="#edf6ff"
     tools:context=".ui.fragment.HomeFragment"
     >
 
@@ -78,14 +78,14 @@
             android:textSize="16sp" />
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="130dp"
             android:layout_marginTop="4dp"
             android:gravity="center"
             android:orientation="horizontal">
             <androidx.cardview.widget.CardView
                 android:layout_width="190dp"
-                android:layout_height="match_parent"
-                app:cardElevation="8dp"
+                android:layout_height="120dp"
+                app:cardElevation="2dp"
                 android:background="@drawable/shapestatictic"
                 app:cardCornerRadius="6dp">
                 <TextView
@@ -98,13 +98,13 @@
                     android:textSize="35sp"
                     android:gravity="start"
                     android:layout_margin="16dp" />
-
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="190dp"
                 android:id="@+id/rightCard"
                 android:layout_height="120dp"
-                app:cardElevation="8dp"
+                app:cardElevation="2dp"
                 android:layout_marginStart="4dp"
                 app:cardCornerRadius="8dp">
                 <TextView

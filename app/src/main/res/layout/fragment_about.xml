@@ -111,7 +111,7 @@
         android:fontFamily="@font/cardobold"
         android:layout_marginEnd="64dp"
         android:elevation="10dp"
-        android:text="@string/team_member_nooraldeen_akeel"
+        android:text="@string/Team_Member_Nooralden.A"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

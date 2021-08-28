@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.DetailsButtonFragment"
-    >
+    android:background="#edf6ff"
+    tools:context=".ui.fragment.DetailsButtonFragment">
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
+        android:background="#edf6ff"
         android:src="@drawable/google2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,44 +35,297 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginBottom="466dp"
+        android:layout_marginBottom="510dp"
         android:fontFamily="@font/lora_regular"
         android:text="@string/descriptionScreen"
-        android:textColor="#4D78CF"
-        android:textSize="29sp"
+        android:textColor="#353239"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="@id/viewGuid"
         app:layout_constraintStart_toStartOf="@id/viewGuid"
         app:layout_constraintTop_toBottomOf="@id/viewGuid" />
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="351dp"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:scrollbars="none"
+        android:scrollbars="vertical"
+        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintStart_toStartOf="@id/description"
+        app:layout_constraintEnd_toEndOf="@id/description"
+        app:layout_constraintTop_toBottomOf="@id/description"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/description">
+        >
+
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="29dp"
-            android:layout_marginEnd="29dp"
-            android:gravity="start"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/textDescription"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/loramedium"
-                android:letterSpacing="0.05"
-                android:text="@string/vaizor"
-                android:textAlignment="viewStart"
-                android:textColor="#5F5E5D"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView2" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/lineraMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:id="@+id/expanededButton"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/circle_outline"
+                        android:layout_margin="2dp"
+                        />
+                    <TextView
+                        android:id="@+id/expanededText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="What is vaccination?"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/lorabolditalic"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/whatTheVaccien"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginStart="28dp"
+                    android:layout_height="260dp">
+                    <ScrollView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/what_is_vaccination"
+                                android:textSize="18sp"
+                                android:gravity="start"
+                                android:letterSpacing="0.07"
+                                android:textAlignment="viewStart"
+                                android:textColor="#878C95"
+                                android:fontFamily="@font/frankruhllibremedium"
+                                />
+                        </LinearLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/lineraMain1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:id="@+id/expanededButton1"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/circle_outline"
+                        android:layout_margin="2dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/expanededText1"                        android:text="How does a vaccine work?"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/lorabolditalic"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/whatTheVaccien1"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginStart="28dp"
+                    android:layout_height="210dp">
+                    <ScrollView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/How_does_a_vaccine_work"
+                                android:textSize="18sp"
+                                android:gravity="start"
+                                android:letterSpacing="0.07"
+                                android:textAlignment="viewStart"
+                                android:layout_margin="8dp"
+                                android:textColor="#878C95"
+                                android:fontFamily="@font/frankruhllibremedium"
+                                />
+                        </LinearLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lineraMain2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:id="@+id/expanededButton2"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/circle_outline"
+                        android:layout_margin="2dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/expanededText2"
+                        android:text="Why should I get vaccinated?"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/lorabolditalic"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/whatTheVaccien2"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="28dp"
+                    android:layout_height="160dp">
+                    <ScrollView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Why_should_I_get_vaccinated"
+                                android:textSize="18sp"
+                                android:gravity="start"
+                                android:letterSpacing="0.07"
+                                android:textAlignment="viewStart"
+                                android:layout_margin="8dp"
+                                android:textColor="#878C95"
+                                android:fontFamily="@font/frankruhllibremedium"
+                                />
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/lineraMain3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:id="@+id/expanededButton3"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/circle_outline"
+                        android:layout_margin="2dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Are vaccines safe?"
+                        android:textStyle="normal"
+                        android:id="@+id/expanededText3"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/lorabolditalic"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/whatTheVaccien3"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="28dp"
+                    android:layout_height="210dp">
+                    <ScrollView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Are_vaccines_safe"
+                                android:textSize="18sp"
+                                android:gravity="start"
+                                android:letterSpacing="0.07"
+                                android:textAlignment="viewStart"
+                                android:layout_margin="8dp"
+                                android:textColor="#878C95"
+                                android:fontFamily="@font/frankruhllibremedium"
+                                />
+                        </LinearLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
