@@ -77,7 +77,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
     override fun onClickServiceItem(Position: Int) {
         when(Position){
             0 -> {
-                replaceFragment(myDetailsButtonFragment)
+                Toast.makeText(context,"item $Position clicked" , Toast.LENGTH_SHORT).show()
                 adapter.notifyItemChanged(Position) }
             1 -> {
                 replaceFragment(myVaccineTypeFragment)

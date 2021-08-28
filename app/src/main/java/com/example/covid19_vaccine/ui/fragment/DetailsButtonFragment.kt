@@ -145,5 +145,4 @@ class DetailsButtonFragment : BaseFragment<FragmentButtonDetailsBinding>(){
             }
         }
     }
-
 }
