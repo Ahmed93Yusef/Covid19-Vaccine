@@ -8,7 +8,6 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
     override val bindingInflater: (LayoutInflater) -> FragmentStatisticBinding = FragmentStatisticBinding::inflate
 
     override fun setup() {
-
     }
 
     override fun addCallBack() {
