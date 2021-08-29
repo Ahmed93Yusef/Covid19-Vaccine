@@ -39,6 +39,7 @@
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_search.xml" value="0.41205053449951407" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_statistic.xml" value="0.22083333333333333" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_vaccine_type.xml" value="0.536" />
+        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/menu/main_bottom_navigation.xml" value="0.22083333333333333" />
       </map>
     </option>
   </component>
@@ -47,5 +48,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22083333333333333" />
+      </ProjectState>
+    </option>
   </component>
 </project>

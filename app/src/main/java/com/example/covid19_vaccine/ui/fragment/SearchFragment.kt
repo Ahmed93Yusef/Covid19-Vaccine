@@ -13,6 +13,7 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
 
     override fun setup() {
         binding?.apply {
+            inputCountryText.isIconified = false
             inputCountryText.setOnQueryTextListener(object :
                 android.widget.SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(search: String?): Boolean {

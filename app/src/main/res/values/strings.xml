@@ -55,4 +55,5 @@
     <string name="are_vaccines_safe">Are vaccines safe?</string>
     <string name="daily_vaccine">Daily Vaccine</string>
     <string name="total_vaccine">Total Vaccine</string>
+    <string name="top_country_statistic">Top Country Statistic</string>
 </resources>
