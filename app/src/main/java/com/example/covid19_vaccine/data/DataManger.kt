@@ -1,5 +1,6 @@
 package com.example.covid19_vaccine.data
 
+import android.util.Log
 import com.example.covid19_vaccine.data.domain.VaccineData
 
 object DataManger {
@@ -10,6 +11,8 @@ object DataManger {
     private var oneCountryList = mutableListOf<VaccineData>()
 
     private var topCountriesVaccinated = mutableListOf<Double>()
+
+    private var countryNameList = mutableSetOf<String>()
 
     fun addVaccine(vaccine: VaccineData) = vaccineList.add(vaccine)
 
@@ -78,8 +81,13 @@ object DataManger {
         }
     }
 
-    fun makeCountryNameList(){
-//        this.vaccineList.map
-    }
+//    fun putCountryNameList(){
+//        vaccineList.forEach{
+//            countryNameList.add(it.country)
+//        }
+//        countryNameList.forEach {
+//            Log.i("DataManger", it)
+//        }
+//    }
 
   }
