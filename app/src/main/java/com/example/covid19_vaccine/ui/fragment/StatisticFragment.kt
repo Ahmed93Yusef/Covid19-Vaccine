@@ -20,17 +20,17 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
             country4Name.text = topTeenCountry[3].country
             country5Name.text = topTeenCountry[4].country
 
-            country1VaccineTotal.text = DataManger.convertNumber(topTeenCountry[0].total_vaccinated)
-            country2VaccineTotal.text = DataManger.convertNumber(topTeenCountry[1].total_vaccinated)
-            country3VaccineTotal.text = DataManger.convertNumber(topTeenCountry[2].total_vaccinated)
-            country4VaccineTotal.text = DataManger.convertNumber(topTeenCountry[3].total_vaccinated)
-            country5VaccineTotal.text = DataManger.convertNumber(topTeenCountry[4].total_vaccinated)
+            country1VaccineTotal.text = DataManger.convertNumber(topTeenCountry[0].people_fully_vaccinated)
+            country2VaccineTotal.text = DataManger.convertNumber(topTeenCountry[1].people_fully_vaccinated)
+            country3VaccineTotal.text = DataManger.convertNumber(topTeenCountry[2].people_fully_vaccinated)
+            country4VaccineTotal.text = DataManger.convertNumber(topTeenCountry[3].people_fully_vaccinated)
+            country5VaccineTotal.text = DataManger.convertNumber(topTeenCountry[4].people_fully_vaccinated)
 
-            country1VaccinePer.text = topTeenCountry[0].total_vaccinated_per_hundred.toString()
-            country2VaccinePer.text = topTeenCountry[1].total_vaccinated_per_hundred.toString()
-            country3VaccinePer.text = topTeenCountry[2].total_vaccinated_per_hundred.toString()
-            country4VaccinePer.text = topTeenCountry[3].total_vaccinated_per_hundred.toString()
-            country5VaccinePer.text = topTeenCountry[4].total_vaccinated_per_hundred.toString()
+            country1VaccinePer.text = topTeenCountry[0].people_fully_vaccinated_per_hundred.toString()
+            country2VaccinePer.text = topTeenCountry[1].people_fully_vaccinated_per_hundred.toString()
+            country3VaccinePer.text = topTeenCountry[2].people_fully_vaccinated_per_hundred.toString()
+            country4VaccinePer.text = topTeenCountry[3].people_fully_vaccinated_per_hundred.toString()
+            country5VaccinePer.text = topTeenCountry[4].people_fully_vaccinated_per_hundred.toString()
         }
     }
 

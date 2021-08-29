@@ -82,6 +82,6 @@ object DataManger {
         }
     }
 
-    fun getTopTeen() = oneCountryList.sortedByDescending{list -> list.total_vaccinated_per_hundred}.subList(0, 10)
+    fun getTopTeen() = oneCountryList.sortedByDescending{list -> list.people_fully_vaccinated_per_hundred}.subList(0, 10)
 
   }
