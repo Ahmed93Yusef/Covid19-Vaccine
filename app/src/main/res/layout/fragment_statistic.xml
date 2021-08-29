@@ -47,7 +47,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/Text_Iraq"
+                android:id="@+id/country1Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -62,7 +62,7 @@
                 app:layout_constraintTop_toTopOf="@+id/cardView1" />
 
             <TextView
-                android:id="@+id/Text_Iraq_Vaccine_Per"
+                android:id="@+id/country1VaccinePer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="4dp"
@@ -70,13 +70,13 @@
                 android:text="80%"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@id/Text_Iraq_Vaccine_Total"
+                app:layout_constraintBottom_toTopOf="@id/country1VaccineTotal"
                 app:layout_constraintEnd_toEndOf="@+id/cardView1"
                 app:layout_constraintStart_toStartOf="@+id/cardView1"
-                app:layout_constraintTop_toBottomOf="@+id/Text_Iraq" />
+                app:layout_constraintTop_toBottomOf="@+id/country1Name" />
 
             <TextView
-                android:id="@+id/Text_Iraq_Vaccine_Total"
+                android:id="@+id/country1VaccineTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -90,7 +90,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/cardView1"
                 app:layout_constraintEnd_toEndOf="@+id/cardView1"
                 app:layout_constraintStart_toStartOf="@+id/cardView1"
-                app:layout_constraintTop_toBottomOf="@+id/Text_Iraq_Vaccine_Per" />
+                app:layout_constraintTop_toBottomOf="@+id/country1VaccinePer" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
@@ -104,7 +104,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/Text_Jordan"
+                android:id="@+id/country2Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -119,7 +119,7 @@
                 app:layout_constraintTop_toTopOf="@+id/cardView2" />
 
             <TextView
-                android:id="@+id/Text_Jordan_Vaccine_Per"
+                android:id="@+id/country2VaccinePer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="4dp"
@@ -127,13 +127,13 @@
                 android:text="70%"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@id/Text_Jordan_Vaccine_Total"
+                app:layout_constraintBottom_toTopOf="@id/country2VaccineTotal"
                 app:layout_constraintEnd_toEndOf="@+id/cardView2"
                 app:layout_constraintStart_toStartOf="@+id/cardView2"
-                app:layout_constraintTop_toBottomOf="@+id/Text_Jordan" />
+                app:layout_constraintTop_toBottomOf="@+id/country2Name" />
 
             <TextView
-                android:id="@+id/Text_Jordan_Vaccine_Total"
+                android:id="@+id/country2VaccineTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -147,7 +147,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/cardView2"
                 app:layout_constraintEnd_toEndOf="@+id/cardView2"
                 app:layout_constraintStart_toStartOf="@+id/cardView2"
-                app:layout_constraintTop_toBottomOf="@+id/Text_Jordan_Vaccine_Per" />
+                app:layout_constraintTop_toBottomOf="@+id/country2VaccinePer" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView3"
@@ -161,7 +161,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/Text_UAE"
+                android:id="@+id/country3Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -176,7 +176,7 @@
                 app:layout_constraintTop_toTopOf="@+id/cardView3" />
 
             <TextView
-                android:id="@+id/Text_UAE_Vaccine_Per"
+                android:id="@+id/country3VaccinePer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="4dp"
@@ -184,13 +184,13 @@
                 android:text="90%"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@id/Text_UAE_Vaccine_Total"
+                app:layout_constraintBottom_toTopOf="@id/country3VaccineTotal"
                 app:layout_constraintEnd_toEndOf="@+id/cardView3"
                 app:layout_constraintStart_toStartOf="@+id/cardView3"
-                app:layout_constraintTop_toBottomOf="@+id/Text_UAE" />
+                app:layout_constraintTop_toBottomOf="@+id/country3Name" />
 
             <TextView
-                android:id="@+id/Text_UAE_Vaccine_Total"
+                android:id="@+id/country3VaccineTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -204,7 +204,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/cardView3"
                 app:layout_constraintEnd_toEndOf="@+id/cardView3"
                 app:layout_constraintStart_toStartOf="@+id/cardView3"
-                app:layout_constraintTop_toBottomOf="@+id/Text_UAE_Vaccine_Per" />
+                app:layout_constraintTop_toBottomOf="@+id/country3VaccinePer" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView4"
@@ -218,7 +218,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/Text_Iran"
+                android:id="@+id/country4Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -233,7 +233,7 @@
                 app:layout_constraintTop_toTopOf="@+id/cardView4" />
 
             <TextView
-                android:id="@+id/Text_Iran_Vaccine_Per"
+                android:id="@+id/country4VaccinePer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="4dp"
@@ -241,13 +241,13 @@
                 android:text="40%"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@id/Text_Iran_Vaccine_Total"
+                app:layout_constraintBottom_toTopOf="@id/country4VaccineTotal"
                 app:layout_constraintEnd_toEndOf="@+id/cardView4"
                 app:layout_constraintStart_toStartOf="@+id/cardView4"
-                app:layout_constraintTop_toBottomOf="@+id/Text_Iran" />
+                app:layout_constraintTop_toBottomOf="@+id/country4Name" />
 
             <TextView
-                android:id="@+id/Text_Iran_Vaccine_Total"
+                android:id="@+id/country4VaccineTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -261,7 +261,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/cardView4"
                 app:layout_constraintEnd_toEndOf="@+id/cardView4"
                 app:layout_constraintStart_toStartOf="@+id/cardView4"
-                app:layout_constraintTop_toBottomOf="@+id/Text_Iran_Vaccine_Per" />
+                app:layout_constraintTop_toBottomOf="@+id/country4VaccinePer" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView5"
@@ -275,7 +275,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/Text_USA"
+                android:id="@+id/country5Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -290,7 +290,7 @@
                 app:layout_constraintTop_toTopOf="@+id/cardView5" />
 
             <TextView
-                android:id="@+id/Text_USA_Vaccine_Per"
+                android:id="@+id/country5VaccinePer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="4dp"
@@ -298,13 +298,13 @@
                 android:text="83%"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@id/Text_USA_Vaccine_Total"
+                app:layout_constraintBottom_toTopOf="@id/country5VaccineTotal"
                 app:layout_constraintEnd_toEndOf="@+id/cardView5"
                 app:layout_constraintStart_toStartOf="@+id/cardView5"
-                app:layout_constraintTop_toBottomOf="@+id/Text_USA" />
+                app:layout_constraintTop_toBottomOf="@+id/country5Name" />
 
             <TextView
-                android:id="@+id/Text_USA_Vaccine_Total"
+                android:id="@+id/country5VaccineTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -318,7 +318,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/cardView5"
                 app:layout_constraintEnd_toEndOf="@+id/cardView5"
                 app:layout_constraintStart_toStartOf="@+id/cardView5"
-                app:layout_constraintTop_toBottomOf="@+id/Text_USA_Vaccine_Per" />
+                app:layout_constraintTop_toBottomOf="@+id/country5VaccinePer" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -2,6 +2,7 @@ package com.example.covid19_vaccine.data
 
 import android.util.Log
 import com.example.covid19_vaccine.data.domain.VaccineData
+import android.util.Log.i as Log
 
 object DataManger {
     private val vaccineList = mutableListOf<VaccineData>()
@@ -46,13 +47,13 @@ object DataManger {
         )
     }
 
-    fun getLastCountry(){
-        for (i in 0 until vaccineList.size) {
+    fun initCountryList(){
+        for (i in 0 until vaccineList.size - 1) {
            if( vaccineList[i].country != vaccineList[i+1].country){
             oneCountryList.add(vaccineList[i])
            }
         }
-
+        oneCountryList.add(vaccineList[vaccineList.size - 1])
     }
 
 
@@ -81,13 +82,6 @@ object DataManger {
         }
     }
 
-//    fun putCountryNameList(){
-//        vaccineList.forEach{
-//            countryNameList.add(it.country)
-//        }
-//        countryNameList.forEach {
-//            Log.i("DataManger", it)
-//        }
-//    }
+    fun getTopTeen() = oneCountryList.sortedByDescending{list -> list.total_vaccinated_per_hundred}.subList(0, 10)
 
   }
