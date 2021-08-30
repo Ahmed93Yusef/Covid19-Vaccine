@@ -12,7 +12,6 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
 
         DataManger.initCountryList()
         val topTeenCountry = DataManger.getTopTeen()
-
         binding?.apply {
             country1Name.text = topTeenCountry[0].country
             country2Name.text = topTeenCountry[1].country
@@ -26,23 +25,13 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
             country4VaccineTotal.text = DataManger.convertNumber(topTeenCountry[3].people_vaccinated)
             country5VaccineTotal.text = DataManger.convertNumber(topTeenCountry[4].people_vaccinated)
 
-            country1VaccinePer.text = topTeenCountry[0].people_vaccinated_per_hundred.toString()
-            country2VaccinePer.text = topTeenCountry[1].people_vaccinated_per_hundred.toString()
-            country3VaccinePer.text = topTeenCountry[2].people_vaccinated_per_hundred.toString()
-            country4VaccinePer.text = topTeenCountry[3].people_vaccinated_per_hundred.toString()
-            country5VaccinePer.text = topTeenCountry[4].people_vaccinated_per_hundred.toString()
+            "${topTeenCountry[0].people_vaccinated_per_hundred}%".also { country1VaccinePer.text = it }
+            "${topTeenCountry[1].people_vaccinated_per_hundred}%".also { country2VaccinePer.text = it }
+            "${topTeenCountry[2].people_vaccinated_per_hundred}%".also { country3VaccinePer.text = it }
+            "${topTeenCountry[3].people_vaccinated_per_hundred}%".also { country4VaccinePer.text = it }
+            "${topTeenCountry[4].people_vaccinated_per_hundred}%".also { country5VaccinePer.text = it }
         }
     }
 
-    override fun addCallBack() {
-
-
-    }
-
-
-
-
-
-
-
+    override fun addCallBack() {}
 }
