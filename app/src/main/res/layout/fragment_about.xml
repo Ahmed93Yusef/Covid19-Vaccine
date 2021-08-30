@@ -1,176 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ECF6FF"
+    app:layoutDescription="@xml/fragment_about_scene"
+    tools:context=".ui.fragment.AboutFragment">
 
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="fitXY"
-        android:elevation="2dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/home"
-        />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        app:layout_constraintVertical_bias="0.50"
-        android:src="@drawable/covid3"
-        android:elevation="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/covid" />
-
-    <View
-        android:id="@+id/view1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#5A61B7"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <View
-        android:id="@+id/viewLoitty"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
-        app:layout_constraintVertical_bias="0.36"
-        />
-    <com.airbnb.lottie.LottieAnimationView
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_one"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="@id/viewLoitty"
-        app:layout_constraintTop_toTopOf="@id/viewLoitty"
-        app:layout_constraintStart_toStartOf="@id/viewLoitty"
-        app:layout_constraintBottom_toBottomOf="@id/viewLoitty"
-        app:lottie_autoPlay="true"
-        android:elevation="2dp"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/tools"
+        android:layout_height="220dp"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="#ECF6FF"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@drawable/bg_about"
+            android:elevation="12dp"
+            android:padding="5dp">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="250dp"
-        android:layout_height="150dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/animation" />
+            <!--            <ImageView-->
+            <!--                android:layout_width="100dp"-->
+            <!--                android:layout_height="100dp"-->
+            <!--                android:elevation="16dp"-->
+            <!--                android:src="@drawable/get_vaccinated"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
-    <TextView
-        android:id="@+id/project"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="10dp"
-        android:fontFamily="@font/cardobold"
-        android:paddingStart="6dp"
-        android:layout_marginBottom="32dp"
-        android:text="@string/project_done_by"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/nooralddenText"
-        app:layout_constraintBottom_toTopOf="@id/ahmedText"
-         />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="16dp"
+                android:fontFamily="@font/kalambold"
+                android:padding="14dp"
+                android:text="let's vaccine"
+                android:textColor="#82C5FF"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/ahmedText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:elevation="10dp"
-        android:fontFamily="@font/cardobold"
-        android:paddingStart="16dp"
-        android:text="@string/team_leader_ahmed_yusef"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/nooralddenText"
-        app:layout_constraintBottom_toTopOf="@id/nooralddenText" />
 
-    <TextView
-        android:id="@+id/nooralddenText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:paddingStart="16dp"
-        android:fontFamily="@font/cardobold"
-        android:layout_marginEnd="64dp"
-        android:elevation="10dp"
-        android:text="@string/Team_Member_Nooralden.A"
-        android:textSize="20sp"
-        android:textStyle="bold"
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:background="#ECF6FF"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/card_two">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:padding="10dp"
+            android:text="Information about the application"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:padding="8dp"
+            android:text="An application designed and developed by a group of beginners in application development that provides a set of services such as information on vaccines and statistics on vaccinators in many countries and many other services." />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_two"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_margin="2dp"
+        app:cardBackgroundColor="#A5D5FF"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="12dp">
+
+            <TextView
+                android:id="@+id/card_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="12dp"
+                android:fontFamily="serif"
+                android:padding="5dp"
+                android:text="To contact us click on the icon."
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/member1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/github"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/member2"
+                app:layout_constraintTop_toBottomOf="@id/card_text1" />
+
+            <TextView
+                android:id="@+id/member1_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Ahmed"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/member1"
+                app:layout_constraintStart_toStartOf="@+id/member1"
+                app:layout_constraintTop_toBottomOf="@id/member1" />
+
+            <ImageView
+                android:id="@+id/member2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/github"
+                app:layout_constraintLeft_toRightOf="@id/member1"
+                app:layout_constraintRight_toLeftOf="@id/member3"
+                app:layout_constraintTop_toBottomOf="@id/card_text1" />
+
+            <TextView
+                android:id="@+id/member2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Nooralden"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/member2"
+                app:layout_constraintStart_toStartOf="@+id/member2"
+                app:layout_constraintTop_toBottomOf="@id/member2" />
 
 
+            <ImageView
+                android:id="@+id/member3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/github"
+                app:layout_constraintLeft_toRightOf="@id/member2"
+                app:layout_constraintRight_toLeftOf="@id/member4"
+                app:layout_constraintTop_toBottomOf="@id/card_text1" />
+
+            <TextView
+                android:id="@+id/member3_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Nofel"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/member3"
+                app:layout_constraintStart_toStartOf="@+id/member3"
+                app:layout_constraintTop_toBottomOf="@id/member3" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/member4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/github"
+                app:layout_constraintLeft_toRightOf="@id/member3"
+                app:layout_constraintRight_toLeftOf="@id/member5"
+                app:layout_constraintTop_toBottomOf="@id/card_text1" />
+
+            <TextView
+                android:id="@+id/member4_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Huda"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/member4"
+                app:layout_constraintStart_toStartOf="@+id/member4"
+                app:layout_constraintTop_toBottomOf="@id/member4" />
+
+            <ImageView
+                android:id="@+id/member5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/github"
+                app:layout_constraintLeft_toRightOf="@id/member4"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_text1" />
+
+            <TextView
+                android:id="@+id/member5_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="12dp"
+                android:fontFamily="serif"
+                android:text="Anwar"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/member5"
+                app:layout_constraintStart_toStartOf="@+id/member5"
+                app:layout_constraintTop_toBottomOf="@id/member5" />
 
 
-
-<!--<TextView-->
-<!--android:id="@+id/textView"-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:fontFamily="@font/loraregular"-->
-<!--android:gravity="center"-->
-<!--android:text="@string/App_Name"-->
-<!--android:textColor="@color/white"-->
-<!--android:textSize="30sp"-->
-<!--android:textStyle="bold"-->
-<!--app:layout_constraintBottom_toBottomOf="parent"-->
-<!--app:layout_constraintEnd_toEndOf="parent"-->
-<!--app:layout_constraintStart_toStartOf="parent"-->
-<!--app:layout_constraintTop_toTopOf="parent"-->
-<!--app:layout_constraintVertical_bias="0.05" />-->
-
-<!--<TextView-->
-<!--android:id="@+id/textView2"-->
-<!--android:layout_width="410dp"-->
-<!--android:layout_height="120dp"-->
-<!--android:layout_marginTop="28dp"-->
-<!--android:fontFamily="@font/loraregular"-->
-<!--android:text="@string/statement1"-->
-<!--android:textAlignment="center"-->
-<!--android:textColor="@color/white"-->
-<!--android:textSize="20sp"-->
-<!--app:layout_constraintEnd_toEndOf="parent"-->
-<!--app:layout_constraintHorizontal_bias="0.0"-->
-<!--app:layout_constraintStart_toStartOf="parent"-->
-<!--app:layout_constraintTop_toBottomOf="@+id/textView" />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 
-
-<!--<TextView-->
-<!--android:id="@+id/textView3"-->
-<!--android:layout_width="348dp"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:layout_marginTop="36dp"-->
-<!--android:fontFamily="@font/loraregular"-->
-<!--android:text="@string/statement2"-->
-<!--android:textColor="@color/white"-->
-<!--android:textSize="20sp"-->
-<!--app:layout_constraintBottom_toBottomOf="parent"-->
-<!--app:layout_constraintEnd_toEndOf="parent"-->
-<!--app:layout_constraintHorizontal_bias="0.492"-->
-<!--app:layout_constraintStart_toStartOf="parent"-->
-<!--app:layout_constraintTop_toTopOf="parent"-->
-<!--app:layout_constraintVertical_bias="0.82" />-->
+</androidx.constraintlayout.motion.widget.MotionLayout>
