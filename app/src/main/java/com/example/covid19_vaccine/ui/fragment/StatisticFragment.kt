@@ -10,9 +10,28 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
 
     override fun setup() {
 
-//        DataManger.putCountryNameList()
+        DataManger.initCountryList()
+        val topTeenCountry = DataManger.getTopTeen()
 
+        binding?.apply {
+            country1Name.text = topTeenCountry[0].country
+            country2Name.text = topTeenCountry[1].country
+            country3Name.text = topTeenCountry[2].country
+            country4Name.text = topTeenCountry[3].country
+            country5Name.text = topTeenCountry[4].country
 
+            country1VaccineTotal.text = DataManger.convertNumber(topTeenCountry[0].people_fully_vaccinated)
+            country2VaccineTotal.text = DataManger.convertNumber(topTeenCountry[1].people_fully_vaccinated)
+            country3VaccineTotal.text = DataManger.convertNumber(topTeenCountry[2].people_fully_vaccinated)
+            country4VaccineTotal.text = DataManger.convertNumber(topTeenCountry[3].people_fully_vaccinated)
+            country5VaccineTotal.text = DataManger.convertNumber(topTeenCountry[4].people_fully_vaccinated)
+
+            country1VaccinePer.text = topTeenCountry[0].people_fully_vaccinated_per_hundred.toString()
+            country2VaccinePer.text = topTeenCountry[1].people_fully_vaccinated_per_hundred.toString()
+            country3VaccinePer.text = topTeenCountry[2].people_fully_vaccinated_per_hundred.toString()
+            country4VaccinePer.text = topTeenCountry[3].people_fully_vaccinated_per_hundred.toString()
+            country5VaccinePer.text = topTeenCountry[4].people_fully_vaccinated_per_hundred.toString()
+        }
     }
 
     override fun addCallBack() {
