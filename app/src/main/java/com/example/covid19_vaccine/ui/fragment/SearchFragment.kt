@@ -51,7 +51,7 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
             lottieError.visibility = View.GONE
             visibility(false)
             lottieSearch.isVisible = true
-            pieChart.isVisible = false
+            lineChart.isVisible = false
         }
     }
 
@@ -64,6 +64,10 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
                 txtPeopleVaccine.text = DataManger.convertNumber(data.people_vaccinated)
                 txtPeopleFullyVaccine.text = DataManger.convertNumber(data.people_fully_vaccinated)
                 txtCountryName.text = data.country
+
+//                lineChart.apply {
+//
+//                }
 
 //                pieChart.apply {
 //                    clearChart()      /// Clear chart before new search
@@ -97,7 +101,7 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
             binding?.apply {
                 cardCountry.isVisible = state
                 lottieSearch.isVisible = !state
-                pieChart.isVisible = state
+                lineChart.isVisible = state
             }
         }
 

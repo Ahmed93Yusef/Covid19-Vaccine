@@ -138,8 +138,8 @@
         app:lottie_autoPlay="true"
         app:lottie_rawRes="@raw/search" />
 
-    <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/pieChart"
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
