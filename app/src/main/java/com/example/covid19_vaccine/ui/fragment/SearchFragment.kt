@@ -17,12 +17,12 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
             inputCountryText.setOnQueryTextListener(object :
                 android.widget.SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(search: String?): Boolean {
-                    searchSubmit(search!!)
+                    searchSubmit(requireNotNull(search))
                     return false
                 }
 
                 override fun onQueryTextChange(newSearch: String?): Boolean {
-                    searchTextChange(newSearch!!)
+                    searchTextChange(requireNotNull(newSearch))
                     return false
                 }
 

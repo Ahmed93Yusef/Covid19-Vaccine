@@ -56,4 +56,25 @@
     <string name="daily_vaccine">Daily Vaccine</string>
     <string name="total_vaccine">Total Vaccine</string>
     <string name="top_country_statistic">Top Country Statistic</string>
+    <string name="test"><u>ٍSymptoms:</u></string>
+    <string name="fever">fever</string>
+    <string name="dry_cough">dry cough</string>
+    <string name="tiredness">tiredness</string>
+    <string name="aches_and_pains">aches and pains</string>
+    <string name="sore_throat">sore throat</string>
+    <string name="diarrhoea">diarrhoea</string>
+    <string name="conjunctivitis">conjunctivitis</string>
+    <string name="headache">headache</string>
+    <string name="loss_of_taste_smell">loss of taste,smell</string>
+    <string name="a_rash_on_skin">a rash on skin</string>
+    <string name="discolouration_of_fingers_toes">discolouration of fingers,toes</string>
+    <string name="difficulty_breathing">difficulty breathing</string>
+    <string name="shortness_of_breath">shortness of breath</string>
+    <string name="chest_pain_pressure">chest pain,pressure</string>
+    <string name="loss_of_speech_movement">loss of speech,movement</string>
+    <string name="submitted">Submitted</string>
+    <string name="infected">Infected</string>
+    <string name="youInfected">You\'re Infected!!</string>
+    <string name="possibly_infected">Possibly Infected</string>
+    <string name="no_infected">No Infected</string>
 </resources>

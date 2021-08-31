@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
 import com.example.covid19_vaccine.data.VaccineDataRecyclerView
-import com.example.covid19_vaccine.data.domain.VaccineData
 import com.example.covid19_vaccine.databinding.FragmentHomeBinding
 import com.example.covid19_vaccine.util.TransFragment
 import com.example.covid19_vaccine.util.VaccineAdapter
@@ -17,6 +16,7 @@ import com.example.covid19_vaccine.util.VaccineInteraction
 class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,TransFragment {
     private val myVaccineTypeFragment = VaccineTypeFragment()
     private val myDetailsButtonFragment = DetailsButtonFragment()
+    private val myHomeTestFragment = HomeTestFragment()
 
     lateinit var adapter: VaccineAdapter
 
@@ -43,7 +43,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
             R.drawable.back2,
             R.drawable.back3,
         )
-        imagePreventFlipper = binding!!.viewFlipper
+        imagePreventFlipper = requireNotNull(binding?.viewFlipper)
         for (i in image.iterator()){
             flipperImage(i)
         }
@@ -85,8 +85,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
                 replaceFragment(myVaccineTypeFragment)
                 adapter.notifyItemChanged(Position) }
             2 -> {
-                Toast.makeText(context,"item $Position clicked" , Toast.LENGTH_SHORT).show()
-                adapter.notifyItemChanged(Position) }
+                replaceFragment(myHomeTestFragment) }
             3 -> {
                 Toast.makeText(context,"item $Position clicked" , Toast.LENGTH_SHORT).show()
                 adapter.notifyItemChanged(Position) }
