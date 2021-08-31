@@ -9,6 +9,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorButton">#ffaebd</color>
-    <color name="pinkDeep">#6E215F</color>
+    <color name="grayDark">#bdbdbd</color>
+    <color name="graynormal">#80322F2F</color>
+    <color name="homecolor">#edf6ff</color>
 
 </resources>

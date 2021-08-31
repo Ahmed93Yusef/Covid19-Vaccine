@@ -55,4 +55,16 @@
     <string name="are_vaccines_safe">Are vaccines safe?</string>
     <string name="daily_vaccine">Daily Vaccine</string>
     <string name="total_vaccine">Total Vaccine</string>
+    <string name="manufactured">Manufactured</string>
+    <string name="license_in_use">License In Use</string>
+    <string name="emergency_use_auth">Emergency Use Auth</string>
+    <string name="dosage_form">Dosage Form</string>
+    <string name="injection">Injection</string>
+    <string name="dosage">Dosage</string>
+    <string name="_0_5_ml">0,5 mL</string>
+    <string name="_0_3_ml">0,3 mL X2</string>
+    <string name="vaccine">Vaccine</string>
+    <string name="usa_germany">Pfizer-BioNTech \nUSA,Germany</string>
+    <string name="efficacy">Efficacy</string>
+    <string name="_0_5_ml_x2">0,5 ml X2</string>
 </resources>

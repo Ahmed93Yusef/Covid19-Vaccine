@@ -3,32 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable-xxhdpi/ic_baseline_remove_circle_24.xml" value="0.2203125" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/arrow_down.xml" value="0.1" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/arrow_up.xml" value="0.2203125" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/colorapp.xml" value="0.2203125" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/ic_about_icon.xml" value="0.18076923076923077" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/ic_handshake.xml" value="0.1" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/ic_heart.xml" value="0.1" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/ic_line_graph_psd.xml" value="0.2203125" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/ic_line_graphya.xml" value="0.2388888888888889" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/sh.xml" value="0.2203125" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/shape_staticticcard.xml" value="0.2203125" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/search_text_background.xml" value="0.2203125" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/shapecardhome.xml" value="0.2203125" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/shapeview.xml" value="0.2203125" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/splash_image.xml" value="0.2203125" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/drawable/style.xml" value="0.2203125" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout-v31/fragment_search.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/activity_main.xml" value="0.1911231884057971" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_about.xml" value="0.2" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_button_details.xml" value="0.25" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_about.xml" value="0.1" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_astazanika.xml" value="0.1897644927536232" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_button_details.xml" value="0.16" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_search.xml" value="0.25" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_johnson_and_johnson.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_moderna.xml" value="0.19972826086956522" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_novavox.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_pfizer.xml" value="0.18" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_search.xml" value="0.1" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_sinopharm.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_sputnik_v.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_statistic.xml" value="0.25" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_vaccine_type.xml" value="0.2" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_vaccine_type_show.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/recycler_view_layout.xml" value="0.18" />
-        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/menu/main_bottom_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_vaccine_type.xml" value="0.2739393939393939" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_vaccine_type_show.xml" value="0.1743659420289855" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/recycler_view_layout.xml" value="0.19519927536231885" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/drawable/shearch_text_background.xml" value="0.24114583333333334" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout-v31/fragment_search.xml" value="0.22083333333333333" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/activity_Home.xml" value="0.22083333333333333" />
@@ -47,5 +42,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.21654749744637386" />
+      </ProjectState>
+    </option>
   </component>
 </project>
