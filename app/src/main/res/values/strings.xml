@@ -77,4 +77,12 @@
     <string name="youInfected">You\'re Infected!!</string>
     <string name="possibly_infected">Possibly Infected</string>
     <string name="no_infected">No Infected</string>
+    <string name="information_about_the_application">Information about the application</string>
+    <string name="an_application_designed_and_developed_by_a_group_of_beginners_in_application_development_that_provides_a_set_of_services_such_as_information_on_vaccines_and_statistics_on_vaccinators_in_many_countries_and_many_other_services">An application designed and developed by a group of beginners in application development that provides a set of services such as information on vaccines and statistics on vaccinators in many countries and many other services.</string>
+    <string name="to_contact_us_click_on_the_icon">To contact us click on the icon.</string>
+    <string name="ahmed">Ahmed</string>
+    <string name="nooralden">Nooralden</string>
+    <string name="nofel">Nofel</string>
+    <string name="huda">Huda</string>
+    <string name="anwar">Anwar</string>
 </resources>

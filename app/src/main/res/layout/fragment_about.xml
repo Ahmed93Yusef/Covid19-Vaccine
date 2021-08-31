@@ -7,8 +7,6 @@
     android:background="#ECF6FF"
     app:layoutDescription="@xml/fragment_about_scene"
     tools:context=".ui.fragment.AboutFragment">
-
-
     <androidx.cardview.widget.CardView
         android:id="@+id/card_one"
         android:layout_width="0dp"
@@ -28,15 +26,6 @@
             android:background="@drawable/bg_about"
             android:elevation="12dp"
             android:padding="5dp">
-
-            <!--            <ImageView-->
-            <!--                android:layout_width="100dp"-->
-            <!--                android:layout_height="100dp"-->
-            <!--                android:elevation="16dp"-->
-            <!--                android:src="@drawable/get_vaccinated"-->
-            <!--                app:layout_constraintRight_toRightOf="parent"-->
-            <!--                app:layout_constraintTop_toTopOf="parent" />-->
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,13 +34,11 @@
                 android:padding="14dp"
                 android:text="let's vaccine"
                 android:textColor="#82C5FF"
-                android:textSize="25sp"
+                android:textSize="28sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
-
     <LinearLayout
         android:id="@+id/linear_layout"
         android:layout_width="match_parent"
@@ -66,18 +53,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="serif"
-            android:padding="10dp"
-            android:text="Information about the application"
+            android:padding="16dp"
+            android:text="@string/information_about_the_application"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="serif"
-            android:padding="8dp"
-            android:text="An application designed and developed by a group of beginners in application development that provides a set of services such as information on vaccines and statistics on vaccinators in many countries and many other services." />
-
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:text="@string/an_application_designed_and_developed_by_a_group_of_beginners_in_application_development_that_provides_a_set_of_services_such_as_information_on_vaccines_and_statistics_on_vaccinators_in_many_countries_and_many_other_services" />
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
@@ -103,7 +90,7 @@
                 android:elevation="12dp"
                 android:fontFamily="serif"
                 android:padding="5dp"
-                android:text="To contact us click on the icon."
+                android:text="@string/to_contact_us_click_on_the_icon"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -121,8 +108,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="serif"
-                android:text="Ahmed"
-                android:textSize="10sp"
+                android:text="@string/ahmed"
+                android:textSize="@dimen/ten"
                 app:layout_constraintEnd_toEndOf="@+id/member1"
                 app:layout_constraintStart_toStartOf="@+id/member1"
                 app:layout_constraintTop_toBottomOf="@id/member1" />
@@ -141,13 +128,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="serif"
-                android:text="Nooralden"
-                android:textSize="10sp"
+                android:text="@string/nooralden"
+                android:textSize="@dimen/ten"
                 app:layout_constraintEnd_toEndOf="@+id/member2"
                 app:layout_constraintStart_toStartOf="@+id/member2"
                 app:layout_constraintTop_toBottomOf="@id/member2" />
-
-
             <ImageView
                 android:id="@+id/member3"
                 android:layout_width="35dp"
@@ -156,19 +141,16 @@
                 app:layout_constraintLeft_toRightOf="@id/member2"
                 app:layout_constraintRight_toLeftOf="@id/member4"
                 app:layout_constraintTop_toBottomOf="@id/card_text1" />
-
             <TextView
                 android:id="@+id/member3_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="serif"
-                android:text="Nofel"
-                android:textSize="10sp"
+                android:text="@string/nofel"
+                android:textSize="@dimen/ten"
                 app:layout_constraintEnd_toEndOf="@+id/member3"
                 app:layout_constraintStart_toStartOf="@+id/member3"
                 app:layout_constraintTop_toBottomOf="@id/member3" />
-
-
             <ImageView
                 android:id="@+id/member4"
                 android:layout_width="35dp"
@@ -183,8 +165,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="serif"
-                android:text="Huda"
-                android:textSize="10sp"
+                android:text="@string/huda"
+                android:textSize="@dimen/ten"
                 app:layout_constraintEnd_toEndOf="@+id/member4"
                 app:layout_constraintStart_toStartOf="@+id/member4"
                 app:layout_constraintTop_toBottomOf="@id/member4" />
@@ -204,13 +186,11 @@
                 android:layout_height="wrap_content"
                 android:elevation="12dp"
                 android:fontFamily="serif"
-                android:text="Anwar"
-                android:textSize="10sp"
+                android:text="@string/anwar"
+                android:textSize="@dimen/ten"
                 app:layout_constraintEnd_toEndOf="@+id/member5"
                 app:layout_constraintStart_toStartOf="@+id/member5"
                 app:layout_constraintTop_toBottomOf="@id/member5" />
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
