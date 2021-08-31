@@ -4,18 +4,10 @@ import com.example.covid19_vaccine.data.domain.VaccineData
 
 object DataManger {
     private val vaccineList = mutableListOf<VaccineData>()
-
     private var countryList = mutableListOf<VaccineData>()
-
     private var oneCountryList = mutableListOf<VaccineData>()
-
-    private var topCountriesVaccinated = mutableListOf<Double>()
-
-    private var countryNameList = mutableSetOf<String>()
-
-    fun addVaccine(vaccine: VaccineData) = vaccineList.add(vaccine)
-
     private var vaccineIndex = 0
+    fun addVaccine(vaccine: VaccineData) = vaccineList.add(vaccine)
     //thus function using with RecyclerView to make the the first position on Recycler can Reachable
     fun getCurrentItem():VaccineData = vaccineList[vaccineIndex]
     fun getNextItem() : VaccineData{
@@ -33,7 +25,6 @@ object DataManger {
         return vaccineList[vaccineIndex]
     }
     //thus function using with Recycler View to make the the last position on Recycler can Reachable
-
     fun getCountry(country: String) = vaccineList.let {
         countryList = it.filter { it1 ->
             it1.country.lowercase().trim() == country.lowercase().trim()
@@ -44,27 +35,14 @@ object DataManger {
             valueTransform = { countryList }
         )
     }
-
+    // initCountryList filter vaccineList according to country to create new list content only last row of data
     fun initCountryList(){
-        for (i in 0 until vaccineList.size - 1) {
-           if( vaccineList[i].country != vaccineList[i+1].country){
-            oneCountryList.add(vaccineList[i])
-           }
-        }
+        (0 until vaccineList.size - 1)
+            .filter { vaccineList[it].country != vaccineList[it +1].country }
+            .forEach { oneCountryList.add(vaccineList[it]) }
         oneCountryList.add(vaccineList[vaccineList.size - 1])
     }
-
-
-    fun getTopFive(){
-        for (i in oneCountryList.indices){
-            topCountriesVaccinated.add(oneCountryList[i].people_vaccinated)
-        }
-    }
-    fun topTen() = topCountriesVaccinated.sort()
-
-
-// function to convert big numbers to K and M style
-
+    // function to convert big numbers to K , M and B style
     fun convertNumber(number: Double): String {
         return when {
             (number / 1000000000) >= 1 -> {
@@ -83,7 +61,6 @@ object DataManger {
             }
         }
     }
-
-    fun getTopTeen() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 10)
-
+    // function getTopTen get only the top ten country according data entry
+    fun getTopTen() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 10)
   }
