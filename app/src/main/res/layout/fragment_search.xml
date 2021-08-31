@@ -1,117 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#6868AEFF"
     tools:context=".ui.fragment.SearchFragment">
-
-
     <SearchView
         android:id="@+id/inputCountryText"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:background="@drawable/search_text_background"
         android:layout_height="wrap_content"
-        android:hint="@string/input_country"
-        android:layout_marginVertical="32dp"
         android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="32dp"
+        android:background="@drawable/search_text_background"
+        android:hint="@string/input_country"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-
+        app:layout_constraintTop_toTopOf="parent">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
     </SearchView>
     <androidx.cardview.widget.CardView
         android:id="@+id/card_country"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="130dp"
         android:layout_margin="18dp"
         android:visibility="visible"
         app:cardCornerRadius="24dp"
         app:cardElevation="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputCountryText">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/txtCountryName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="12dp"
-                tools:text="Iraq"
-                android:textColor="@color/black"
-                android:textSize="32sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <TextView
-                android:id="@+id/txtPeopleFullyVaccine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingEnd="16dp"
-                android:paddingStart="16dp"
-                tools:text="44.4142"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/labPeopleFullyVaccine"
-                app:layout_constraintStart_toStartOf="@+id/labPeopleFullyVaccine"
-                app:layout_constraintTop_toTopOf="@+id/txtPeopleVaccine" />
-
-            <TextView
-                android:id="@+id/txtPeopleVaccine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingEnd="16dp"
-                android:paddingStart="16dp"
-                tools:text="44.4142"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/labPeopleVaccine"
-                app:layout_constraintStart_toStartOf="@+id/labPeopleVaccine"
-                app:layout_constraintTop_toBottomOf="@+id/txtCountryName" />
-
-            <TextView
-                android:id="@+id/labPeopleFullyVaccine"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:text="@string/people_fully_vaccinated"
-                android:textSize="12sp"
-                android:padding="6dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                android:textAlignment="center"
-                app:layout_constraintStart_toEndOf="@+id/labPeopleVaccine"
-                app:layout_constraintTop_toTopOf="@+id/labPeopleVaccine" />
-
-            <TextView
-                android:id="@+id/labPeopleVaccine"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:text="@string/people_vaccinated"
-                android:textSize="12sp"
-                android:padding="6dp"
-                app:layout_constraintEnd_toStartOf="@+id/labPeopleFullyVaccine"
-                app:layout_constraintHorizontal_bias="0.5"
-                android:textAlignment="center"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtPeopleVaccine" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-
+        app:layout_constraintTop_toBottomOf="@+id/inputCountryText" />
+    <TextView
+        android:id="@+id/txtCountryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:gravity="center_horizontal"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/card_country"
+        app:layout_constraintStart_toStartOf="@id/card_country"
+        app:layout_constraintTop_toTopOf="@id/card_country"
+        tools:text="Iraq" />
+    <TextView
+        android:id="@+id/txtPeopleFullyVaccine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/labPeopleFullyVaccine"
+        app:layout_constraintStart_toStartOf="@+id/labPeopleFullyVaccine"
+        app:layout_constraintTop_toTopOf="@+id/txtPeopleVaccine"
+        tools:text="44.4142" />
+    <TextView
+        android:id="@+id/txtPeopleVaccine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/labPeopleVaccine"
+        app:layout_constraintStart_toStartOf="@+id/labPeopleVaccine"
+        app:layout_constraintTop_toBottomOf="@+id/txtCountryName"
+        tools:text="44.4142" />
+    <TextView
+        android:id="@+id/labPeopleFullyVaccine"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:padding="6dp"
+        android:text="@string/people_fully_vaccinated"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/labPeopleVaccine"
+        app:layout_constraintTop_toTopOf="@+id/labPeopleVaccine" />
+    <TextView
+        android:id="@+id/labPeopleVaccine"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:padding="6dp"
+        android:text="@string/people_vaccinated"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/labPeopleFullyVaccine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPeopleVaccine" />
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_error"
         android:layout_width="300dp"
@@ -124,7 +108,6 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/error" />
-
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_search"
         android:layout_width="320dp"
@@ -137,7 +120,6 @@
         app:layout_constraintVertical_bias="0.329"
         app:lottie_autoPlay="true"
         app:lottie_rawRes="@raw/search" />
-
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/lineChart"
         android:layout_width="match_parent"

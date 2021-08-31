@@ -7,7 +7,7 @@ import com.example.covid19_vaccine.data.DataManger
 import com.example.covid19_vaccine.databinding.FragmentSearchBinding
 
 
-class SearchFragment: BaseFragment<FragmentSearchBinding>() {
+class SearchFragment : BaseFragment<FragmentSearchBinding>() {
     override val bindingInflater: (LayoutInflater) -> FragmentSearchBinding =
         FragmentSearchBinding::inflate
 
@@ -25,11 +25,9 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
                     searchTextChange(requireNotNull(newSearch))
                     return false
                 }
-
             })
         }
     }
-
     private fun searchSubmit(country: String) {
         binding?.apply {
             visibility(true)
@@ -55,56 +53,29 @@ class SearchFragment: BaseFragment<FragmentSearchBinding>() {
         }
     }
 
-
     private fun setData(country: String) {
-
         DataManger.getCountry(country).forEach { dataCountry ->
             val data = dataCountry.value[dataCountry.value.size - 1]
             binding?.apply {
                 txtPeopleVaccine.text = DataManger.convertNumber(data.people_vaccinated)
                 txtPeopleFullyVaccine.text = DataManger.convertNumber(data.people_fully_vaccinated)
                 txtCountryName.text = data.country
-
-//                lineChart.apply {
-//
-//                }
-
-//                pieChart.apply {
-//                    clearChart()      /// Clear chart before new search
-//
-//                    addPieSlice(PieModel("people_fully_vaccinated", data.people_fully_vaccinated.toFloat(), -0x78c0aa))
-//                    addPieSlice(PieModel("people_fully_vaccinated", data.people_fully_vaccinated.toFloat(), -0xa9cbaa))
-////                    addBar(BarModel(data.people_vaccinated_per_hundred.toFloat(), -0xa9cbaa))
-////                    addBar(BarModel(data.people_fully_vaccinated_per_hundred.toFloat(), -0x78c0aa))
-////                    addBar(BarModel(data.daily_vaccinations.toFloat(), -0xa9480f))
-////                    addBar(BarModel(data.daily_vaccinations_per_million.toFloat(), -0xcbcbaa))
-//
-//                    startAnimation()
-
-                //}
             }
         }
     }
-
-
-
-
-
-
-
-
-        override fun addCallBack() {
-            visibility(false)
+    override fun addCallBack() {
+        visibility(false)
+    }
+    private fun visibility(state: Boolean) {
+        binding?.apply {
+            cardCountry.isVisible = state
+            txtCountryName.isVisible =state
+            txtPeopleFullyVaccine.isVisible =state
+            labPeopleVaccine.isVisible =state
+            labPeopleFullyVaccine.isVisible =state
+            txtPeopleVaccine.isVisible =state
+            lottieSearch.isVisible = !state
+            lineChart.isVisible = state
         }
-
-        private fun visibility(state: Boolean) {
-            binding?.apply {
-                cardCountry.isVisible = state
-                lottieSearch.isVisible = !state
-                lineChart.isVisible = state
-            }
-        }
-
-
-
+    }
 }
