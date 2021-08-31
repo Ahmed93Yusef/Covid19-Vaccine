@@ -16,30 +16,30 @@ class AboutFragment: BaseFragment<FragmentAboutBinding>() {
     override fun addCallBack() {
 
         binding?.apply{
-            member1?.setOnClickListener() {
+            member1.setOnClickListener() {
                 val urlIntent = Intent(Intent.ACTION_VIEW)
                 urlIntent.data = Uri.parse("https://github.com/Ahmed93Yusef")
                 startActivity(urlIntent)
             }
 
-            member2?.setOnClickListener() {
+            member2.setOnClickListener() {
             val urlIntent = Intent(Intent.ACTION_VIEW)
             urlIntent.data = Uri.parse("https://github.com/nooraldenakel")
             startActivity(urlIntent)
             }
 
-            member3?.setOnClickListener() {
+            member3.setOnClickListener() {
             val urlIntent = Intent(Intent.ACTION_VIEW)
             urlIntent.data = Uri.parse("https://github.com/naufalAliraqi")
             startActivity(urlIntent)
             }
 
-            member4?.setOnClickListener() {
+            member4.setOnClickListener() {
             val urlIntent = Intent(Intent.ACTION_VIEW)
             urlIntent.data = Uri.parse("https://github.com/huda997")
             startActivity(urlIntent)
             }
-            member5?.setOnClickListener() {
+            member5.setOnClickListener() {
             val urlIntent = Intent(Intent.ACTION_VIEW)
             urlIntent.data = Uri.parse("https://github.com/Anwar-Alfarhany")
             startActivity(urlIntent)
