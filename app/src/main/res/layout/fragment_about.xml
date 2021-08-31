@@ -4,195 +4,173 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ECF6FF"
+    android:background="@color/light_blue"
     app:layoutDescription="@xml/fragment_about_scene"
     tools:context=".ui.fragment.AboutFragment">
+
+
+    <ImageView
+        android:id="@+id/about_image"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/bg_about"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/about_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="About The Application:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/card_one" />
+
+    <TextView
+        android:id="@+id/text_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:lineSpacingExtra="3dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/an_application_designed_and_developed_by_a_group_of_beginners_in_application_development_that_provides_a_set_of_services_such_as_information_on_vaccines_and_statistics_on_vaccinators_in_many_countries_and_many_other_services"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/about_text" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_one"
         android:layout_width="0dp"
-        android:layout_height="220dp"
-        android:layout_margin="8dp"
-        app:cardBackgroundColor="#ECF6FF"
-        app:cardCornerRadius="40dp"
-        app:cardElevation="12dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="right"
-            android:background="@drawable/bg_about"
-            android:elevation="12dp"
-            android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:elevation="16dp"
-                android:fontFamily="@font/kalambold"
-                android:padding="14dp"
-                android:text="let's vaccine"
-                android:textColor="#82C5FF"
-                android:textSize="28sp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-    <LinearLayout
-        android:id="@+id/linear_layout"
-        android:layout_width="match_parent"
-        android:layout_height="1000dp"
-        android:background="#ECF6FF"
-        android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/card_two">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif"
-            android:padding="16dp"
-            android:text="@string/information_about_the_application"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif"
-            android:padding="16dp"
-            android:textSize="16sp"
-            android:text="@string/an_application_designed_and_developed_by_a_group_of_beginners_in_application_development_that_provides_a_set_of_services_such_as_information_on_vaccines_and_statistics_on_vaccinators_in_many_countries_and_many_other_services" />
-    </LinearLayout>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_two"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="65dp"
         android:layout_margin="2dp"
         app:cardBackgroundColor="#A5D5FF"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:elevation="12dp">
 
-            <TextView
-                android:id="@+id/card_text1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:elevation="12dp"
-                android:fontFamily="serif"
-                android:padding="5dp"
-                android:text="@string/to_contact_us_click_on_the_icon"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/member1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:elevation="12dp"
+        android:src="@drawable/github"
+        app:layout_constraintEnd_toStartOf="@id/member2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/card_one" />
 
-            <ImageView
-                android:id="@+id/member1"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/github"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/member2"
-                app:layout_constraintTop_toBottomOf="@id/card_text1" />
+    <TextView
+        android:id="@+id/member1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:fontFamily="serif"
+        android:text="@string/ahmed"
+        android:textSize="@dimen/ten"
+        app:layout_constraintEnd_toStartOf="@id/member2_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/member1" />
 
-            <TextView
-                android:id="@+id/member1_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="serif"
-                android:text="@string/ahmed"
-                android:textSize="@dimen/ten"
-                app:layout_constraintEnd_toEndOf="@+id/member1"
-                app:layout_constraintStart_toStartOf="@+id/member1"
-                app:layout_constraintTop_toBottomOf="@id/member1" />
+    <ImageView
+        android:id="@+id/member2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:elevation="12dp"
+        android:src="@drawable/github"
+        app:layout_constraintEnd_toStartOf="@id/member3"
+        app:layout_constraintStart_toEndOf="@id/member1"
+        app:layout_constraintTop_toTopOf="@id/card_one" />
 
-            <ImageView
-                android:id="@+id/member2"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/github"
-                app:layout_constraintLeft_toRightOf="@id/member1"
-                app:layout_constraintRight_toLeftOf="@id/member3"
-                app:layout_constraintTop_toBottomOf="@id/card_text1" />
+    <TextView
+        android:id="@+id/member2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:fontFamily="serif"
+        android:text="@string/nooralden"
+        android:textSize="@dimen/ten"
+        app:layout_constraintEnd_toStartOf="@id/member3_text"
+        app:layout_constraintStart_toEndOf="@id/member1_text"
+        app:layout_constraintTop_toBottomOf="@id/member2" />
 
-            <TextView
-                android:id="@+id/member2_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="serif"
-                android:text="@string/nooralden"
-                android:textSize="@dimen/ten"
-                app:layout_constraintEnd_toEndOf="@+id/member2"
-                app:layout_constraintStart_toStartOf="@+id/member2"
-                app:layout_constraintTop_toBottomOf="@id/member2" />
-            <ImageView
-                android:id="@+id/member3"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/github"
-                app:layout_constraintLeft_toRightOf="@id/member2"
-                app:layout_constraintRight_toLeftOf="@id/member4"
-                app:layout_constraintTop_toBottomOf="@id/card_text1" />
-            <TextView
-                android:id="@+id/member3_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="serif"
-                android:text="@string/nofel"
-                android:textSize="@dimen/ten"
-                app:layout_constraintEnd_toEndOf="@+id/member3"
-                app:layout_constraintStart_toStartOf="@+id/member3"
-                app:layout_constraintTop_toBottomOf="@id/member3" />
-            <ImageView
-                android:id="@+id/member4"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/github"
-                app:layout_constraintLeft_toRightOf="@id/member3"
-                app:layout_constraintRight_toLeftOf="@id/member5"
-                app:layout_constraintTop_toBottomOf="@id/card_text1" />
+    <ImageView
+        android:id="@+id/member3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:elevation="12dp"
+        android:src="@drawable/github"
+        app:layout_constraintEnd_toStartOf="@id/member4"
+        app:layout_constraintStart_toEndOf="@id/member2"
+        app:layout_constraintTop_toTopOf="@id/card_one" />
 
-            <TextView
-                android:id="@+id/member4_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="serif"
-                android:text="@string/huda"
-                android:textSize="@dimen/ten"
-                app:layout_constraintEnd_toEndOf="@+id/member4"
-                app:layout_constraintStart_toStartOf="@+id/member4"
-                app:layout_constraintTop_toBottomOf="@id/member4" />
+    <TextView
+        android:id="@+id/member3_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:fontFamily="serif"
+        android:text="@string/nofel"
+        android:textSize="@dimen/ten"
+        app:layout_constraintEnd_toStartOf="@id/member4_text"
+        app:layout_constraintStart_toEndOf="@id/member2_text"
+        app:layout_constraintTop_toBottomOf="@id/member3" />
 
-            <ImageView
-                android:id="@+id/member5"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/github"
-                app:layout_constraintLeft_toRightOf="@id/member4"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_text1" />
+    <ImageView
+        android:id="@+id/member4"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:elevation="12dp"
+        android:src="@drawable/github"
+        app:layout_constraintEnd_toStartOf="@id/member5"
+        app:layout_constraintStart_toEndOf="@id/member3"
+        app:layout_constraintTop_toTopOf="@id/card_one" />
 
-            <TextView
-                android:id="@+id/member5_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:elevation="12dp"
-                android:fontFamily="serif"
-                android:text="@string/anwar"
-                android:textSize="@dimen/ten"
-                app:layout_constraintEnd_toEndOf="@+id/member5"
-                app:layout_constraintStart_toStartOf="@+id/member5"
-                app:layout_constraintTop_toBottomOf="@id/member5" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/member4_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:fontFamily="serif"
+        android:text="@string/huda"
+        android:textSize="@dimen/ten"
+        app:layout_constraintEnd_toStartOf="@id/member5_text"
+        app:layout_constraintStart_toEndOf="@id/member3_text"
+        app:layout_constraintTop_toBottomOf="@id/member4" />
+
+    <ImageView
+        android:id="@+id/member5"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:elevation="12dp"
+        android:src="@drawable/github"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/member4"
+        app:layout_constraintTop_toTopOf="@id/card_one" />
+
+    <TextView
+        android:id="@+id/member5_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:fontFamily="serif"
+        android:text="@string/anwar"
+        android:textSize="@dimen/ten"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/member4_text"
+        app:layout_constraintTop_toBottomOf="@id/member5" />
 
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
