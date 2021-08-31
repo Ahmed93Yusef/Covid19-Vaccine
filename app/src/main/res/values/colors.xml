@@ -14,5 +14,8 @@
 
 
     <color name="main_background">#EBF5FF</color>
+    <color name="grayDark">#bdbdbd</color>
+    <color name="graynormal">#80322F2F</color>
+    <color name="homecolor">#edf6ff</color>
 
 </resources>

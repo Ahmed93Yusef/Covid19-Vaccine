@@ -6,7 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.VaccineTypeFragment">
 
-
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentCountainerVaccine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/motionLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <ImageView
         android:id="@+id/imageBackground"
         android:layout_width="match_parent"
@@ -53,6 +61,7 @@
         android:id="@+id/motionLayout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:elevation="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +87,7 @@
                     android:layout_height="match_parent"
                     app:lottie_autoPlay="true"
                     app:lottie_loop="true"
-                    app:lottie_rawRes="@raw/uparrows" />
+                    app:lottie_rawRes="@raw/downarrows" />
             </LinearLayout>
 
             <HorizontalScrollView
@@ -86,8 +95,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="clip_horizontal"
-                android:background="#48344A89"
-                android:elevation="8dp"
+                android:background="#3B112663"
                 android:scrollbars="none">
 
                 <LinearLayout
@@ -103,52 +111,81 @@
                         android:layout_height="120dp"
                         android:layout_gravity="center"
                         android:layout_marginEnd="@dimen/marginEnd16"
-                        app:cardBackgroundColor="#FFEB3B"
+                        app:cardBackgroundColor="#E4EDF6FF"
                         app:cardCornerRadius="8dp"
-                        app:cardElevation="8dp" />
+                        app:cardElevation="1dp" >
+                        <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/bottolphizor"/>
+                    </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
                         android:id="@+id/sputnik_type2"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_gravity="center"
                         android:layout_marginEnd="@dimen/marginEnd16"
-                        app:cardBackgroundColor="#E6D533"
+                        app:cardBackgroundColor="#E4EDF6FF"
                         app:cardCornerRadius="8dp"
-                        app:cardElevation="8dp" />
+                        app:cardElevation="1dp" >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/sputinkv"/>
+                    </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
                         android:id="@+id/asta_type3"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_gravity="center"
                         android:layout_marginEnd="@dimen/marginEnd16"
-                        app:cardBackgroundColor="#FDE61D"
+                        app:cardBackgroundColor="#E4EDF6FF"
                         app:cardCornerRadius="8dp"
-                        app:cardElevation="8dp" />
+                        app:cardElevation="1dp" >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/bottolasta"/>
+                    </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
                         android:id="@+id/moderna_type4"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_gravity="center"
                         android:layout_marginEnd="@dimen/marginEnd16"
-                        app:cardBackgroundColor="#EDD81B"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="8dp" />
+                        app:cardBackgroundColor="#85EDF6FF"                       app:cardCornerRadius="8dp"
+                        app:cardElevation="1dp" >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/bottolphizorcopy"/>
+                    </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
                         android:id="@+id/novavax_type5"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_gravity="center"
                         android:layout_marginEnd="@dimen/marginEnd16"
-                        app:cardBackgroundColor="#FFEB3B"
+                        app:cardBackgroundColor="#E4EDF6FF"
                         app:cardCornerRadius="8dp"
-                        app:cardElevation="8dp" />
+                        app:cardElevation="1dp" >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/bottolsniphorm"/>
+                    </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
                         android:id="@+id/jhonson_type6"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_gravity="center"
                         android:layout_marginEnd="@dimen/marginEnd16"
-                        app:cardBackgroundColor="#E6D533"
+                        app:cardBackgroundColor="#E4EDF6FF"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="8dp" />
                     <androidx.cardview.widget.CardView
