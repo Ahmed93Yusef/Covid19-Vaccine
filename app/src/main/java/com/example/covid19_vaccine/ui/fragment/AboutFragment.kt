@@ -12,7 +12,7 @@ class AboutFragment: BaseFragment<FragmentAboutBinding>() {
 
     }
 
-
+    // Open a link of Github site when click on the icon from the fragment.
     override fun addCallBack() {
 
         binding?.apply{
