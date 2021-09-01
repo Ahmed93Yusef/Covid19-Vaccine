@@ -17,6 +17,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
     private val myVaccineTypeFragment = VaccineTypeFragment()
     private val myDetailsButtonFragment = DetailsButtonFragment()
     private val myHomeTestFragment = HomeTestFragment()
+    private var myCovidPreventFragment = CovidPreventFragment()
 
     lateinit var adapter: VaccineAdapter
 
@@ -87,8 +88,8 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
             2 -> {
                 replaceFragment(myHomeTestFragment) }
             3 -> {
-                Toast.makeText(context,"item $Position clicked" , Toast.LENGTH_SHORT).show()
-                adapter.notifyItemChanged(Position) }
+                replaceFragment(myCovidPreventFragment)
+                 }
         }
     } // this function using for transition to Fragments depend on the type of services user selected , and working by Positions
 
@@ -102,4 +103,5 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
             }
         }
     }
+
 }
