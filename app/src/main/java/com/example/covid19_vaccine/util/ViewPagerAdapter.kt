@@ -18,7 +18,8 @@ class ViewPagerAdapter(private val listData : List<CovidPrevent> ) : RecyclerVie
             textViewItem.text = currentItem.textTitle
             textShow.text = currentItem.textDescriptor
             imageViewItem.setImageResource(currentItem.image)
-            imagePreventShow.setImageResource(currentItem.imagePreventShow) }
+            imagePreventShow.setImageResource(currentItem.imagePreventShow)
+        }
     }
     override fun getItemCount() = listData.size
 
