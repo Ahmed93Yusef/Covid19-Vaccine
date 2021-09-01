@@ -39,10 +39,9 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
 
     private fun imageFlipper(){
         val image = arrayListOf(
-            R.drawable.back,
-            R.drawable.back1,
-            R.drawable.back2,
-            R.drawable.back3,
+            R.drawable.whyshouldwetake,
+            R.drawable.arevaccinesafe,
+            R.drawable.whatthevaccine,
         )
         imagePreventFlipper = requireNotNull(binding?.viewFlipper)
         for (i in image.iterator()){

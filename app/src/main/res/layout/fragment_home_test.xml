@@ -5,29 +5,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/homecolor"
     tools:context=".ui.fragment.HomeTestFragment">
     <TextView
-        android:id="@+id/testText"
+        android:id="@+id/symptomsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:textSize="32sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="8dp"
+        android:textSize="45sp"
+        android:fontFamily="@font/cardobold"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="18dp"
         android:text="@string/test"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/descriptionState"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="@string/people_may_be_sick"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/frankruhllibrelight"
+        app:layout_constraintTop_toBottomOf="@id/symptomsText"
+        app:layout_constraintStart_toStartOf="@id/symptomsText" />
+    <TextView
+        android:id="@+id/symptomsexperience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What sympomes do you experience?"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:fontFamily="@font/cardobold"
+        android:layout_marginTop="18dp"
+        app:layout_constraintBottom_toTopOf="@id/chipGroup1"
+        app:layout_constraintTop_toBottomOf="@id/descriptionState"
+        app:layout_constraintStart_toStartOf="@id/descriptionState"
+        />
+
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroup1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:singleLine="true"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="4dp"
         app:chipSpacingHorizontal="1dp"
         app:chipSpacingVertical="1dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/testText">
+        app:layout_constraintTop_toBottomOf="@id/symptomsexperience">
         <com.google.android.material.chip.Chip
             android:id="@+id/commonChip1"
             android:layout_width="wrap_content"

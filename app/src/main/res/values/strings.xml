@@ -67,7 +67,7 @@
     <string name="efficacy">Efficacy</string>
     <string name="_0_5_ml_x2">0,5 ml X2</string>
     <string name="top_country_statistic">Top Country Statistic</string>
-    <string name="test"><u>ٍSymptoms:</u></string>
+    <string name="test">ٍSymptoms:</string>
     <string name="fever">fever</string>
     <string name="dry_cough">dry cough</string>
     <string name="tiredness">tiredness</string>
@@ -96,4 +96,5 @@
     <string name="nofel">Nofel</string>
     <string name="huda">Huda</string>
     <string name="anwar">Anwar</string>
+    <string name="people_may_be_sick">People may be sick with the virus for 1 to 14 days before developing any symptoms.</string>
 </resources>
