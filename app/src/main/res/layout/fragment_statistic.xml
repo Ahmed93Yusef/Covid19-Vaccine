@@ -21,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
     
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dataTopRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="180dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -550,7 +551,8 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/dataTopRecyclerView"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
