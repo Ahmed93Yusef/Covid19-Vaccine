@@ -13,6 +13,7 @@ object Constant {
         const val PEOPLE_FULLY_VACCINATED_PER_HUNDRED = 10
         const val DAILY_VACCINATIONS_PER_MILLION = 11
     }
+    const val CHART_LABEL = "Daily Vaccine"
 
 
 }
