@@ -20,9 +20,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
     private var myCovidPreventFragment = CovidPreventFragment()
 
     lateinit var adapter: VaccineAdapter
-
     private lateinit var imagePreventFlipper: ViewFlipper
-
     override val bindingInflater: (LayoutInflater) -> FragmentHomeBinding = FragmentHomeBinding::inflate
 
     override fun setup() {
@@ -39,9 +37,9 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
 
     private fun imageFlipper(){
         val image = arrayListOf(
-            R.drawable.whyshouldwetake,
-            R.drawable.arevaccinesafe,
             R.drawable.whatthevaccine,
+            R.drawable.whythevaccine,
+            R.drawable.whyshouldwetake
         )
         imagePreventFlipper = requireNotNull(binding?.viewFlipper)
         for (i in image.iterator()){
@@ -79,7 +77,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
     override fun onClickServiceItem(Position: Int) {
         when(Position){
             0 -> {
-                Toast.makeText(context,"item $Position clicked" , Toast.LENGTH_SHORT).show()
+                Toast.makeText(context,"Under the Maintenance" , Toast.LENGTH_SHORT).show()
                 adapter.notifyItemChanged(Position) }
             1 -> {
                 replaceFragment(myVaccineTypeFragment)
@@ -101,6 +99,6 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
                 homeScreenDaily.text = DataManger.convertNumber(data.daily_vaccinations)
             }
         }
-    }
+    }//this fun using to get data for iraq to shown it in the Home screen
 
 }
