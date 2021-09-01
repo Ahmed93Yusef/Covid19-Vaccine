@@ -29,8 +29,16 @@
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/fragment_vaccine_type_show.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/recycler_view_layout.xml" value="0.18" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/menu/main_bottom_navigation.xml" value="0.1" />
+        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/drawable-xxhdpi/circle_outline.xml" value="0.20307017543859648" />
+        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/drawable/ic_launcher_background.xml" value="0.20307017543859648" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/drawable/infaceted_background.xml" value="0.24114583333333334" />
+        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/drawable/search_text_background.xml" value="0.20307017543859648" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/drawable/shearch_text_background.xml" value="0.24114583333333334" />
+        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/drawable/vaccine_2.xml" value="0.20307017543859648" />
+        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/drawable/vaccine_3.xml" value="0.20307017543859648" />
+        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/drawable/vaccine_4.xml" value="0.20307017543859648" />
+        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/drawable/vaccine_5.xml" value="0.20307017543859648" />
+        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/drawable/vaccine_7.xml" value="0.20307017543859648" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout-v31/fragment_search.xml" value="0.22083333333333333" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/activity_Home.xml" value="0.22083333333333333" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/activity_home.xml" value="0.22083333333333333" />
@@ -38,7 +46,8 @@
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_about.xml" value="0.18596491228070175" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_home.xml" value="0.21654749744637386" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_home_test.xml" value="0.182916307161346" />
-        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_search.xml" value="0.2" />
+        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_johnson_and_johnson.xml" value="0.18596491228070175" />
+        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_search.xml" value="0.18596491228070175" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_statistic.xml" value="0.22083333333333333" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_vaccine_type.xml" value="0.21654749744637386" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_vaccine_type_show.xml" value="0.22083333333333333" />

@@ -11,8 +11,7 @@
     <color name="colorButton">#ffaebd</color>
     <color name="pinkDeep">#6E215F</color>
     <color name="light_blue">#edf6ff</color>
-
-
+    <color name="green">#008000</color>
     <color name="main_background">#EBF5FF</color>
     <color name="grayDark">#bdbdbd</color>
     <color name="graynormal">#80322F2F</color>
