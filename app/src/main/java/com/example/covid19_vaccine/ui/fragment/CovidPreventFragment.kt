@@ -63,12 +63,6 @@ class CovidPreventFragment : BaseFragment<FragmentCovidPreventBinding>() {
 
         }
     }
-    private fun test(){
-        binding?.apply {
-
-            }
-
-        }
 
 
     }
