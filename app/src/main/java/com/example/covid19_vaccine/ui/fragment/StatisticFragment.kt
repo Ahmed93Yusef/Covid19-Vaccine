@@ -16,41 +16,37 @@ import java.util.*
 
 class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
     override val bindingInflater: (LayoutInflater) -> FragmentStatisticBinding = FragmentStatisticBinding::inflate
-
     override fun setup() {
-
-        DataManger.initCountryList()
-        val topTeenCountry = DataManger.getTopTen()
-        binding?.apply {
-            country1Name.text = topTeenCountry[0].country
-            country2Name.text = topTeenCountry[1].country
-            country3Name.text = topTeenCountry[2].country
-            country4Name.text = topTeenCountry[3].country
-            country5Name.text = topTeenCountry[4].country
-
-            country1VaccineTotal.text = DataManger.convertNumber(topTeenCountry[0].people_fully_vaccinated)
-            country2VaccineTotal.text = DataManger.convertNumber(topTeenCountry[1].people_fully_vaccinated)
-            country3VaccineTotal.text = DataManger.convertNumber(topTeenCountry[2].people_fully_vaccinated)
-            country4VaccineTotal.text = DataManger.convertNumber(topTeenCountry[3].people_fully_vaccinated)
-            country5VaccineTotal.text = DataManger.convertNumber(topTeenCountry[4].people_fully_vaccinated)
-
-            "${topTeenCountry[0].people_fully_vaccinated_per_hundred.toString()} %".also { country1VaccinePer.text = it }
-            "${topTeenCountry[1].people_fully_vaccinated_per_hundred.toString()} %".also { country2VaccinePer.text = it }
-            "${topTeenCountry[2].people_fully_vaccinated_per_hundred.toString()} %".also { country3VaccinePer.text = it }
-            "${topTeenCountry[3].people_fully_vaccinated_per_hundred.toString()} %".also { country4VaccinePer.text = it }
-            "${topTeenCountry[4].people_fully_vaccinated_per_hundred.toString()} %".also { country5VaccinePer.text = it }
+//        DataManger.initCountryList()
+//        val topTenCountry = DataManger.getTopTen()
+//        binding?.apply {
+//            country1Name.text = topTenCountry[0].country
+//            country2Name.text = topTenCountry[1].country
+//            country3Name.text = topTenCountry[2].country
+//            country4Name.text = topTenCountry[3].country
+//            country5Name.text = topTenCountry[4].country
+//
+//            country1VaccineTotal.text = DataManger.convertNumber(topTenCountry[0].people_fully_vaccinated)
+//            country2VaccineTotal.text = DataManger.convertNumber(topTenCountry[1].people_fully_vaccinated)
+//            country3VaccineTotal.text = DataManger.convertNumber(topTenCountry[2].people_fully_vaccinated)
+//            country4VaccineTotal.text = DataManger.convertNumber(topTenCountry[3].people_fully_vaccinated)
+//            country5VaccineTotal.text = DataManger.convertNumber(topTenCountry[4].people_fully_vaccinated)
+//
+//            "${topTenCountry[0].people_fully_vaccinated_per_hundred.toString()} %".also { country1VaccinePer.text = it }
+//            "${topTenCountry[1].people_fully_vaccinated_per_hundred.toString()} %".also { country2VaccinePer.text = it }
+//            "${topTenCountry[2].people_fully_vaccinated_per_hundred.toString()} %".also { country3VaccinePer.text = it }
+//            "${topTenCountry[3].people_fully_vaccinated_per_hundred.toString()} %".also { country4VaccinePer.text = it }
+//            "${topTenCountry[4].people_fully_vaccinated_per_hundred.toString()} %".also { country5VaccinePer.text = it }
 
             setLineChartData()
         }
-    }
 
     override fun addCallBack() {
-
-
+        TODO("Not yet implemented")
     }
-
-
-    fun dataValues1() : ArrayList<Entry>
+}
+    override fun addCallBack() {}
+    private fun dataValues1() : ArrayList<Entry>
     {
         val dataVal = ArrayList<Entry>()
         dataVal.add(Entry(0F, 20F))
@@ -59,42 +55,34 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
         dataVal.add(Entry(3F, 10F))
         return dataVal
     }
-
-    fun setLineChartData()
+    private fun setLineChartData()
     {
         val mpLineChart = binding?.lineChart!!
 
         val lineDataSet1 = LineDataSet(dataValues1(), "Data Set 1")
-        lineDataSet1.lineWidth = 4f
-        lineDataSet1.color = Color.parseColor("#00FFFF")
-        lineDataSet1.setDrawCircles(true)
-        lineDataSet1.setDrawCircleHole(false)
-        lineDataSet1.setCircleColor(Color.parseColor("#00FFFF"))
-        lineDataSet1.circleHoleColor = Color.parseColor("#00FFFF")
-        lineDataSet1.circleHoleRadius = 5f
-        lineDataSet1.circleRadius = 7f
-        lineDataSet1.valueTextSize = 12f
-        lineDataSet1.valueTextColor = Color.parseColor("#00FFFF")
-
+        lineDataSet1.apply {
+            lineWidth = 4f
+            color = Color.parseColor("#00FFFF")
+            setDrawCircles(true)
+            setDrawCircleHole(false)
+            setCircleColor(Color.parseColor("#00FFFF"))
+            circleHoleColor = Color.parseColor("#00FFFF")
+            circleHoleRadius = 5f
+            circleRadius = 7f
+            valueTextSize = 12f
+            valueTextColor = Color.parseColor("#00FFFF")
+        }
         val xAxis = mpLineChart.xAxis
         xAxis.valueFormatter = CustomFormat(axis)
-
         val dataSets : ArrayList<ILineDataSet> = ArrayList()
-
         dataSets.add(lineDataSet1)
-
         val data = LineData(dataSets)
-
         data.setValueFormatter(CustomFormat(axis))
-
         mpLineChart.data = data
         mpLineChart.invalidate()
-//        mpLineChart?.setBackgroundColor(Color.parseColor("#ff00ff"))
         mpLineChart.setDrawGridBackground(true)
         mpLineChart.setDrawBorders(true)
-//        mpLineChart.setBorderColor(Color.parseColor("#ff00ff"))
         mpLineChart.setBorderWidth(2f)
-
         val legend = mpLineChart.legend
         legend.isEnabled = true
         legend.textColor = Color.parseColor("#431678")
@@ -103,49 +91,13 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
         legend.formSize = 10f
         legend.xEntrySpace = 10f
         legend.formToTextSpace = 10f
-
         setvlaue
-//        val xvalue = ArrayList<String>()
-//        xvalue.add("11.00 AM")
-//        xvalue.add("12.00 AM")
-//        xvalue.add("1.00 AM")
-//        xvalue.add("3.00 PM")
-//        xvalue.add("7.00 PM")
-//
-//
-//
-//        val lineentry = ArrayList<Entry>();
-//        lineentry.add(Entry(20f,0f))
-//        lineentry.add(Entry(50f,1f))
-//        lineentry.add(Entry(60f,2f))
-//        lineentry.add(Entry(30f,3f))
-//        lineentry.add(Entry(10f,4f))
-//
-//
-//
-//
-//        val linedataset = LineDataSet(lineentry, "first")
-//        linedataset.color = resources.getColor(R.color.cardview_shadow_start_color)
-//
-//
-//
-//        val data = LineData()
-
     }
-
     val axis = arrayOf<String>("22/8" , "23/8" , "29/8" , "03/9" , "09/9" , "15/9")
-
     private var setvlaue = mutableListOf<String>("22/8", "31/7", "20/9")
-
-
     private class CustomFormat(var ax: Array<String>) : IndexAxisValueFormatter() {
         override fun getAxisLabel(value: Float, axis: AxisBase?): String {
             return ax[value.toInt()]
         }
-    }
-
-    private class setAxisValue() : IndexAxisValueFormatter()
-    {
-
     }
 }

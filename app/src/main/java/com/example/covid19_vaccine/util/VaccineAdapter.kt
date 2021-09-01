@@ -9,7 +9,6 @@ import com.example.covid19_vaccine.data.domain.VaccineRecyclerView
 import com.example.covid19_vaccine.databinding.RecyclerViewLayoutBinding
 
 class VaccineAdapter(private val listData : List<VaccineRecyclerView>, private val listener : VaccineInteraction) : RecyclerView.Adapter<VaccineAdapter.VaccineHolder>() {
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VaccineHolder =
         VaccineHolder(LayoutInflater.from(parent.context).inflate(R.layout.recycler_view_layout,parent,false))
 
@@ -21,8 +20,7 @@ class VaccineAdapter(private val listData : List<VaccineRecyclerView>, private v
         }
     }
     override fun getItemCount() = listData.size
-
-        inner class VaccineHolder(itemView : View) : RecyclerView.ViewHolder(itemView) , View.OnClickListener{
+    inner class VaccineHolder(itemView : View) : RecyclerView.ViewHolder(itemView) , View.OnClickListener{
             val binding = RecyclerViewLayoutBinding.bind(itemView)
              init {
                  itemView.setOnClickListener(this)
@@ -32,6 +30,5 @@ class VaccineAdapter(private val listData : List<VaccineRecyclerView>, private v
                 if (position != RecyclerView.NO_POSITION){
                  listener.onClickServiceItem(position)}
             }
-
-        }
+    }
 }

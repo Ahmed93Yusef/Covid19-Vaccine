@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/light_blue"/>
     <!--Add the logo that you want to display and its gravity to centre-->
-    <item android:drawable="@drawable/vaccine_3" android:gravity="center" />
-
+    <item android:drawable="@drawable/vaccine_3"
+        android:gravity="center" />
 </layer-list>

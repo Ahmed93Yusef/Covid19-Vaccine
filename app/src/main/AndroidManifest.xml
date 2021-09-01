@@ -12,6 +12,7 @@
         >
         <activity
             android:name=".ui.HomeActivity"
+            android:screenOrientation="sensorPortrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

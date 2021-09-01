@@ -2,6 +2,7 @@ package com.example.covid19_vaccine.data.domain
 
 data class VaccineData(
     val country: String,
+    val Iso: String,
     val date: String,
     val total_vaccinated: Double,
     val people_vaccinated: Double,

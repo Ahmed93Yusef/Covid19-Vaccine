@@ -1,6 +1,5 @@
 package com.example.covid19_vaccine.ui.fragment
 
-
 import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
@@ -9,8 +8,7 @@ import com.example.covid19_vaccine.ui.fragment.VaccineType.AstazanikaFragment
 import com.example.covid19_vaccine.ui.fragment.VaccineType.PfizerFragment
 import com.example.covid19_vaccine.ui.fragment.VaccineTypeFragments.*
 
-class VaccineTypeFragment : BaseFragment<FragmentVaccineTypeBinding>(){
-
+class VaccineTypeFragment : BaseFragment<FragmentVaccineTypeBinding>() {
     var mySputnikFragment =  Sputing_v_Fragment()
     var myAstazanikaFragment = AstazanikaFragment()
     var myPfizerFragment = PfizerFragment()
@@ -18,11 +16,8 @@ class VaccineTypeFragment : BaseFragment<FragmentVaccineTypeBinding>(){
     val mySinopharmFragment = SinopharmFragment()
     val myJohnsonJohnsonFragment = JohnsonFragment()
     val myNovaVoxFragment = NovaVoxFragment()
-
     override val bindingInflater: (LayoutInflater) -> FragmentVaccineTypeBinding = FragmentVaccineTypeBinding::inflate
-
     override fun setup() {}
-
     override fun addCallBack() {
         binding?.apply {
             VizorType1.setOnClickListener {
@@ -48,17 +43,17 @@ class VaccineTypeFragment : BaseFragment<FragmentVaccineTypeBinding>(){
             }
         }
     }
-    fun addFragment(fragment : Fragment){
+     private fun addFragment(fragment : Fragment){
         val trans = activity?.supportFragmentManager?.beginTransaction()
         trans?.add(R.id.fragmentCountainerVaccine,fragment)
         trans?.commit()
     }
-    fun replaceFragment(fragment : Fragment){
+     private fun replaceFragment(fragment : Fragment){
         val trans = activity?.supportFragmentManager?.beginTransaction()
         trans?.replace(R.id.fragmentCountainerVaccine,fragment)
         trans?.commit()
     }
-    fun condition(fragment: Fragment){
+    private fun condition(fragment: Fragment){
         if (R.id.fragmentCountainerVaccine != null){
             replaceFragment(fragment)
         }

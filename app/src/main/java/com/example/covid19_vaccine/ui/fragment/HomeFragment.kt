@@ -9,22 +9,17 @@ import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
 import com.example.covid19_vaccine.data.VaccineDataRecyclerView
 import com.example.covid19_vaccine.databinding.FragmentHomeBinding
-import com.example.covid19_vaccine.util.TransFragment
 import com.example.covid19_vaccine.util.VaccineAdapter
 import com.example.covid19_vaccine.util.VaccineInteraction
 
-class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,TransFragment {
+class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction {
     private val myVaccineTypeFragment = VaccineTypeFragment()
     private val myDetailsButtonFragment = DetailsButtonFragment()
     private val myHomeTestFragment = HomeTestFragment()
     private var myCovidPreventFragment = CovidPreventFragment()
-
     lateinit var adapter: VaccineAdapter
-
     private lateinit var imagePreventFlipper: ViewFlipper
-
     override val bindingInflater: (LayoutInflater) -> FragmentHomeBinding = FragmentHomeBinding::inflate
-
     override fun setup() {
         imageFlipper()
         adapter = VaccineAdapter(VaccineDataRecyclerView.listData,this) //Call the Recycle View to shown it
@@ -36,12 +31,11 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
             replaceFragment(myDetailsButtonFragment)
         }
     }
-
     private fun imageFlipper(){
         val image = arrayListOf(
-            R.drawable.whyshouldwetake,
-            R.drawable.arevaccinesafe,
             R.drawable.whatthevaccine,
+            R.drawable.whyshouldwetake,
+            R.drawable.why_shot,
         )
         imagePreventFlipper = requireNotNull(binding?.viewFlipper)
         for (i in image.iterator()){
@@ -59,27 +53,17 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
             setOutAnimation(context,android.R.anim.slide_out_right)
         }
     }  //This Function using to add flipper image to cardView in the Home Screen
-
-    override fun addFragment(fragment: Fragment) {
-        val transaction = activity?.supportFragmentManager?.beginTransaction()
-        transaction?.add(R.id.fragment_container, fragment)
-        transaction?.commit()
-    }
-    /*this functions @Override from the "TransFragment" interface to make the trans easy to use.
-     ++ the functionality of it to add the fragment on another fragment user want to go to it */
-
-    override fun replaceFragment(fragment: Fragment) {
+    private fun replaceFragment(fragment: Fragment) {
         val transaction = activity?.supportFragmentManager?.beginTransaction()
         transaction?.replace(R.id.fragment_container, fragment)?.addToBackStack(null)
         transaction?.commit()
     }
     /*this functions @Override from the "TransFragment" interface to make the trans easy to use.
      ++ the functionality of it to replace the fragment to another fragment user want to go to it*/
-
     override fun onClickServiceItem(Position: Int) {
         when(Position){
             0 -> {
-                Toast.makeText(context,"item $Position clicked" , Toast.LENGTH_SHORT).show()
+                Toast.makeText(context,"Under Maintenance" , Toast.LENGTH_SHORT).show()
                 adapter.notifyItemChanged(Position) }
             1 -> {
                 replaceFragment(myVaccineTypeFragment)
@@ -91,9 +75,7 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
                  }
         }
     } // this function using for transition to Fragments depend on the type of services user selected , and working by Positions
-
     private fun iraqData(){
-
         DataManger.getCountry("iraq").forEach { dataCountry ->
             val data = dataCountry.value[dataCountry.value.size-1]
             binding?.apply {
@@ -101,6 +83,5 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,Tran
                 homeScreenDaily.text = DataManger.convertNumber(data.daily_vaccinations)
             }
         }
-    }
-
+    } // this function provide Iraq data to shown it in homeScreen
 }

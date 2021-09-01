@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/homecolor"
+    android:background="@color/light_blue"
     tools:context=".ui.fragment.HomeTestFragment">
     <TextView
         android:id="@+id/symptomsText"
@@ -14,7 +14,6 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="40sp"
-        android:fontFamily="@font/cardobold"
         android:layout_marginTop="24dp"
         android:layout_marginStart="18dp"
         android:text="@string/test"
@@ -28,9 +27,16 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/frankruhllibrelight"
         app:layout_constraintTop_toBottomOf="@id/symptomsText"
         app:layout_constraintStart_toStartOf="@id/symptomsText" />
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/creenho"
+        app:layout_constraintTop_toBottomOf="@id/descriptionState"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
         android:id="@+id/symptomsexperience"
         android:layout_width="wrap_content"
@@ -39,10 +45,9 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="24sp"
-        android:fontFamily="@font/cardobold"
         android:layout_marginTop="18dp"
         app:layout_constraintBottom_toTopOf="@id/chipGroup1"
-        app:layout_constraintTop_toBottomOf="@id/descriptionState"
+        app:layout_constraintTop_toBottomOf="@id/image1"
         app:layout_constraintStart_toStartOf="@id/descriptionState"
         />
 
@@ -103,45 +108,6 @@
             style="@style/Widget.MaterialComponents.Chip.Filter"
             android:text="@string/aches_and_pains"
             android:textSize="18sp"/>
-        <com.google.android.material.chip.Chip
-            android:id="@+id/mediumChip2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:text="@string/sore_throat"
-            android:textSize="18sp"/>
-        <com.google.android.material.chip.Chip
-            android:id="@+id/mediumChip3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:text="@string/diarrhoea"
-            android:textSize="18sp"/>
-    </com.google.android.material.chip.ChipGroup>
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:singleLine="true"
-        android:layout_marginStart="4dp"
-        app:chipSpacingHorizontal="1dp"
-        app:chipSpacingVertical="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chipGroup2">
-        <com.google.android.material.chip.Chip
-            android:id="@+id/mediumChip4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:text="@string/conjunctivitis"
-            android:textSize="18sp"/>
-        <com.google.android.material.chip.Chip
-            android:id="@+id/mediumChip8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:text="@string/discolouration_of_fingers_toes"
-            android:textSize="18sp"/>
     </com.google.android.material.chip.ChipGroup>
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroup4"
@@ -152,7 +118,7 @@
         app:chipSpacingHorizontal="1dp"
         app:chipSpacingVertical="1dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chipGroup3">
+        app:layout_constraintTop_toBottomOf="@id/chipGroup1">
         <com.google.android.material.chip.Chip
             android:id="@+id/mediumChip6"
             android:layout_width="wrap_content"
@@ -162,35 +128,11 @@
             android:textSize="18sp"/>
         <com.google.android.material.chip.Chip
             android:id="@+id/hardChip4"
+            android:layout_marginStart="22dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.Chip.Filter"
             android:text="@string/loss_of_speech_movement"
-            android:textSize="18sp"/>
-    </com.google.android.material.chip.ChipGroup>
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:singleLine="true"
-        android:layout_marginStart="4dp"
-        app:chipSpacingHorizontal="1dp"
-        app:chipSpacingVertical="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chipGroup4">
-        <com.google.android.material.chip.Chip
-            android:id="@+id/mediumChip7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:text="@string/loss_of_taste_smell"
-            android:textSize="18sp"/>
-        <com.google.android.material.chip.Chip
-            android:id="@+id/hardChip1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:text="@string/difficulty_breathing"
             android:textSize="18sp"/>
     </com.google.android.material.chip.ChipGroup>
     <com.google.android.material.chip.ChipGroup
@@ -202,7 +144,7 @@
         app:chipSpacingHorizontal="1dp"
         app:chipSpacingVertical="1dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chipGroup5">
+        app:layout_constraintTop_toBottomOf="@id/chipGroup4">
         <com.google.android.material.chip.Chip
             android:id="@+id/hardChip2"
             android:layout_width="wrap_content"
@@ -222,9 +164,9 @@
         android:id="@+id/infectedText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="12dp"
         android:visibility="gone"
-        android:textSize="32sp"
+        android:textSize="22sp"
         android:textColor="@color/white"
         android:background="@drawable/infected_background"
         android:paddingHorizontal="16dp"
@@ -240,7 +182,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/infected_background"
         android:text="@string/submitted"
-        android:textSize="28sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:layout_marginBottom="28dp"
         app:layout_constraintStart_toStartOf="parent"

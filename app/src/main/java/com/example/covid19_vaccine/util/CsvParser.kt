@@ -7,6 +7,7 @@ class CsvParser {
         val tokens = line.split(",")
         return VaccineData(
             country = tokens[Constant.ColumnIndex.COUNTRY],
+            Iso = tokens[Constant.ColumnIndex.ISO],
             date = tokens[Constant.ColumnIndex.DATE],
             total_vaccinated = tokens[Constant.ColumnIndex.TOTAL_VACCINATED].toDoubleOrNull() ?: 0.0,
             people_vaccinated = tokens[Constant.ColumnIndex.PEOPLE_VACCINATED].toDoubleOrNull() ?: 0.0,

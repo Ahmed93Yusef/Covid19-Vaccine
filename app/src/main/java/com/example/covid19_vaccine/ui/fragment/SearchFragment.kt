@@ -10,7 +10,6 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
 
     override val bindingInflater: (LayoutInflater) -> FragmentSearchBinding =
         FragmentSearchBinding::inflate
-
     override fun setup() {
         binding?.apply {
             inputCountryText.isIconified = false
@@ -43,7 +42,6 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
             lottieSearch.isVisible = false
         }
     }
-
     private fun searchTextChange(newText: String) {
         binding?.apply {
             lottieError.visibility = View.GONE
@@ -52,7 +50,6 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
             lineChart.isVisible = false
         }
     }
-
     private fun setData(country: String) {
         DataManger.getCountry(country).forEach { dataCountry ->
             val data = dataCountry.value[dataCountry.value.size - 1]
@@ -62,22 +59,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
                 txtPeopleFullyVaccine.text = DataManger.convertNumber(data.people_fully_vaccinated)
                 txtCountryName.text = data.country
             }
-//            var count = 0
-//            val xValue = mutableListOf<String>()
-//            val lineEntry = mutableListOf<Entry>()
-//            for (i in 0..5){
-//            val data1 = dataCountry.value[count]
-//                xValue.add(data1.date)
-//                lineEntry.add(Entry(data1.daily_vaccinations.toFloat(),))
-//                count =+ 30
-//            }
-//            val lineDataSet = LineDataSet(lineEntry, Constant.CHART_LABEL)
-//            lineDataSet.color = resources.getColor(R.color.green)
-//            binding?.lineChart?.data = LineData(xValue,lineDataSet)
-//            binding?.lineChart?.setBackgroundColor(resources.getColor(R.color.white))
-//            binding?.lineChart?.animateXY(3000,3000)
-            }
-
+        }
     }
     override fun addCallBack() {
         visibility(false)

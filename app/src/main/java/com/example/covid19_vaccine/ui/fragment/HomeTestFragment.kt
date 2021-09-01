@@ -18,11 +18,11 @@ class HomeTestFragment: BaseFragment<FragmentHomeTestBinding>(){
     private fun buttonClicked() {
         binding?.submittedButton?.setOnClickListener {
             when {
-                binding?.hardChip1?.isChecked == true || binding?.hardChip2?.isChecked == true || binding?.hardChip3?.isChecked == true || binding?.hardChip4?.isChecked == true -> {
+                binding?.hardChip2?.isChecked == true || binding?.hardChip3?.isChecked == true || binding?.hardChip4?.isChecked == true -> {
                     binding?.infectedText?.text = getString(R.string.youInfected)
                     visible(true)
                 }
-                binding?.mediumChip1?.isChecked == true || binding?.mediumChip2?.isChecked == true || binding?.mediumChip3?.isChecked == true || binding?.mediumChip4?.isChecked == true || binding?.mediumChip5?.isChecked == true || binding?.mediumChip6?.isChecked == true || binding?.mediumChip7?.isChecked == true || binding?.mediumChip8?.isChecked == true -> {
+                binding?.mediumChip1?.isChecked == true || binding?.mediumChip5?.isChecked == true || binding?.mediumChip6?.isChecked == true  -> {
                     binding?.infectedText?.text = getString(R.string.possibly_infected)
                     visible(true)
                 }

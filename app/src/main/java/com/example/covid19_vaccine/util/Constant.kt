@@ -3,6 +3,7 @@ package com.example.covid19_vaccine.util
 object Constant {
     object ColumnIndex{
         const val COUNTRY = 0
+        const val ISO = 1
         const val DATE = 2
         const val TOTAL_VACCINATED = 3
         const val PEOPLE_VACCINATED = 4

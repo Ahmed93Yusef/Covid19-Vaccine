@@ -169,15 +169,6 @@
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
-
-
-
-
-
-
-
-
-
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

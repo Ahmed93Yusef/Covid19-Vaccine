@@ -1,32 +1,18 @@
 package com.example.covid19_vaccine.ui.fragment
 
-import android.os.Bundle
-import android.os.Handler
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.core.view.iterator
 import androidx.core.view.size
 import androidx.viewpager2.widget.ViewPager2
-import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.domain.DataPrevent
 import com.example.covid19_vaccine.databinding.FragmentCovidPreventBinding
 import com.example.covid19_vaccine.util.ViewPagerAdapter
-import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback as WidgetViewPager2OnPageChangeCallback
 
 class CovidPreventFragment : BaseFragment<FragmentCovidPreventBinding>() {
-
-    lateinit var handler: Handler
-
     override val bindingInflater: (LayoutInflater) -> FragmentCovidPreventBinding = FragmentCovidPreventBinding::inflate
 
     override fun setup() {
         viewPagerAdapter()
-
-
     }
-
     override fun addCallBack() {
         onClickNext()
     }
@@ -44,9 +30,7 @@ class CovidPreventFragment : BaseFragment<FragmentCovidPreventBinding>() {
                 endFakeDrag()
             }
         }
-
     }
-
     private fun onClickNext(){
 
         binding?.apply {
@@ -66,9 +50,7 @@ class CovidPreventFragment : BaseFragment<FragmentCovidPreventBinding>() {
 
         }
     }
-    fun setCurrentIndicator(index :Int){
-        val childCount = binding?.myindecator?.childCount
-    }
+
 
 
 

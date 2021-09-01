@@ -16,35 +16,26 @@ import java.io.InputStreamReader
 
 class HomeActivity: AppCompatActivity() {
     private var binding : ActivityHomeBinding? = null
-
     private val myHomeFragment = HomeFragment()
     private val mySearchFragment = SearchFragment()
     private val myStatisticFragment = StatisticFragment()
     private val myAboutFragment = AboutFragment()
-
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(requireNotNull(binding).root)
-
         window.setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN) //this function using for hiding the stats bar
-
         setup()
         addCallbacks()
     }
-
     private fun setup() {
         initSubView()
         parseFile()
     }
-
     private fun addCallbacks() {
         selectFragment()
     }
-
     private fun selectFragment(){
-
         binding?.bottomNavigationView?.setOnItemSelectedListener {
                 item ->
             when(item.itemId){
@@ -66,17 +57,12 @@ class HomeActivity: AppCompatActivity() {
                     true
                 }
                 else -> false
-
             }
         }
     } //this function Do : give each item in menu on the NavButton functionality to tran to the specific fragment
-
-
-
     private fun initSubView() {
         addFragment(HomeFragment()) //this function Do : to make the first Screen shown is the "HomeFragment".
     }
-
     private fun parseFile() {
         val inputStream = assets.open("country_vaccinations.csv")
         val buffer = BufferedReader(InputStreamReader(inputStream))
@@ -85,26 +71,17 @@ class HomeActivity: AppCompatActivity() {
             val currentVaccine = parser.parse(it)
             DataManger.addVaccine(currentVaccine)
         }
-    }
-
-    /* this function Do to tran data the csv provide it to File to make dail with it symbol
+    }/* this function Do to transfer data the csv provide it to File to make dail with it symbol
     ,then sprite the data to single line using @parse function then using it. */
-
     private fun addFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-        /* "addToBackStack" is very important to mack the back
-        to previous fragment work fine without close the app*/
         transaction.add(R.id.fragment_container, fragment)  
         transaction.commit()
     }// this function using for add fragment on another fragment when we want trans to another Screen.
-
-
-
     private fun replaceFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container, fragment)
            // .addToBackStack(null)
         transaction.commit()
     }// this function using for replace fragment to another fragment , so the above fragment is deleted.
-
 }
