@@ -504,26 +504,6 @@
     <!--        app:layout_constraintBottom_toTopOf="@+id/bar_chart_top"-->
     <!--        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />-->
 
-    <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/chart"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_margin="16dp"
-        android:background="@color/white"
-        android:transitionGroup="true"
-        app:barrierMargin="4dp"
-        app:layout_constraintBottom_toTopOf="@id/line_chart"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
-
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/line_chart"
-        android:layout_margin="16dp"
-        android:background="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chart" />
 
     <!--    <ProgressBar-->
     <!--        android:id="@+id/progress"-->
@@ -540,17 +520,5 @@
     <!--        app:layout_constraintBottom_toTopOf="@+id/textView"-->
     <!--        app:layout_constraintTop_toBottomOf="@+id/chart"-->
     <!--        tools:layout_editor_absoluteX="16dp" />-->
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Top country vaccine details"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

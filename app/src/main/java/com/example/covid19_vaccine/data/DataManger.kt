@@ -54,7 +54,7 @@ object DataManger {
                 String.format("%.2f", number1) + "M"
             }
             (number / 1000) >= 1 -> {
-                (((number / 1000).toInt()).toString() + "K")
+                ((number / 1000).toInt()).toString() + "K"
             }
             else -> {
                 number.toString()
