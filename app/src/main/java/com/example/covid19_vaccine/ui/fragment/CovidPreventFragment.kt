@@ -50,8 +50,4 @@ class CovidPreventFragment : BaseFragment<FragmentCovidPreventBinding>() {
 
         }
     }
-
-
-
-
 }

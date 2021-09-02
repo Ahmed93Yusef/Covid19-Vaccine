@@ -25,7 +25,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_country"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="155dp"
         android:layout_margin="18dp"
         android:visibility="visible"
         app:cardCornerRadius="24dp"
@@ -53,7 +53,8 @@
         android:elevation="12dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textColor="@color/green"
         app:layout_constraintEnd_toEndOf="@+id/labPeopleFullyVaccine"
         app:layout_constraintStart_toStartOf="@+id/labPeopleFullyVaccine"
         app:layout_constraintTop_toTopOf="@+id/txtPeopleVaccine"
@@ -65,11 +66,38 @@
         android:elevation="12dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textColor="@color/green"
         app:layout_constraintEnd_toEndOf="@+id/labPeopleVaccine"
         app:layout_constraintStart_toStartOf="@+id/labPeopleVaccine"
         app:layout_constraintTop_toBottomOf="@+id/txtCountryName"
         tools:text="44.4142" />
+    <TextView
+        android:id="@+id/txtPeopleVaccinePerHundred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtPeopleVaccine"
+        app:layout_constraintStart_toStartOf="@+id/txtPeopleVaccine"
+        app:layout_constraintTop_toBottomOf="@+id/txtPeopleVaccine"
+        tools:text="44.6%" />
+    <TextView
+        android:id="@+id/txtPeopleFullyVaccinePerHundred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtPeopleFullyVaccine"
+        app:layout_constraintStart_toStartOf="@+id/txtPeopleFullyVaccine"
+        app:layout_constraintTop_toBottomOf="@+id/txtPeopleFullyVaccine"
+        tools:text="44.6%" />
     <TextView
         android:id="@+id/labPeopleFullyVaccine"
         android:layout_width="180dp"
@@ -78,7 +106,8 @@
         android:padding="6dp"
         android:text="@string/people_fully_vaccinated"
         android:textAlignment="center"
-        android:textSize="12sp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/labPeopleVaccine"
@@ -91,11 +120,12 @@
         android:padding="6dp"
         android:text="@string/people_vaccinated"
         android:textAlignment="center"
-        android:textSize="12sp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/labPeopleFullyVaccine"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPeopleVaccine" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPeopleVaccinePerHundred" />
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_error"
         android:layout_width="300dp"
@@ -120,15 +150,24 @@
         app:layout_constraintVertical_bias="0.329"
         app:lottie_autoPlay="true"
         app:lottie_rawRes="@raw/search" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/chartCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="32dp"
+        android:padding="8dp"
+        app:cardCornerRadius="24dp"
+        android:elevation="16dp"
+        app:layout_constraintTop_toBottomOf="@id/card_country"
+        app:layout_constraintBottom_toBottomOf="parent"/>
     <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
         android:id="@+id/lineChart"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/search_text_background"
-        android:layout_margin="8dp"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_country" />
+        android:elevation="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/chartCard"
+        app:layout_constraintEnd_toEndOf="@id/chartCard"
+        app:layout_constraintStart_toStartOf="@id/chartCard"
+        app:layout_constraintTop_toTopOf="@+id/chartCard" />
 </androidx.constraintlayout.widget.ConstraintLayout>
