@@ -10,6 +10,7 @@ import com.example.covid19_vaccine.databinding.ActivityHomeBinding
 import com.example.covid19_vaccine.ui.fragment.AboutFragment
 import com.example.covid19_vaccine.ui.fragment.HomeFragment
 import com.example.covid19_vaccine.ui.fragment.SearchFragment
+import com.example.covid19_vaccine.ui.fragment.StatisticFragment
 import com.example.covid19_vaccine.util.CsvParser
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -19,6 +20,7 @@ class HomeActivity: AppCompatActivity() {
     private val myHomeFragment = HomeFragment()
     private val mySearchFragment = SearchFragment()
     private val myAboutFragment = AboutFragment()
+    private val myStatisticFragment = StatisticFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
@@ -30,6 +32,7 @@ class HomeActivity: AppCompatActivity() {
     private fun setup() {
         initSubView()
         parseFile()
+        DataManger.initCountryList()
     }
     private fun addCallbacks() {
         selectFragment()
@@ -47,7 +50,7 @@ class HomeActivity: AppCompatActivity() {
                     true
                 }
                 R.id.statisticPage -> {
-                    Toast.makeText(this,"Under Maintenance" , Toast.LENGTH_SHORT).show()
+                    replaceFragment(myStatisticFragment)
                     true
                 }
                 R.id.aboutPage -> {

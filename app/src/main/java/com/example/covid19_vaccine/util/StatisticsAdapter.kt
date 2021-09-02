@@ -1,35 +1,32 @@
-package com.example.covid19_vaccine.util
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.covid19_vaccine.R
-import com.example.covid19_vaccine.data.domain.StatisticRecyclerView
+import com.example.covid19_vaccine.data.DataManger
+import com.example.covid19_vaccine.data.domain.VaccineData
 import com.example.covid19_vaccine.databinding.ItemStatisticsBinding
 
-class StatisticsAdapter (val listStatis: List<StatisticRecyclerView>): RecyclerView.Adapter<StatisticsAdapter.StatisticViewHolder>() {
+class StatisticsAdapter(private val listData: List<VaccineData>) : RecyclerView.Adapter<StatisticsAdapter.TopViewHolder>(){
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = TopViewHolder(
+        LayoutInflater.from(parent.context).inflate(R.layout.item_statistics,parent,false))
 
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StatisticViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_statistics, parent, false)
-        return StatisticViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: StatisticViewHolder, position: Int) {
-        val currentCountry = listStatis[position]
-        holder.binding.apply{
-            countryName.text = currentCountry.countryName
-            countryVaccinePer.text = currentCountry.countryVaccinePer.toString()
-            countryVaccineTotal.text = currentCountry.countryVaccineTotal.toString()
-
+    override fun onBindViewHolder(holder: TopViewHolder, position: Int) {
+        val textList = listData[position]
+        holder.binding.apply {
+            countryName.isSelected=true
+            countryName.text = textList.country
+            countryVaccinePer.text = DataManger.convertNumber(textList.people_vaccinated)
+            countryVaccineTotal.text = textList.people_vaccinated_per_hundred.toString()
         }
+
     }
 
-    override fun getItemCount() = listStatis.size
+    override fun getItemCount() = listData.size
 
-    class StatisticViewHolder (viewItem: View): RecyclerView.ViewHolder(viewItem){
-        val binding = ItemStatisticsBinding.bind(viewItem)
+    inner class TopViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
+        val binding = ItemStatisticsBinding.bind(itemView)
     }
+
 }
