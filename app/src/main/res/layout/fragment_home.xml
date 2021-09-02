@@ -63,23 +63,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/iraq_statistics"
-            android:textSize="25sp"
+            android:textSize="28sp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/lorabold" />
-        <TextView
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:text="@string/this_statistics_shown"
-            android:lines="2"
-            android:textStyle="bold"
-            android:fontFamily="@font/frankruhllibrelight"
-            android:letterSpacing="0.01"
-            android:layout_marginStart="16dp"
-            android:textSize="16sp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:gravity="center"
             android:orientation="horizontal">
             <com.google.android.material.card.MaterialCardView

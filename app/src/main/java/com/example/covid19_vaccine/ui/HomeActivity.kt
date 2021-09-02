@@ -19,8 +19,8 @@ class HomeActivity: AppCompatActivity() {
     private var binding : ActivityHomeBinding? = null
     private val myHomeFragment = HomeFragment()
     private val mySearchFragment = SearchFragment()
-    private val myStatisticFragment = StatisticFragment()
     private val myAboutFragment = AboutFragment()
+    private val myStatisticFragment = StatisticFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
@@ -32,6 +32,7 @@ class HomeActivity: AppCompatActivity() {
     private fun setup() {
         initSubView()
         parseFile()
+        DataManger.initCountryList()
     }
     private fun addCallbacks() {
         selectFragment()
@@ -46,7 +47,6 @@ class HomeActivity: AppCompatActivity() {
                 }
                 R.id.searchPage -> {
                     replaceFragment(mySearchFragment)
-                    mySearchFragment
                     true
                 }
                 R.id.statisticPage -> {
