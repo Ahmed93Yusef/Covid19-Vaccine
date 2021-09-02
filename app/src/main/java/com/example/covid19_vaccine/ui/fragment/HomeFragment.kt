@@ -8,13 +8,13 @@ import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
 import com.example.covid19_vaccine.data.VaccineDataRecyclerView
-import com.example.covid19_vaccine.data.domain.VaccineData
 import com.example.covid19_vaccine.databinding.FragmentHomeBinding
 import com.example.covid19_vaccine.util.TransFragment
 import com.example.covid19_vaccine.util.VaccineAdapter
 import com.example.covid19_vaccine.util.VaccineInteraction
 
 class HomeFragment: BaseFragment<FragmentHomeBinding>(), VaccineInteraction,TransFragment {
+
     private val myVaccineTypeFragment = VaccineTypeFragment()
     private val myDetailsButtonFragment = DetailsButtonFragment()
 

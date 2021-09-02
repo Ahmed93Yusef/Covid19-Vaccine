@@ -35,6 +35,7 @@ class HomeActivity: AppCompatActivity() {
 
         setup()
         addCallbacks()
+        DataManger.initCountryList()
     }
 
     private fun setup() {
@@ -105,6 +106,6 @@ class HomeActivity: AppCompatActivity() {
         transaction.replace(R.id.fragment_container, fragment)
            // .addToBackStack(null)
         transaction.commit()
-    }// this function using for replace fragment to another fragment , so the above fragment is deleted.
+    } // this function using for replace fragment to another fragment , so the above fragment is deleted.
 
 }

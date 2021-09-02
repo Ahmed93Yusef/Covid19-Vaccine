@@ -1,32 +1,31 @@
 package com.example.covid19_vaccine.ui.fragment
 
 import android.graphics.Color
-import android.os.Parcel
-import android.os.Parcelable
 import android.view.LayoutInflater
-import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
 import com.example.covid19_vaccine.databinding.FragmentStatisticBinding
 import com.example.covid19_vaccine.util.CsvParser
+import com.example.covid19_vaccine.util.TopCountriesAdapter
 import com.github.mikephil.charting.components.AxisBase
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
-import com.github.mikephil.charting.formatter.IValueFormatter
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
-import java.util.ArrayList
+import java.util.*
 
 
-class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
+class StatisticFragment: BaseFragment<FragmentStatisticBinding>() {
+
+    lateinit var adapter: TopCountriesAdapter
+
+
     override val bindingInflater: (LayoutInflater) -> FragmentStatisticBinding = FragmentStatisticBinding::inflate
 
     override fun setup() {
 
-        DataManger.initCountryList()
         val topTeenCountry = DataManger.getTopTeen()
-
         binding?.apply {
             val parser = CsvParser()
             topTeenCountry.forEach{
@@ -35,10 +34,14 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
 
             setLineChartData()
         }
+
+        adapter = TopCountriesAdapter(topTeenCountry)
+        binding?.dataTopRecyclerView?.adapter = adapter
     }
     override fun addCallBack() {
+
     }
-    fun dataValues1() : ArrayList<Entry>
+    private fun dataValues1() : ArrayList<Entry>
     {
         val dataVal = ArrayList<Entry>()
         dataVal.add(Entry(0F, 20F))
@@ -48,11 +51,15 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
         return dataVal
     }
 
-    fun setLineChartData()
+
+
+
+
+    private fun setLineChartData()
     {
         val mpLineChart = binding?.lineChart!!
 
-        val lineDataSet1 = LineDataSet(dataValues1(), "Data Set 1")
+        val lineDataSet1 = LineDataSet(this.dataValues1(), "Data Set 1")
         lineDataSet1.lineWidth = 4f
         lineDataSet1.color = Color.parseColor("#00FFFF")
         lineDataSet1.setDrawCircles(true)
@@ -71,9 +78,10 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
 
         dataSets.add(lineDataSet1)
 
-        val data = LineData(dataSets)
+        val data = LineData(dataSets).apply {
 
-        data.setValueFormatter(CustomFormat(axis))
+            setValueFormatter(CustomFormat(axis))
+        }
 
         mpLineChart.data = data
         mpLineChart.invalidate()
@@ -121,9 +129,9 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
 
     }
 
-    val axis = arrayOf<String>("22/8" , "23/8" , "29/8" , "03/9" , "09/9" , "15/9")
+    private val axis = arrayOf("22/8" , "23/8" , "29/8" , "03/9" , "09/9" , "15/9")
 
-    private var setvlaue = mutableListOf<String>("22/8", "31/7", "20/9")
+    private var setvlaue = mutableListOf("22/8", "31/7", "20/9")
 
 
     private class CustomFormat(var ax: Array<String>) : IndexAxisValueFormatter() {
@@ -132,8 +140,4 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(){
         }
     }
 
-    private class setAxisValue() : IndexAxisValueFormatter()
-    {
-
-    }
 }

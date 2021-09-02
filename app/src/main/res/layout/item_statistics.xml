@@ -1,65 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="@color/purple_200"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardBackgroundColor="@color/main_background"
     android:id="@+id/cardView1"
-    android:layout_width="128dp"
-    android:layout_height="160dp"
-    android:layout_marginStart="4dp"
-    app:cardCornerRadius="16dp">
-<!--    android:backgroundTint="@color/white"-->
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_marginStart="8dp"
+    android:layout_marginVertical="8dp"
+    android:layout_gravity="center"
+    android:layout_width="120dp"
+    android:layout_height="150dp"
+    app:cardCornerRadius="16dp"
+    android:elevation="1dp">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
         <TextView
             android:id="@+id/countryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:elevation="4dp"
+            tools:text ="Iraq"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
             android:gravity="center"
-            android:text="Iraq"
+            android:layout_gravity="center"
+            android:fontFamily="@font/lorabold"
+            android:layout_marginBottom="14dp"
             android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            android:textSize="20sp"
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/countryVaccinePer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:elevation="4dp"
-            android:gravity="center"
             android:text="80%"
+            android:fontFamily="@font/cardoregular"
+            android:layout_marginBottom="14dp"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@id/countryVaccineTotal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/countryName" />
-
+            android:textSize="20sp" />
         <TextView
             android:id="@+id/countryVaccineTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="12dp"
-            android:elevation="4dp"
-            android:gravity="center"
             android:text="2.4M"
+            android:fontFamily="@font/cardoregular"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/countryVaccinePer" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
+            android:textSize="20sp"/>
+    </LinearLayout>
 </androidx.cardview.widget.CardView>

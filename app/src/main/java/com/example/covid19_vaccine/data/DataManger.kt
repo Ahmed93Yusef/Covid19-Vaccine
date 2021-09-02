@@ -1,19 +1,16 @@
 package com.example.covid19_vaccine.data
 
-import android.util.Log
 import com.example.covid19_vaccine.data.domain.VaccineData
-import android.util.Log.i as Log
 
 object DataManger {
-    private val vaccineList = mutableListOf<VaccineData>()
 
-    private var countryList = mutableListOf<VaccineData>()
+     val vaccineList = mutableListOf<VaccineData>()
 
-    private var oneCountryList = mutableListOf<VaccineData>()
+     var countryList = mutableListOf<VaccineData>()
 
-    private var topCountriesVaccinated = mutableListOf<Double>()
+     var oneCountryList = mutableListOf<VaccineData>()
 
-    private var countryNameList = mutableSetOf<String>()
+     var topCountriesVaccinated = mutableListOf<Double>()
 
     fun addVaccine(vaccine: VaccineData) = vaccineList.add(vaccine)
 
@@ -47,13 +44,12 @@ object DataManger {
         )
     }
 
-    fun initCountryList(){
+    fun initCountryList() {
         for (i in 0 until vaccineList.size - 1) {
            if( vaccineList[i].country != vaccineList[i+1].country){
             oneCountryList.add(vaccineList[i])
            }
         }
-        oneCountryList.add(vaccineList[vaccineList.size - 1])
     }
 
 
@@ -62,13 +58,14 @@ object DataManger {
             topCountriesVaccinated.add(oneCountryList[i].people_vaccinated)
         }
     }
-    fun topTen() = topCountriesVaccinated.sort()
-
-
 // function to convert big numbers to K and M style
 
     fun convertNumber(number: Double): String {
         return when {
+            (number / 1000000000) >= 1 -> {
+                val number1 =number / 1000000000
+                String.format("%.3f", number1) + "B"
+            }
             (number / 1000000) >= 1 -> {
                 val number1 =number / 1000000
                 String.format("%.2f", number1) + "M"
@@ -80,8 +77,11 @@ object DataManger {
                 number.toString()
             }
         }
+
     }
 
-    fun getTopTeen() = oneCountryList.sortedByDescending{list -> list.people_fully_vaccinated_per_hundred}.subList(0, 10)
+    fun getTopTeen() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0,10)
 
-  }
+
+
+}

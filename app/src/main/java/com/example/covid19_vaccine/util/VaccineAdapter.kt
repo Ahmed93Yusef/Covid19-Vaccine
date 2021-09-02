@@ -7,8 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.domain.VaccineRecyclerView
 import com.example.covid19_vaccine.databinding.RecyclerViewLayoutBinding
+import com.example.covid19_vaccine.ui.fragment.HomeFragment
 
-class VaccineAdapter(private val listData : List<VaccineRecyclerView>, private val listener : VaccineInteraction) : RecyclerView.Adapter<VaccineAdapter.VaccineHolder>() {
+class VaccineAdapter(private val listData: List<VaccineRecyclerView>, private val listener: HomeFragment) : RecyclerView.Adapter<VaccineAdapter.VaccineHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VaccineHolder =
         VaccineHolder(LayoutInflater.from(parent.context).inflate(R.layout.recycler_view_layout,parent,false))
