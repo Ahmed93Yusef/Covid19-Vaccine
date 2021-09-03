@@ -6,15 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_blue"
-    tools:context=".ui.fragment.HomeFragment"
-    >
-
+    tools:context=".ui.fragment.HomeFragment">
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="380dp"
         android:layout_height="220dp"
         android:elevation="8dp"
-        android:layout_margin="8dp"
+        android:layout_margin="12dp"
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,14 +26,17 @@
         android:id="@+id/services"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/frankruhllibremedium"
         android:text="@string/services"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:fontFamily="@font/frankruhllibremedium"
-        app:layout_constraintTop_toBottomOf="@id/cardView"
-        app:layout_constraintStart_toStartOf="@id/cardView" />
+        android:layout_marginStart="4dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/cardView"
+        app:layout_constraintEnd_toEndOf="@id/cardView"
+        app:layout_constraintTop_toBottomOf="@id/cardView" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vaccineRecyclerView"
         android:layout_width="match_parent"
@@ -46,120 +47,118 @@
         app:layout_constraintTop_toBottomOf="@id/services"
         app:layout_constraintStart_toStartOf="@id/cardView"
         app:layout_constraintEnd_toEndOf="@id/cardView"
-        app:layout_constraintBottom_toTopOf="@id/layoutStatictec"
         tools:listitem="@layout/recycler_view_layout"
         android:orientation="horizontal" />
-    <LinearLayout
-        android:id="@+id/layoutStatictec"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+    <TextView
+        android:id="@+id/textIraq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/iraq_statistics"
+        android:textSize="24sp"
+        android:textColor="@color/black"
         android:layout_marginTop="4dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@id/vaccineRecyclerView"
-        app:layout_constraintEnd_toEndOf="@id/vaccineRecyclerView"
-        app:layout_constraintTop_toBottomOf="@id/vaccineRecyclerView">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/iraq_statistics"
-            android:textSize="28sp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/lorabold" />
+        app:layout_constraintStart_toStartOf="@id/services"
+        app:layout_constraintTop_toBottomOf="@id/vaccineRecyclerView"
+        android:fontFamily="@font/lorabold" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/liftCard"
+        android:layout_width="185dp"
+        android:layout_height="130dp"
+        app:cardElevation="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintEnd_toStartOf="@id/liftCard"
+        app:layout_constraintStart_toStartOf="@id/cardView"
+        app:layout_constraintTop_toBottomOf="@id/textIraq"
+        style="@style/CustomCardViewStyle">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="190dp"
-                android:layout_height="120dp"
-                app:cardElevation="2dp"
-                android:layout_marginEnd="2dp"
-                style="@style/CustomCardViewStyle">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="65dp"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:id="@+id/homeScreenDaily"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="843"
-                            android:textStyle="bold"
-                            android:fontFamily="@font/frankruhllibrelight"
-                            android:textSize="35sp"
-                            android:gravity="start"
-                            android:layout_margin="16dp" />
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_line_graphq" />
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/daily_vaccine"
-                        android:layout_gravity="start"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/frankruhllibrelight"
-                        android:layout_marginStart="16dp"
-                        />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="190dp"
-                android:id="@+id/rightCard"
-                android:layout_height="120dp"
-                style="@style/CustomCardViewStyle"
-                app:cardElevation="2dp"
-                android:layout_marginStart="4dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="65dp"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:id="@+id/homeScreenTotal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:text="210M"
-                            android:textStyle="bold"
-                            android:fontFamily="@font/frankruhllibrelight"
-                            android:textSize="35sp"
-                            android:gravity="start"
-                            android:layout_margin="16dp" />
-                        <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="45dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/linegraphpng" />
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/total_vaccine"
-                        android:layout_gravity="start"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/frankruhllibrelight"
-                        android:layout_marginStart="16dp"
-                        />
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/homeScreenDaily"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="843"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/frankruhllibrelight"
+                    android:textSize="35sp"
+                    android:gravity="start"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="@dimen/marginEnd16"
+                    android:layout_marginTop="@dimen/marginEnd16"/>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_line_graphq" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/daily_vaccine"
+                android:layout_gravity="start"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/frankruhllibrelight"
+                android:layout_marginStart="16dp"
+                />
         </LinearLayout>
-    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rightCard"
+        android:layout_width="185dp"
+        android:layout_height="130dp"
+        style="@style/CustomCardViewStyle"
+        app:cardElevation="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintTop_toTopOf="@id/liftCard"
+        app:layout_constraintBottom_toBottomOf="@id/liftCard"
+        app:layout_constraintEnd_toEndOf="@id/cardView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/homeScreenTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="210M"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/frankruhllibrelight"
+                    android:textSize="35sp"
+                    android:gravity="start"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    />
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/linegraphpng" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_vaccine"
+                android:layout_gravity="start"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/frankruhllibrelight"
+                android:layout_marginStart="16dp"
+                />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
