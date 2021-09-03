@@ -35,8 +35,8 @@
     <string name="project_done_by">Project Done By:</string>
     <string name="team_leader_ahmed_yusef">Team Leader: Ahmed Yusef</string>
     <string name="Team_Member_Nooralden.A">Team Member: Nooralden.A</string>
-    <string name="people_fully_vaccinated">people fully vaccinated</string>
-    <string name="people_vaccinated">people vaccinated</string>
+    <string name="people_fully_vaccinated">Fully Vaccinated</string>
+    <string name="people_vaccinated">Vaccinated</string>
     <string name="services">Services :</string>
     <string name="health_support">Health Support</string>
     <string name="iraq_statistics">Iraq Statistics : </string>

@@ -25,7 +25,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card_country"
         android:layout_width="match_parent"
-        android:layout_height="155dp"
+        android:layout_height="160dp"
         android:layout_margin="18dp"
         android:visibility="visible"
         app:cardCornerRadius="24dp"
