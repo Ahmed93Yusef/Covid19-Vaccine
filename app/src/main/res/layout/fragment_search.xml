@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginVertical="32dp"
+        android:layout_marginVertical="@dimen/marginEnd16"
         android:background="@drawable/search_text_background"
         android:hint="@string/input_country"
         app:layout_constraintEnd_toEndOf="parent"
