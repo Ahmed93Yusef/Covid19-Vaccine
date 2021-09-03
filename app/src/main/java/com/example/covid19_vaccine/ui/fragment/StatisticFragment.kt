@@ -26,7 +26,7 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(),CountryInterAc
     }
 
     override fun addCallBack() {
-//        chartDataSet(DataManger.getDailyVaccine("Iraq"),"Iraq")
+        chartDataSet(DataManger.getDailyVaccine("china"),"china")
     }
 
     private fun chartDataSet(data: MutableList<Double>, country:String){
