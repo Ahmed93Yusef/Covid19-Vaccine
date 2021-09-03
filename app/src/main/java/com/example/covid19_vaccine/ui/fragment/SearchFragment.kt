@@ -66,9 +66,10 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
                 txtCountryName.text = data.country
             }
         }
-        chartDataSet(DataManger.getDailyVaccine(country),country)
+        chartDataSet(country)
     }
-    private fun chartDataSet(data: MutableList<Double>,country: String){
+    private fun chartDataSet(country: String){
+        val data = DataManger.getDailyVaccine(country)
         val aaChartView = binding?.lineChart
         val aaChartModel : AAChartModel = AAChartModel()
             .chartType(AAChartType.Area)

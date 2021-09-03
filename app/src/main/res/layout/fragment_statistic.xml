@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,7 +16,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/header"
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
         android:fontFamily="@font/lorabold"
         android:text="Top Country Statistic"
         android:textColor="@color/black"
-        android:textSize="27sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/myImageView"
         app:layout_constraintEnd_toEndOf="@id/myImageView"
@@ -36,41 +36,48 @@
         app:cardCornerRadius="40dp"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_marginHorizontal="@dimen/marginEnd16"
+        android:layout_marginHorizontal="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/myImageView">
-
-        <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
-            android:id="@+id/lineChart"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:elevation="8dp" />
-
-
-    </com.google.android.material.card.MaterialCardView>
-
+        app:layout_constraintTop_toBottomOf="@id/myImageView"/>
+    <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+    android:id="@+id/barChart"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:elevation="8dp"
+    app:layout_constraintTop_toTopOf="@id/chartCardView"
+    app:layout_constraintBottom_toBottomOf="@id/chartCardView"
+    app:layout_constraintStart_toStartOf="@id/chartCardView"
+    app:layout_constraintEnd_toEndOf="@id/chartCardView"/>
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/chartCardView2"
         app:cardCornerRadius="40dp"
         android:layout_width="0dp"
         android:layout_height="150dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="@id/chartCardView"
         app:layout_constraintStart_toStartOf="@id/chartCardView"
         app:layout_constraintTop_toBottomOf="@id/chartCardView" />
+    <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+        android:id="@+id/lineChart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="8dp"
+        android:elevation="8dp"
+        app:layout_constraintTop_toTopOf="@id/chartCardView2"
+        app:layout_constraintBottom_toBottomOf="@id/chartCardView2"
+        app:layout_constraintStart_toStartOf="@id/chartCardView2"
+        app:layout_constraintEnd_toEndOf="@id/chartCardView2"/>
     <TextView
         android:id="@+id/textTop10"
         android:layout_width="wrap_content"
         app:layout_constraintHorizontal_bias="0.1"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="Top Ten Countries :"
-        android:textSize="22sp"
+        android:textSize="18sp"
         android:textColor="@color/black"
         android:fontFamily="@font/cardobold"
-        app:layout_constraintBottom_toTopOf="@id/dataTopRecyclerView"
-        app:layout_constraintEnd_toEndOf="@id/chartCardView2"
         app:layout_constraintStart_toStartOf="@id/chartCardView2"
         app:layout_constraintTop_toBottomOf="@id/chartCardView2" />
     <androidx.recyclerview.widget.RecyclerView
@@ -80,7 +87,6 @@
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textTop10"

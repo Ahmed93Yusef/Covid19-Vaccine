@@ -7,6 +7,7 @@ object DataManger {
     private var countryList = mutableListOf<VaccineData>()
     private var oneCountryList = mutableListOf<VaccineData>()
     private var vaccineIndex = 0
+    var countryTopTen = mutableListOf("china","india","united states","brazil","japan","indonesia","mexico","germany","united kingdom","france")
     var dailyList = mutableListOf<VaccineData>()
     fun addVaccine(vaccine: VaccineData) = vaccineList.add(vaccine)
 
@@ -65,7 +66,7 @@ object DataManger {
         }
     }
     // function getTopTen get only the top ten country according data entry
-    fun getTopTen() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 10)
+    fun getTopTen() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 9)
 
     fun getDailyVaccine(country: String): MutableList<Double> {
         val list = mutableListOf<Double>()
@@ -76,7 +77,16 @@ object DataManger {
         }
         return list
     }
-
+    fun getVaccineTotally(): MutableList<Double>{
+        val list = mutableListOf<Double>()
+        countryTopTen.forEach {
+        getCountry(it).forEach { dataCountry ->
+            val data = dataCountry.value[dataCountry.value.size - 1]
+            list.add(data.people_vaccinated)
+         }
+        }
+        return list
+    }
 
     fun getTopFive()  = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 5)
     fun getTopOneHandred() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 100)

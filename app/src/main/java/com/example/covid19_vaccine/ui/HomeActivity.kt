@@ -1,7 +1,5 @@
 package com.example.covid19_vaccine.ui
 import android.os.Bundle
-import android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.covid19_vaccine.R
@@ -25,7 +23,7 @@ class HomeActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(requireNotNull(binding).root)
-        window.setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN) //this function using for hiding the stats bar
+//        window.setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN) //this function using for hiding the stats bar
         setup()
         addCallbacks()
     }
