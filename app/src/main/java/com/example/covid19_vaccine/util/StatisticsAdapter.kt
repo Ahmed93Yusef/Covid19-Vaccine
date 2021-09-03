@@ -18,7 +18,7 @@ class StatisticsAdapter(private val listData: List<VaccineData>) : RecyclerView.
             countryName.isSelected=true
             countryName.text = textList.country
             countryVaccinePer.text = DataManger.convertNumber(textList.people_vaccinated)
-            countryVaccineTotal.text = textList.people_vaccinated_per_hundred.toString()
+            "${textList.people_vaccinated_per_hundred}%".also { countryVaccineTotal.text = it }
         }
 
     }

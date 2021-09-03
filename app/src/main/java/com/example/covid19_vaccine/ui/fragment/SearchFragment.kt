@@ -3,12 +3,12 @@ package com.example.covid19_vaccine.ui.fragment
 import android.view.LayoutInflater
 import android.view.View
 import androidx.core.view.isVisible
+import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
 import com.example.covid19_vaccine.databinding.FragmentSearchBinding
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartModel
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartType
 import com.github.aachartmodel.aainfographics.aachartcreator.AASeriesElement
-
 
 class SearchFragment : BaseFragment<FragmentSearchBinding>() {
 
@@ -61,33 +61,34 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
             binding?.apply {
                 txtPeopleVaccine.text = DataManger.convertNumber(data.people_vaccinated)
                 txtPeopleFullyVaccine.text = DataManger.convertNumber(data.people_fully_vaccinated)
+                "${data.people_vaccinated_per_hundred}%".also { txtPeopleVaccinePerHundred.text = it }
+                "${data.people_fully_vaccinated_per_hundred}%".also { txtPeopleFullyVaccinePerHundred.text = it }
                 txtCountryName.text = data.country
             }
-            val aaChartView = binding?.lineChart
-            val aaChartModel : AAChartModel = AAChartModel()
-                .chartType(AAChartType.Area)
-                .title("title")
-                .subtitle("subtitle")
-                .backgroundColor("#4b2b7f")
-                .dataLabelsEnabled(true)
-                .series(arrayOf(
-                    AASeriesElement()
-                        .name("Tokyo")
-                        .data(arrayOf(7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6)),
-                    AASeriesElement()
-                        .name("NewYork")
-                        .data(arrayOf(0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5)),
-                    AASeriesElement()
-                        .name("London")
-                        .data(arrayOf(0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0)),
-                    AASeriesElement()
-                        .name("Berlin")
-                        .data(arrayOf(3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8))
-                )
-                )
-            aaChartView?.aa_drawChartWithChartModel(aaChartModel)
-
         }
+        chartDataSet(DataManger.getDailyVaccine(country),country)
+    }
+    private fun chartDataSet(data: MutableList<Double>,country: String){
+        val aaChartView = binding?.lineChart
+        val aaChartModel : AAChartModel = AAChartModel()
+            .chartType(AAChartType.Area)
+            .title("Daily Vaccination")
+            .backgroundColor(resources.getColor(R.color.white))
+            .dataLabelsEnabled(true)
+            .yAxisTitle("vaccination")
+            .yAxisLabelsEnabled(false)
+            .categories(arrayOf("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug"))
+            .series(arrayOf(
+                AASeriesElement()
+                    .name(country)
+                    .enableMouseTracking(true)
+                    .data(arrayOf(data[1], data[data.size-125], data[data.size-110], data[data.size-90], data[data.size-75], data[data.size-40], data[data.size-20], data[data.size-1])),
+            )
+            )
+            .animationDuration(3000)
+        aaChartView?.aa_drawChartWithChartModel(aaChartModel)
+        aaChartView?.aa_updateChartWithOptions(aaChartModel,true)
+
     }
     override fun addCallBack() {
         visibility(false)
@@ -97,11 +98,14 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
             cardCountry.isVisible = state
             txtCountryName.isVisible =state
             txtPeopleFullyVaccine.isVisible =state
+            txtPeopleVaccinePerHundred.isVisible =state
+            txtPeopleFullyVaccinePerHundred.isVisible =state
             labPeopleVaccine.isVisible =state
             labPeopleFullyVaccine.isVisible =state
             txtPeopleVaccine.isVisible =state
             lottieSearch.isVisible = !state
             lineChart.isVisible = state
+            chartCard.isVisible = state
         }
     }
 }
