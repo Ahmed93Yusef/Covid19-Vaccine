@@ -17,5 +17,6 @@
     <color name="graynormal">#80322F2F</color>
     <color name="homecolor">#edf6ff</color>
     <color name="red">#FF0000</color>
+    <color name="blue">#A5D5FF</color>
 
 </resources>

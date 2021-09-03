@@ -1,7 +1,6 @@
 package com.example.covid19_vaccine.ui.fragment
 
 import StatisticsAdapter
-import android.provider.ContactsContract
 import android.view.LayoutInflater
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
@@ -78,7 +77,7 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(),CountryInterAc
 
     override fun onClickCountryItem(Position: Int) {
         val data = DataManger.countryTopTen
-        for (i in 0 until data.size) {
+        for (i in 0..data.size) {
             if (Position == i)
             {
                 chartDataSet(DataManger.getDailyVaccine(data[Position]))

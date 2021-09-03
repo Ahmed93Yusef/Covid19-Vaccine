@@ -87,17 +87,4 @@ object DataManger {
         }
         return list
     }
-
-    fun getTopFive()  = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 5)
-    fun getTopOneHandred() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 100)
-
-
-
-
-    fun getTopTen2(x:Any):MutableList<Double>{ val list = mutableListOf<Double>()
-        vaccineList.forEach{if (it.country == x){
-            list.add(it.daily_vaccinations)
-        } }
-        return list
-    }
   }

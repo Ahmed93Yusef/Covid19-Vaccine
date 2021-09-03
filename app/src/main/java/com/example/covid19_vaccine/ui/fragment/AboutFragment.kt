@@ -33,12 +33,6 @@ class AboutFragment: BaseFragment<FragmentAboutBinding>() {
             urlIntent.data = Uri.parse("https://github.com/naufalAliraqi")
             startActivity(urlIntent)
             }
-
-            member4.setOnClickListener() {
-            val urlIntent = Intent(Intent.ACTION_VIEW)
-            urlIntent.data = Uri.parse("https://github.com/huda997")
-            startActivity(urlIntent)
-            }
             member5.setOnClickListener() {
             val urlIntent = Intent(Intent.ACTION_VIEW)
             urlIntent.data = Uri.parse("https://github.com/Anwar-Alfarhany")

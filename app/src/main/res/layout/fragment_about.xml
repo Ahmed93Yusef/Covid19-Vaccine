@@ -22,7 +22,7 @@
         android:padding="16dp"
         android:text="About The Application:"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,11 +32,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:lineSpacingExtra="3dp"
+        android:lineSpacingExtra="5dp"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:text="@string/an_application_designed_and_developed_by_a_group_of_beginners_in_application_development_that_provides_a_set_of_services_such_as_information_on_vaccines_and_statistics_on_vaccinators_in_many_countries_and_many_other_services"
-        android:textSize="16sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/about_text" />
@@ -44,7 +44,7 @@
         android:id="@+id/card_one"
         android:layout_width="0dp"
         android:layout_height="65dp"
-        android:layout_margin="2dp"
+        android:layout_margin="8dp"
         app:cardBackgroundColor="#A5D5FF"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -99,7 +99,7 @@
         android:layout_marginTop="10dp"
         android:elevation="12dp"
         android:src="@drawable/github"
-        app:layout_constraintEnd_toStartOf="@id/member4"
+        app:layout_constraintEnd_toStartOf="@id/member5"
         app:layout_constraintStart_toEndOf="@id/member2"
         app:layout_constraintTop_toTopOf="@id/card_one" />
     <TextView
@@ -110,30 +110,9 @@
         android:fontFamily="serif"
         android:text="@string/nofel"
         android:textSize="@dimen/ten"
-        app:layout_constraintEnd_toStartOf="@id/member4_text"
+        app:layout_constraintEnd_toStartOf="@id/member5_text"
         app:layout_constraintStart_toEndOf="@id/member2_text"
         app:layout_constraintTop_toBottomOf="@id/member3" />
-    <ImageView
-        android:id="@+id/member4"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="10dp"
-        android:elevation="12dp"
-        android:src="@drawable/github"
-        app:layout_constraintEnd_toStartOf="@id/member5"
-        app:layout_constraintStart_toEndOf="@id/member3"
-        app:layout_constraintTop_toTopOf="@id/card_one" />
-    <TextView
-        android:id="@+id/member4_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="12dp"
-        android:fontFamily="serif"
-        android:text="@string/huda"
-        android:textSize="@dimen/ten"
-        app:layout_constraintEnd_toStartOf="@id/member5_text"
-        app:layout_constraintStart_toEndOf="@id/member3_text"
-        app:layout_constraintTop_toBottomOf="@id/member4" />
     <ImageView
         android:id="@+id/member5"
         android:layout_width="35dp"
@@ -142,7 +121,7 @@
         android:elevation="12dp"
         android:src="@drawable/github"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/member4"
+        app:layout_constraintStart_toEndOf="@id/member3"
         app:layout_constraintTop_toTopOf="@id/card_one" />
     <TextView
         android:id="@+id/member5_text"
@@ -153,6 +132,6 @@
         android:text="@string/anwar"
         android:textSize="@dimen/ten"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/member4_text"
+        app:layout_constraintStart_toEndOf="@id/member3_text"
         app:layout_constraintTop_toBottomOf="@id/member5" />
 </androidx.constraintlayout.motion.widget.MotionLayout>
