@@ -66,7 +66,7 @@ object DataManger {
         }
     }
     // function getTopTen get only the top ten country according data entry
-    fun getTopTen() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 9)
+    fun getTopTen() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 10)
 
     fun getDailyVaccine(country: String): MutableList<Double> {
         val list = mutableListOf<Double>()

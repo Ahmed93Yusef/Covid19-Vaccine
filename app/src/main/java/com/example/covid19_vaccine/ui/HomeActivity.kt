@@ -48,7 +48,7 @@ class HomeActivity: AppCompatActivity() {
                     true
                 }
                 R.id.statisticPage -> {
-                    Toast.makeText(this,"Under Maintenance" , Toast.LENGTH_SHORT).show()
+                    replaceFragment(myStatisticFragment)
                     true
                 }
                 R.id.aboutPage -> {
