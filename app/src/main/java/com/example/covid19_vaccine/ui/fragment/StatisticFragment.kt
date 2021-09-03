@@ -15,12 +15,13 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>() {
     override fun setup() {
 
         val topTeenCountry = DataManger.getTopTen()
-
         adapter = StatisticsAdapter(topTeenCountry)
         binding?.dataTopRecyclerView?.adapter = adapter
     }
 
-    override fun addCallBack() {}
+    override fun addCallBack() {
+    }
+
 
 
 }

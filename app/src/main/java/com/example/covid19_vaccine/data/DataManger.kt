@@ -63,4 +63,6 @@ object DataManger {
     }
     // function getTopTen get only the top ten country according data entry
     fun getTopTen() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 10)
+    fun getTopFive() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 5)
+    fun getTopOneHandred() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 100)
   }

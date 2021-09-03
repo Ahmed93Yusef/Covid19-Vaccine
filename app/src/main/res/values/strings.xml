@@ -97,4 +97,12 @@
     <string name="huda">Huda</string>
     <string name="anwar">Anwar</string>
     <string name="people_may_be_sick">People may be sick with the virus for 1 to 14 days before developing any symptoms.</string>
+    <string-array name="sorted">
+        <item>Top Five</item>
+        <item>Top Ten</item>
+        <item>Top Fifteen</item>
+        <item>Top Hundred</item>
+
+    </string-array>
+
 </resources>

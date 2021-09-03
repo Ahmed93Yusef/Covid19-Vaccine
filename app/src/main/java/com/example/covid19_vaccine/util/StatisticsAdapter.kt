@@ -22,7 +22,6 @@ class StatisticsAdapter(private val listData: List<VaccineData>) : RecyclerView.
         }
 
     }
-
     override fun getItemCount() = listData.size
 
     inner class TopViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
