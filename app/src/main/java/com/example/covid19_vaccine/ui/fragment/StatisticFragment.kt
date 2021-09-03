@@ -1,6 +1,7 @@
 package com.example.covid19_vaccine.ui.fragment
 
 import StatisticsAdapter
+import android.provider.ContactsContract
 import android.view.LayoutInflater
 import com.example.covid19_vaccine.R
 import com.example.covid19_vaccine.data.DataManger
@@ -16,7 +17,6 @@ class StatisticFragment: BaseFragment<FragmentStatisticBinding>(),CountryInterAc
     private lateinit var adapter: StatisticsAdapter
 
     lateinit var topTeenCountry : List<VaccineData>
-
     override val bindingInflater: (LayoutInflater) -> FragmentStatisticBinding = FragmentStatisticBinding::inflate
 
     override fun setup() {

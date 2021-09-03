@@ -9,6 +9,7 @@ import com.example.covid19_vaccine.databinding.FragmentSearchBinding
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartModel
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartType
 import com.github.aachartmodel.aainfographics.aachartcreator.AASeriesElement
+import com.github.aachartmodel.aainfographics.aaoptionsmodel.AAStyle
 
 class SearchFragment : BaseFragment<FragmentSearchBinding>() {
 
@@ -74,8 +75,10 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
         val aaChartModel : AAChartModel = AAChartModel()
             .chartType(AAChartType.Area)
             .title("Daily Vaccination")
+            .titleStyle(AAStyle().color("#008000"))
             .backgroundColor(resources.getColor(R.color.white))
             .dataLabelsEnabled(true)
+            .legendEnabled(false)
             .yAxisTitle("vaccination")
             .yAxisLabelsEnabled(false)
             .categories(arrayOf("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug"))
