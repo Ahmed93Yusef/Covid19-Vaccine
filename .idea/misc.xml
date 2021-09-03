@@ -34,6 +34,13 @@
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/item_statistics.xml" value="0.5" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/prevent_item_recyclerview.xml" value="0.1675213675213675" />
         <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine/app/src/main/res/layout/recycler_view_layout.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine2/app/src/main/res/drawable/splash_image.xml" value="0.2203125" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine2/app/src/main/res/layout/fragment_about.xml" value="0.1394736842105263" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine2/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine2/app/src/main/res/layout/fragment_search.xml" value="0.5" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine2/app/src/main/res/layout/fragment_statistic.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine2/app/src/main/res/layout/item_statistics.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/musli/StudioProjects/Covid19-Vaccine2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1125" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/drawable/shearch_text_background.xml" value="0.24114583333333334" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout-v31/fragment_search.xml" value="0.22083333333333333" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/activity_Home.xml" value="0.22083333333333333" />
@@ -41,14 +48,14 @@
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/activity_main.xml" value="0.22083333333333333" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_about.xml" value="0.1" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_home.xml" value="0.21654749744637386" />
-        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_search.xml" value="0.4" />
+        <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_search.xml" value="0.264" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_statistic.xml" value="0.1394736842105263" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/fragment_vaccine_type.xml" value="0.536" />
         <entry key="..\:/kotlin/week6/covid19_vaccine/app/src/main/res/layout/item_statistics.xml" value="0.1394736842105263" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
@@ -57,7 +64,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.4" />
+        <option name="scale" value="0.1394736842105263" />
       </ProjectState>
     </option>
   </component>
