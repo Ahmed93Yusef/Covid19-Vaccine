@@ -9,6 +9,7 @@ object DataManger {
     private var vaccineIndex = 0
     var dailyList = mutableListOf<VaccineData>()
     fun addVaccine(vaccine: VaccineData) = vaccineList.add(vaccine)
+
     //thus function using with RecyclerView to make the the first position on Recycler can Reachable
     fun getCurrentItem():VaccineData = vaccineList[vaccineIndex]
     fun getNextItem() : VaccineData{
@@ -26,6 +27,7 @@ object DataManger {
         return vaccineList[vaccineIndex]
     }
     //thus function using with Recycler View to make the the last position on Recycler can Reachable
+
     fun getCountry(country: String) = vaccineList.let {
         countryList = it.filter { it1 ->
             it1.country.lowercase().trim() == country.lowercase().trim()
@@ -63,7 +65,7 @@ object DataManger {
         }
     }
     // function getTopTen get only the top ten country according data entry
-    fun getTopTen() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 9)
+    fun getTopTen() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 10)
 
     fun getDailyVaccine(country: String): MutableList<Double> {
         val list = mutableListOf<Double>()
@@ -75,7 +77,17 @@ object DataManger {
         return list
     }
 
-    fun getTopTen() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 10)
-    fun getTopFive() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 5)
+
+    fun getTopFive()  = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 5)
     fun getTopOneHandred() = oneCountryList.sortedByDescending{list -> list.people_vaccinated}.subList(0, 100)
+
+
+
+
+    fun getTopTen2(x:Any):MutableList<Double>{ val list = mutableListOf<Double>()
+        vaccineList.forEach{if (it.country == x){
+            list.add(it.daily_vaccinations)
+        } }
+        return list
+    }
   }
